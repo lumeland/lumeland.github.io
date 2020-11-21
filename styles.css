@@ -158,3 +158,11 @@ th {
 li {
   margin: .5em 0;
 }
+hr {
+  border: none;
+  border-top: solid 1px var(--color-gray);
+  margin: 2em 0;
+}
+hr ~ * {
+  font-size: var(--font-small);
+}
