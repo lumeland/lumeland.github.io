@@ -18,24 +18,42 @@ const site = lume();
 export default site;
 ```
 
-The available options are the following:
-
-Name         | Default  | Description
--------------|----------|------------
-`cwd`        | `Deno.cwd()` | The current working directory. `src` and `dest` folders are relative to this.
-`src`        | `.`      | The source directory where lume read your files
-`dest`       | `_site`  | The destination to output the site
-`location`   | `""`     | The base location where the site will be published. Useful to generate absolute urls or if your site is published in a subfolder like `https://oscarotero.github.io/lume/`
-`dev`        | `false`  | Build the site in development mode or not. You can also override this value with the `--dev` flag from CLI
-`prettyUrls` | `true`   | To generate pretty urls, for example `/about-us/` instead `/about-us.html`. Set `false` to disable it.
+You can pass an object with configuration data to your site. This is an example with the default values:
 
 ```js
 import lume from "https://deno.land/x/lume/mod.js";
 
 const site = lume({
-  src: "./src",
-  dest: "./dest",
-  location: new URL("https://example.com")
+  // The "src" and "dest" folders are relative to this path
+  cwd: Deno.cwd(),
+
+  // The source directory of your site
+  src: ".",
+
+  // The destination output of the site
+  dest: "_site",
+
+  // The base location where the site will be published.
+  // Useful to generate absolute urls or if your site is published in a subfolder
+  // for example: https://username.github.io/project-name/
+  location: new URL("http://localhost"),
+
+  // Set true to build the site in development mode.
+  // You can also override this value with the `--dev` flag from CLI
+  dev: false
+
+  // To generate pretty urls, for example `/about-us/` instead `/about-us.html`.
+  // Set `false` to disable it.
+  prettyurls: false,
+
+  // Local server configuration
+  server: {
+    port: 3000,
+
+    // The HTML page to display for 404 errors.
+    // You can use, for example "/index.html" if you are building a webapp with dynamic urls
+    page404: "/404.html",
+  }
 });
 
 export default site;

@@ -20,12 +20,12 @@ But it's easier if you install the script as an executable, by running:
 deno install --unstable -A https://deno.land/x/lume/cli.js
 ```
 
-Now you have the `lume` command. If you want to change the command name, just use the `-n / --name` argument. More info about [how to install scripts in Deno](https://deno.land/manual/tools/script_installer).
+Now you have the `lume` command. In the Deno manual you can see more info about [how to install scripts in Deno](https://deno.land/manual/tools/script_installer).
 
 ## Update
 
-Updating **lume** is like install it, but you need to add `-f` (to override the previous installation) and `-r` to remove cache and reload all dependencies:
+To update **lume** to the latest version you can execute:
 
 ```sh
-deno install -f -r --unstable -A https://deno.land/x/lume/cli.js
+lume --upgrade
 ```
