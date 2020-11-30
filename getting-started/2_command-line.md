@@ -17,6 +17,9 @@ lume --init
 # Build the site in the current directory
 lume
 
+# Build the site overriding some config values
+lume --src=from --dest=build --location=https://my-site.com/blog/
+
 # Build the site located in a different directory
 lume ./my-site
 
@@ -29,6 +32,9 @@ lume --serve --port=8000
 
 # Run in development mode
 lume --dev
+
+# Pass additional flags
+lume -- flag1 flag2
 
 # Run a custom script
 lume --run gzip

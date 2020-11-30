@@ -28,18 +28,21 @@ const site = lume({
   cwd: Deno.cwd(),
 
   // The source directory of your site
+  // You can override the value from CLI with `--src=new-value`
   src: ".",
 
   // The destination output of the site
+  // You can override the value from CLI with `--dest=new-value`
   dest: "_site",
 
   // The base location where the site will be published.
   // Useful to generate absolute urls or if your site is published in a subfolder
   // for example: https://username.github.io/project-name/
+  // You can override the value from CLI with `--location=new-value`
   location: new URL("http://localhost"),
 
   // Set true to build the site in development mode.
-  // You can also override this value with the `--dev` flag from CLI
+  // You can override the value from CLI with `--dev`
   dev: false
 
   // To generate pretty urls, for example `/about-us/` instead `/about-us.html`.
@@ -48,6 +51,7 @@ const site = lume({
 
   // Local server configuration
   server: {
+    // You can override the value from CLI with `--port`
     port: 3000,
 
     // The HTML page to display for 404 errors.
@@ -141,12 +145,24 @@ site.script("uncompress", "gzip -d images.gz", "gzip -d videos.gz");
 
 //Create a new script that run the previous scripts secuencially
 site.script("run-all", "compress", "uncompress", "deploy");
+
+//Add a javascript function
+site.script("save-now", () => {
+  const file = site.dest("date-published.txt");
+  Deno.writeTextFileSync(file, Date.now());
+})
 ```
 
 To run a script from cli, use the `--run` command:
 
 ```sh
 lume --run deploy
+```
+
+To pass additional arguments that you can retrieve with `site.flags`, use `--`:
+
+```sh
+lume --run deploy -- argument1 argument2
 ```
 
 ## Events
