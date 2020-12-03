@@ -6,7 +6,7 @@ Lume has events that you can use to run some code at certain times during the co
 
 ## beforeBuild
 
-This event is triggered just before start building the site. It's **executed only once,** even if you build you are watching the files with `lume --serve`.
+This event is triggered just before start building the site. It's **executed only once,** even if you build while you are watching the files with `lume --serve`.
 
 ```js
 site.addEventListener("beforeBuild", () => {
@@ -16,11 +16,11 @@ site.addEventListener("beforeBuild", () => {
 
 ## afterBuild
 
-This event is triggered after build the site. It's **executed only once,** even if you build you are watching the files with `lume --serve`.
+This event is triggered after build the site. It's **executed only once,** even if you build while you are watching the files with `lume --serve`.
 
 ```js
 site.addEventListener("afterBuild", () => {
-  console.log("The build is about to start");
+  console.log("The build has finished");
 })
 ```
 
