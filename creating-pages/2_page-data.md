@@ -23,9 +23,10 @@ There are some special variables that **lume** can understand:
 
 - `permalink`: To change the output path of the page
 - `date`: By default it's the file creation date but you can override with this variable (or prepending it to the filename). This value is used to sort the pages in a list.
-- `layout`: To define the layout that is used to render the page
+- `layout`: To define the layout that is used to render the page. See [Layouts](/creating-pages/layouts/)
 - `draft`: To ignore pages in production environment, but the page is visible during development.
-- `tags`: Tags are used to group pages.
+- `tags`: Tags are used to group pages. See [Tags](/creating-pages/tags/)
+- `templateEngine`: To override the template engine used to render the page. See [Template engines](advanced/template-engines/)
 
 ```yaml
 ---

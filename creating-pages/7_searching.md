@@ -31,6 +31,26 @@ The second argument is the sort. The available options are:
 </ul>
 ```
 
+## Searching next and previous page
+
+If the current page belongs to a list of pages (for example, a list of pages under the same tag), you can get the previous and next page in this list. To do that we have the functions `search.previousPage()` and `search.nextPage()`. The syntax is the same as `search.pages()` but the first argument is the url of the current page. Let's see an example:
+
+```html
+<h2>More articles tagged as "html"</h2>
+
+{% set post = search.previousPage(url, "html") %}
+
+{% if post %}
+  <a href="{{ post.data.url | url }}" rel="prev">← {{ post.data.title }}</a>
+{% else %}
+
+{% set post = search.nextPage(url, "html") %}
+
+{% if post %}
+  <a href="{{ post.data.url | url }}" rel="next">{{ post.data.title }} →</a>
+{% endif %}
+```
+
 ## Searching folders
 
 The function `folder` returns an object representing a folder. This is useful to get the data associated to that folder (stored in `_data`). For example:
