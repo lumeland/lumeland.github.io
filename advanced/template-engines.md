@@ -1,5 +1,5 @@
 ---
-title: Template engines
+title: Configure template engines
 ---
 
 By default, the template engine used to render a file is decided according to the file extension. For example, a `.md` file uses Markdown, `.njk` file uses Nunjucks and so on.

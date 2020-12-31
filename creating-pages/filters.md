@@ -14,7 +14,7 @@ Output:
 <h1>WELCOME</h1>
 ```
 
-Lume allows to create your own filters to be used by all template engines. New plugins must be registered in the `_config.js` file:
+Lume allows to create your own filters to be used by all template engines. New filters must be registered in the `_config.js` file:
 
 ```js
 // Filter to prepend a 👍 to any text

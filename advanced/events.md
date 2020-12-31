@@ -29,8 +29,9 @@ site.addEventListener("afterBuild", () => {
 This event is triggered every time a change is detected on build the site with `lume --serve`.
 
 ```js
-site.addEventListener("beforeUpdate", () => {
+site.addEventListener("beforeUpdate", (event) => {
   console.log("New changes detected");
+  console.log(event.files); //The files that have changed
 })
 ```
 
@@ -39,8 +40,9 @@ site.addEventListener("beforeUpdate", () => {
 This event is triggered after re-build the site after detecting changes with `lume --serve`.
 
 ```js
-site.addEventListener("afterUpdate", () => {
+site.addEventListener("afterUpdate", (event) => {
   console.log("Site updated");
+  console.log(event.files); //The files that have changed
 })
 ```
 
