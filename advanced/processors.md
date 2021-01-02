@@ -30,6 +30,7 @@ function process(page) {
   page.dest;     // To get/set the info about the destination of the page
   page.data;     // To get the data of this page (ex: frontmatter)
   page.fullData; // To get the full data of this page (frontmatter merged with _data)
+  page.tags;     // To get the tags assigned to the page
 }
 ```
 

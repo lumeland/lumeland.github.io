@@ -125,3 +125,11 @@ Now, use it in your Nunjucks templates:
 ```html
 <h1>{{ title | uppercase }}</h1>
 ```
+
+If your filter is asynchronous, set `true` to the third argument:
+
+```js
+site.filter("async_filter", async (value) => value, true);
+```
+
+Note that not all template engines support async filters.
