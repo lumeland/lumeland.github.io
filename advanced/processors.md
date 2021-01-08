@@ -59,9 +59,9 @@ const site = lume();
 //Load javascript files as plain text:
 site.loadAssets([".js"], textLoader);
 
-//Transform the javascript files
-site.transform([".js"], function (page) {
-  page.content = bundle(page.content);
+//Process the javascript files
+site.process([".js"], function (page) {
+  page.content = myBundler(page.content);
 
   page.dest.path += ".min"; //append .min to the filename, so it will saved as example.min.js
 })
