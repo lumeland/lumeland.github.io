@@ -2,7 +2,11 @@
 title: Configuration
 ---
 
-**Lume** uses the `_config.js` file that gives you a lot of flexibility to customize how to build your site. This file must be placed in the site's root directory, and you can create it by your own or with the following command:
+**Lume** processes files based on the file extension. Which file extensions are processed how is determined by tying extensions to **template engines** or **processors**. By default, the **Markdown** (`*.md`) and **Nunjucks** (`*.njk` or `*.html`) template engines are enabled, so by default all `*.md`, `*.njk` and `*.html` files with Markdown code and Nunjucks templates will be transformed and output as `*.html` files.
+
+You can customize this by adding a `_config.js` file, which adds to or overrides the default settings; for example, to use a different template engine, or process different file types with other extensions. Although you can code this in the config file, for convenience **Lume** includes **plugins** for common transformations, for example, Markdown and Nunjucks.
+
+The config file must be placed in the site's root directory, and you can create it yourself or with the following command:
 
 ```sh
 lume --init
@@ -33,6 +37,7 @@ const site = lume({
 
   // The destination output of the site
   // You can override the value from CLI with `--dest=new-value`
+  // This folder will be cleared before building
   dest: "_site",
 
   // The base location where the site will be published.
@@ -65,7 +70,7 @@ export default site;
 
 ## Installing plugins
 
-Plugins add extra functionality or support for new formats. There are some basic plugins installed by default (like support for `markdown`, `yaml` or `json` formats), but there are other plugins that you can enable. For example, to add the `svg` plugin (that optimize svg files), you have to import and load in the config file:
+As stated above, plugins add extra functionality or support for new formats. There are some basic plugins installed by default (like support for `markdown`, `yaml` or `json` formats), but there are other plugins that you can enable. For example, to add the `svg` plugin (that optimizes svg files), you have to import the plugin and enable it with `use()` in the config file:
 
 ```js
 import lume from "https://deno.land/x/lume/mod.js";
@@ -91,7 +96,7 @@ site.copy("img");
 site.copy("favicon.ico");
 ```
 
-The path is relative to the root's of the src directory and the files and folders are copies as is, maintaining the same folder structure. If you want to change the output directory, use the second argument:
+The path is relative to the root of the src directory and the files and folders are copied as is, maintaining the same folder structure. If you want to change the output directory, use the second argument:
 
 ```js
 // Copy the "img" folder to _site/images
@@ -113,7 +118,7 @@ Note: `node_modules` folder is ignored by default too.
 
 ## Template filters
 
-Template filters are functions that you can use in your layouts to modify content. Some template engines like Nunjucks [have several builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters), but you can add your owns:
+Template filters are functions that you can use in your layouts to modify content. Some template engines like Nunjucks [have several builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters), but you can add your own:
 
 ```js
 // Filter to convert a string to uppercase
