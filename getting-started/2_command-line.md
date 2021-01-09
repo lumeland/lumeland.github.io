@@ -6,10 +6,10 @@ These examples assume that you have installed lume as the `lume` executable:
 
 ```sh
 # Show the version
-lume --version
+lume --version (or -v)
 
 # Show help information
-lume --help
+lume --help (or -h)
 
 # Create a _config.js file
 lume --init
