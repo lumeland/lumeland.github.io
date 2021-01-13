@@ -19,3 +19,5 @@ When bundling `.ts` files to run in the browser, use a triple slash reference to
 
 document.getElementById("foo");
 ```
+
+This will help Deno and your code editor to Bundle into JS appropriately. 
