@@ -1,5 +1,6 @@
 ---
 title: PostCSS
+description: Using the PostCSS plugin to transform CSS
 ---
 
 The `PostCSS` load and transform your css files using [PostCSS](https://postcss.org/) processor. This plugin **is disabled by default** so to enable it you have to import and use it in the `_config.js` file:

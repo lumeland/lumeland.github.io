@@ -1,5 +1,6 @@
 ---
 title: Layouts
+description: Using layouts in Lume
 ---
 
 Layouts are templates that wrap around your content. They allow you to have the source code for your template in one place so you don’t have to repeat things like the navigation and footer on every page.

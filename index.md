@@ -1,6 +1,7 @@
 ---
 title: 🔥 lume - A static site generator for Deno
 layout: layout.njk
+description: Lume - A static site generator for Deno
 ---
 
 **lume** is the galician word for *fire*, but also a (yet another) static site generator for [Deno](https://deno.land/).

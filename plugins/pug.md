@@ -1,5 +1,6 @@
 ---
 title: Pug
+description: Using Pug to create pages and layouts
 ---
 
 [Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This format is **disabled by default**, so you have to enable it in the `_config.js` file:

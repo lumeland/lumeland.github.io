@@ -1,5 +1,6 @@
 ---
 title: Search
+description: Using the search plugin to sort pages and folders
 ---
 
 This plugin, **enabled by default**, adds the `search` helper to your templates.

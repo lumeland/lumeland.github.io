@@ -1,5 +1,6 @@
 ---
 title: Tags
+description: Grouping pages with tags
 ---
 
 You can assign one or multiple tags to pages using the `tags` variable. Tags allows to group content in interesting ways.

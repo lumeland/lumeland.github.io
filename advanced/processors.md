@@ -1,5 +1,6 @@
 ---
 title: Adding custom processors
+description: A guide on extending Lume with custom processors
 ---
 
 A processor is a function to transform the content of pages and assets.

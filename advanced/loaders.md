@@ -1,5 +1,6 @@
 ---
 title: Adding custom loaders
+description: Small guide on adding custom loaders to Lume
 ---
 
 Loaders are functions that read and return the content of files. There are different loaders for different formats, like `json`, `yaml`, javascript modules or plain text. Creating a custom loader is really easy, you only have to create a function that reads the content of a file and return an object with that content. 

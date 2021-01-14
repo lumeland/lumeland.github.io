@@ -1,5 +1,6 @@
 ---
 title: Extra data
+description: Adding special data in the config
 ---
 
 You can assign extra data to your site available everywhere. This allows to have functions that you can execute everywhere, for example for searching or pagination results.

@@ -1,5 +1,6 @@
 ---
 title: Yaml
+description: Using Yaml for data and pages
 ---
 
 [YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data. It's **enabled by default** and is useful for pages with multiple pieces of text, like landing pages, guides, directories, etc.

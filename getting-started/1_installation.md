@@ -1,5 +1,6 @@
 ---
 title: Installation
+description: Installing Lume
 ---
 
 **lume** requires Deno installed on your computer. Read [Deno installation](https://deno.land/#installation) instructions if you don't have it yet.

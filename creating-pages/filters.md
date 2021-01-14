@@ -1,5 +1,6 @@
 ---
 title: Filters
+description: Adding filters in the config file
 ---
 
 Filters are functions that can be applied to variables to transform content. Nunjucks template engine [has some builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters), for example:

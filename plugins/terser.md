@@ -1,5 +1,6 @@
 ---
 title: Terser
+description: Using the Terser plugin to minify JS files
 ---
 
 The Terser plugin minifies `.js` files using the [Terser minifier](https://terser.org/). It **is disabled by default** so to enable it you have to import and use it in the `_config.js` file:

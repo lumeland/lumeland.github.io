@@ -1,5 +1,6 @@
 ---
 title: Shared data
+description: Creating shared data that can be used between different pages
 ---
 
 In addition to the variables defined in the front matter of the pages and layouts, you can store other data accessible by some or all pages and layouts. Shared data must be saved in the `_data` folder or `_data.*` files with extensions like `.json`, `.yaml`, `.js` or `.ts`.
