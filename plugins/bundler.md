@@ -1,5 +1,6 @@
 ---
 title: Bundler
+description: Enabling the bundler plugin
 ---
 
 The plugin Bundler **is disabled by default** so to enable it you have to import and use it in the `_config.js` file:

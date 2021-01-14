@@ -1,5 +1,6 @@
 ---
 title: Search and collecting
+description: Using the search helper
 ---
 
 In the layouts, you have the `search` helper that allows to search other pages and directories. It's useful to build menus or other navigation stuff.

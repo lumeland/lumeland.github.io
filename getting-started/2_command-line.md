@@ -1,5 +1,6 @@
 ---
 title: Command line usage
+description: Using Lume on the command line
 ---
 
 These examples assume that you have installed lume as the `lume` executable:

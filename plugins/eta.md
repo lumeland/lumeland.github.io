@@ -1,5 +1,6 @@
 ---
 title: Eta
+plugins: Enabling the Eta template engine
 ---
 
 [Eta](https://eta.js.org/) is a javascript template engine with a syntax very similar to EJS but with [some differences](https://eta.js.org/docs/about/eta-vs-ejs). This format is **disabled by default**, so you have to enable it in the `_config.js` file:

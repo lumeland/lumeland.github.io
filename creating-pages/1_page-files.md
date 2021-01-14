@@ -1,5 +1,6 @@
 ---
 title: Page files
+description: How Lume will output files based on the sites file structure
 ---
 
 Pages are the files that are loaded, processed and saved in your site. You can create pages using different formats but the simplest way is by adding a markdown file in the root directory with a suitable filename and `.md` as extension. Lume will load these files and generate html pages with them:

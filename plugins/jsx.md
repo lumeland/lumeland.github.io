@@ -1,5 +1,6 @@
 ---
 title: JSX
+description: Using JSX for templates
 ---
 
 [JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for typescript) is a template language to create and render HTML code, very popular in some frameworks like React. This format **is disabled by default** so you have to enable it by using the jsx plugin in the `_config.js` file:

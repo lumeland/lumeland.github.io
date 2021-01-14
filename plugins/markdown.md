@@ -1,5 +1,6 @@
 ---
 title: Markdown
+description: Using the markdown plugin
 ---
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language to write content that is converted to html. This format is **enabled by default** and is useful for pages with long text like posts or articles.

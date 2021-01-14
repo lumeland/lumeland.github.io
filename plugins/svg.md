@@ -1,5 +1,6 @@
 ---
 title: SVG
+description: Using the SVG plugin to optimize SVG files
 ---
 
 The plugin SVG **is disabled by default** so to enable it you have to import and use it in the `_config.js` file:

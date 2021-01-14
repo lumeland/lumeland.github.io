@@ -1,5 +1,6 @@
 ---
 title: Inline
+description: Using the inline plugin to inline sources
 ---
 
 This plugin allows to inline some sources like css, images or javascript in the HTML automatically. It is **disabled by default**, so you have to enable it in the `_config.js` file:
