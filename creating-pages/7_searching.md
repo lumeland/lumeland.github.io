@@ -23,6 +23,7 @@ The second argument is the sort. The available options are:
 
 - `date`: The default value. Sort the pages by date
 - `file`: Sort the pages by filename
+- Any other value is used to sort by a key with the same name
 
 ```html
 <ul>

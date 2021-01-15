@@ -29,3 +29,18 @@ intro: This is my first post using lume, I hope you like it!
 ## Creating pages
 
 Creating pages is the same as creating layouts, just place the `.njk` or `.html` file outside the `_includes` folder.
+
+## njk filter
+
+The Nunjucks plugin also register the `njk` filter, to render any string value as a nunjucks template and output a html. The filter accepts an object with data.
+
+```html
+---
+data:
+  username: Oscar
+text: "Hello {{ username }}"
+---
+
+<!-- Render a string -->
+<div>{{ text | njk(data) | safe }}<div>
+```
