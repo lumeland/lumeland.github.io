@@ -12,6 +12,10 @@ It's inspired in other static site generators such [Jekyll](https://jekyllrb.com
 - You can hook **processors** to manipulate `html` and assets, like `css` or `js`.
 - It's Deno: forget about manage thousand of packages in `node_modules` or complex bundlers. **Lume** only install that you need. Clean, fast and secure.
 
+### Do you want to create a blog?
+
+Try the [base-blog](https://github.com/lumeland/base-blog) template repository ready to start a blog in seconds.
+
 ---
 
 - Created by: [Óscar Otero](https://github.com/oscarotero/)
