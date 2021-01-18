@@ -66,3 +66,21 @@ The function `folder` returns an object representing a folder. This is useful to
   {% endfor %}
 </ul>
 ```
+
+## Searching tags
+
+The function `tags` returns the list of all available tags. You can use the first argument to set a list of tags that you want to avoid. For example, to list all tags excluding `post` and `menu`:
+
+```html
+<strong>List of tags:</strong>
+
+<ul>
+  {% for tag in search.tags("post menu") %}
+  <li>
+    <a href="/tags/{{ tag }}">
+      {{ tag }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+```
