@@ -30,7 +30,7 @@ The available options are:
 - `sourceMap`: Set `true` to generate a source map file that will be saved in the same place but with the `.map` extension appended. For example, the file `my/styles.css` will generate the sourcemap file `my/styles.css.map`.
 
 ```js
-import css from "https://deno.land/x/lume/plugins/css.js";
+import postcss from "https://deno.land/x/lume/plugins/postcss.js";
 import autoprefixer from "https://esm.sh/autoprefixer";
 import csso from "https://esm.sh/postcss-csso";
 
