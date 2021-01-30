@@ -28,5 +28,5 @@ Now you have the `lume` command. In the Deno manual you can see more info about 
 To update **lume** to the latest version you can execute:
 
 ```sh
-lume --upgrade
+lume upgrade
 ```

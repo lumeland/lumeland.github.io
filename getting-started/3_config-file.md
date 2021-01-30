@@ -10,7 +10,7 @@ You can customize this by adding a `_config.js` file, which adds to or overrides
 The config file must be placed in the site's root directory, and you can create it yourself or with the following command:
 
 ```sh
-lume --init
+lume init
 ```
 
 The `_config.js` file is a javascript module that exports the lume instance. The minimal required code is:

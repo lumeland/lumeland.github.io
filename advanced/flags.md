@@ -28,7 +28,7 @@ const server = site.flags[0] || "server.com";
 site.script("deploy", `rsync -r _site/** user@${server}:/var/www/`);
 ```
 
-Now you can run `lume --run deploy` to deploy the site to the default server or `lume --run deploy -- other-server.com` to change the server name.
+Now you can run `lume run deploy` to deploy the site to the default server or `lume run deploy -- other-server.com` to change the server name.
 
 Because flags are stored in `site`, you can use it everywhere, for example in events:
 

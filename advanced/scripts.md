@@ -9,7 +9,7 @@ Lume includes a simple script runner that you can use to execute commands or cus
 site.script("deploy", "rsync -r _site/** user@server.com:/var/www/");
 ```
 
-Now, you can run this script from CLI with `lume --run deploy`.
+Now, you can run this script from CLI with `lume run deploy`.
 
 ## Running multiple commands
 
@@ -26,7 +26,7 @@ site.script(
 site.script("save-site", "gzip -r _site site.gz && scp site.gz user@host.com:/home/user/archive");
 ```
 
-Now, by running `lume --run save-site`, these two commands will be executed.
+Now, by running `lume run save-site`, these two commands will be executed.
 
 If you don't need to execute the commands in serie but in **parallel**, use an array of commands or the character `&`:
 
