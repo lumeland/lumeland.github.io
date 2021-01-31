@@ -12,6 +12,20 @@
   --font-normal: 1.4rem;
   --font-big: 2rem;
   --font-xbig: 3rem;
+
+  --color-background: unset;
+  --color-highlight: #eee;
+  --color-font: #23241f;
+  --color-highlight-font: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #201f25;
+    --color-font: #e5e7eb;
+    --color-highlight: #190a00;
+    --color-highlight-font: #bdbdbd;
+  }
 }
 
 body {
@@ -26,7 +40,8 @@ body {
   grid-column-gap: 5vw;
   max-width: 1400px;
   align-items: start;
-  color: var(--color-black);
+  color: var(--color-font);
+  background-color: var(--color-background);
 }
 
 @media (max-width: 900px) {
@@ -59,9 +74,9 @@ body {
   text-decoration: none;
 }
 .menu a[aria-current="page"] {
-  color: var(--color-black);
   text-decoration: none;
-  background-color: var(--color-gray-light);
+  color: var(--color-highlight-font);
+  background-color: var(--color-highlight);
 }
 .menu ul {
   list-style: none;
@@ -95,11 +110,11 @@ a {
 
 code {
   font-family: 'PT Mono', monospace;
-  background-color: var(--color-gray-light);
+  background-color: var(--color-highlight);
+  color: var(--color-highlight-font);
   padding: 0 2px;
   border-radius: 2px;
   font-size: 0.75em;
-  color: var(--color-gray);
 }
 pre {
   overflow-x: auto;
@@ -144,7 +159,8 @@ h3 + p {
 }
 
 table {
-  background-color: var(--color-gray-light);
+  background-color: var(--color-highlight);
+  color: var(--color-highlight-font);
   border-collapse: collapse;
   width: 100%;
 }
