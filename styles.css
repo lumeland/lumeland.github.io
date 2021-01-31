@@ -22,7 +22,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #201f25;
-    --color-font: #e5e7eb;
+    --color-font: #e5e5e5;
     --color-highlight: #190a00;
     --color-highlight-font: #bdbdbd;
   }
@@ -64,13 +64,18 @@ body {
   max-width: 100%;
   width: 200px;
 }
+@media (prefers-color-scheme: dark) {
+  .menu img {
+    filter: invert(.9);
+  }
+}
 .menu a {
   display: block;
   padding: .3em .75em;
   border-radius: 5px;
 }
 .menu a:hover {
-  color: var(--color-black);
+  color: var(--color-font);
   text-decoration: none;
 }
 .menu a[aria-current="page"] {
