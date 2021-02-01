@@ -64,11 +64,6 @@ body {
   max-width: 100%;
   width: 200px;
 }
-@media (prefers-color-scheme: dark) {
-  .menu img {
-    filter: invert(.9);
-  }
-}
 .menu a {
   display: block;
   padding: .3em .75em;
