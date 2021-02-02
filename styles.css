@@ -22,7 +22,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #201f25;
-    --color-font: #e5e7eb;
+    --color-font: #e5e5e5;
     --color-highlight: #190a00;
     --color-highlight-font: #bdbdbd;
   }
@@ -70,7 +70,7 @@ body {
   border-radius: 5px;
 }
 .menu a:hover {
-  color: var(--color-black);
+  color: var(--color-font);
   text-decoration: none;
 }
 .menu a[aria-current="page"] {
