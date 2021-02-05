@@ -23,8 +23,11 @@
   :root {
     --color-background: #201f25;
     --color-font: #e5e5e5;
-    --color-highlight: #190a00;
-    --color-highlight-font: #bdbdbd;
+    --color-highlight: #000;
+    --color-highlight-font: #fff;
+  }
+  .hljs {
+    background: var(--color-highlight);
   }
 }
 

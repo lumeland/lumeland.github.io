@@ -1,9 +1,13 @@
 ---
 menu:
-  - getting-started
-  - creating-pages
-  - plugins
-  - advanced
+  - folder: getting-started
+    order: date
+  - folder: creating-pages
+    order: date
+  - folder: plugins
+    order: url
+  - folder: advanced
+    order: url
 ---
 <!doctype html>
 
@@ -23,15 +27,15 @@ menu:
   <body>
     <nav class="menu">
       <a href="{{ '/' | url }}">
-        <img src="{{ 'lume.png' | url }}" alt="Lume logo">
+        <img src="{{ 'logo.svg' | url }}" alt="Lume logo">
       </a>
 
       <ul>
         {% for section in menu %}
         <li>
-          <strong>{{ search.folder(section).data.section }}</strong>
+          <strong>{{ search.data(section.folder).section }}</strong>
           <ul>
-          {% for page in search.pages(section, "file") %}
+          {% for page in search.pages(section.folder, section.order) %}
             <li>
               {% if page.data.url == url %}
               <a href="{{ page.data.url | url }}" aria-current="page">{{ page.data.title }}</a>

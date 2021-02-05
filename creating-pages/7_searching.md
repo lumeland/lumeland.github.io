@@ -3,11 +3,11 @@ title: Search and collecting
 description: Using the search helper
 ---
 
-In the layouts, you have the `search` helper that allows to search other pages and directories. It's useful to build menus or other navigation stuff.
+In the layouts, you have the `search` helper that allows to search other pages. It's useful to build menus or other navigation stuff.
 
 ## Searching pages
 
-The function `search.pages()` returns an array of pages that you can filter by tags and sort.
+The function `search.pages()` returns an array of pages that you can filter and sort.
 
 To search by tags, just include the tag names as first argument, separated by space. For example, to search all pages containing the tags `post` and `html`, you have to execute `search.pages("post html")`:
 
@@ -19,18 +19,55 @@ To search by tags, just include the tag names as first argument, separated by sp
 </ul>
 ```
 
-The second argument is the sort. The available options are:
-
-- `date`: The default value. Sort the pages by date
-- `file`: Sort the pages by filename
-- Any other value is used to sort by a key with the same name
+The second argument is the value used to sort. By default the pages are sorted by `date`, but you can use any field. For example, if you want sort by title:
 
 ```html
 <ul>
-  {% for post in search.pages("post html", "file") %}
+  {% for post in search.pages("post html", "title") %}
   <li>{{ post.data.title }}</li>
   {% endfor %}
 </ul>
+```
+
+Note: You can use dot notation to sort by any subfield. For example: `header.title`.
+
+### Filtering by a field
+
+You can filter pages not only by tags but also any other field that you want. For example, to search all pages with the value `menu` as `true`, simply include the query `menu=true`:
+
+```html
+{% for option in search.pages("menu=true") %}
+<a href="{{ option.data.url | url }}">
+  {{ option.data.title }}
+</a>
+{% endfor %}
+```
+
+The available operators for the conditions are:
+
+- `=` to search coincidences, for example `menu=true`.
+- `!=` to search non-coincidences, for example `menu!=true`.
+- `^=` to search values starting with another value. For example all categories starting with the letter `A`: `category^=A`.
+- `$=` to search values ending with another value. For example all categories ending with the letter `b`: `category$=b`.
+
+You can use the dot notation and even combine queries with tags. For example, let's say you want to select all pages with the value `taxonomy.category=sport` and with the tag `football`:
+
+```html
+{% for post in search.pages("taxonomy.category=sport football") %}
+<a href="{{ post.data.url | url }}">
+  {{ post.data.title }}
+</a>
+{% endfor %}
+```
+
+In addition to space separated values, you can use an array of values, that sometimes is more practical.
+
+```html
+{% for post in search.pages(["taxonomy.category=sport", "football"]) %}
+<a href="{{ post.data.url | url }}">
+  {{ post.data.title }}
+</a>
+{% endfor %}
 ```
 
 ## Searching next and previous page
@@ -53,29 +90,15 @@ If the current page belongs to a list of pages (for example, a list of pages und
 {% endif %}
 ```
 
-## Searching folders
-
-The function `folder` returns an object representing a folder. This is useful to get the data associated to that folder (stored in `_data`). For example:
-
-```html
-<strong>{{ search.folder("about").data.sectionTitle }}</strong>
-
-<ul>
-  {% for post in search.pages("about") %}
-  <li>{{ post.data.title }}</li>
-  {% endfor %}
-</ul>
-```
-
 ## Searching tags
 
-The function `tags` returns the list of all available tags. You can use the first argument to set a list of tags that you want to avoid. For example, to list all tags excluding `post` and `menu`:
+The function `tags` returns the list of all available tags. You can use the first argument to filter the pages of which you want to get the tags. For example, to list all tags used by pages with the category `sport`:
 
 ```html
-<strong>List of tags:</strong>
+<strong>List of tags in sport:</strong>
 
 <ul>
-  {% for tag in search.tags("post menu") %}
+  {% for tag in search.tags("category=sport") %}
   <li>
     <a href="/tags/{{ tag }}">
       {{ tag }}
@@ -83,4 +106,12 @@ The function `tags` returns the list of all available tags. You can use the firs
   </li>
   {% endfor %}
 </ul>
+```
+
+## Searching data
+
+The function `data` returns the data associated to any file or folder in the source directory. This is useful to get the data stored in any `_data` of any folder. For example:
+
+```html
+{{ set companyData = search.data("about/the-company") }}
 ```
