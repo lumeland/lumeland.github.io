@@ -29,7 +29,7 @@ lume ./my-site
 
 # Build the site and boot up a web server
 # that refresh automatically for every change
-lume --serve
+lume --serve # or -s
 
 # Change the web server port to localhost:8000
 lume --serve --port=8000

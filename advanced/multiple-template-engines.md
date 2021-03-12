@@ -1,5 +1,5 @@
 ---
-title: Configure template engines
+title: Multiple template engines
 description: Overriding the behavior of a template engine
 ---
 

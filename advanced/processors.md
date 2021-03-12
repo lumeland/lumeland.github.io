@@ -1,5 +1,5 @@
 ---
-title: Adding custom processors
+title: Custom processors
 description: A guide on extending Lume with custom processors
 ---
 
