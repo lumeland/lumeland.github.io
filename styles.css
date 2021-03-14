@@ -13,7 +13,7 @@
   --font-big: 2rem;
   --font-xbig: 3rem;
 
-  --color-background: unset;
+  --color-background: white;
   --color-highlight: #eee;
   --color-font: #23241f;
   --color-highlight-font: unset;
@@ -25,6 +25,7 @@
     --color-font: #e5e5e5;
     --color-highlight: #000;
     --color-highlight-font: #fff;
+    --color-gray-light: #393548;
   }
   .hljs {
     background: var(--color-highlight);
@@ -34,43 +35,60 @@
 body {
   font-family: 'PT Serif', serif;
   line-height: 1.5;
-  margin: auto;
-  padding: 2vh 5vw 5vh 2vw;
+  margin: 0;
   font-size: var(--font-normal);
   display: grid;
   grid-template-areas: "menu main";
   grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
   grid-column-gap: 5vw;
-  max-width: 1400px;
-  align-items: start;
+  height: 100vh;
+  box-sizing: border-box;
   color: var(--color-font);
   background-color: var(--color-background);
-}
-
-@media (max-width: 900px) {
-  body {
-    grid-template-areas: "menu" "main";
-    grid-template-columns: 100%;
-  }
-  .menu > ul {
-    column-width: 10em;
-  }
 }
 
 .menu {
   grid-area: menu;
   font-size: var(--font-small);
+  padding: 2vh 0 0;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 1px var(--color-gray-light);
 }
-.menu img {
+.menu .menu-logo {
+  flex: 0 0 auto;
+  border-bottom: solid 1px var(--color-gray-light);
+}
+.menu .menu-links {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 2vh 2vw;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand) var(--color-background);
+}
+.menu-links::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.menu-links::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+ 
+.menu-links::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand);
+  border-radius: 5px;
+  border: solid 2px var(--color-background);
+}
+.menu-logo img {
   display: block;
   margin: 0 auto 2rem;
   max-width: 100%;
-  width: 200px;
+  width: 10rem;
 }
 .menu a {
   display: block;
-  padding: .3em .75em;
-  border-radius: 5px;
 }
 .menu a:hover {
   color: var(--color-font);
@@ -86,6 +104,10 @@ body {
   margin: 0 0 1em 0;
   padding: 0;
 }
+.menu li a {
+  padding: .3em .75em;
+  border-radius: 5px;
+}
 .menu li {
   margin: 0;
 }
@@ -93,18 +115,16 @@ body {
   display: block;
   margin: .3em 0;
 }
-.menu > ul {
-  margin-left: 80px;
-}
 .main {
   grid-area: main;
-  margin-top: 3.5em;
+  padding: 5vh 2vw;
+  overflow-y: auto;
 }
 .main > * {
   max-width: 35em
 }
 .main > pre {
-  max-width: none;
+  max-width: 55em
 }
 
 a {
@@ -179,7 +199,7 @@ li {
 }
 hr {
   border: none;
-  border-top: solid 1px var(--color-gray);
+  border-top: solid 1px var(--color-gray-light);
   margin: 2em 0;
 }
 hr ~ * {

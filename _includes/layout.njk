@@ -22,15 +22,16 @@ menu:
     <link rel="stylesheet" href="{{ 'styles.css' | url }}">
     <link href="{{ 'favicon-32x32.png' | url }}" rel="icon" type="image/png" sizes="32x32">
     <meta name="description" content="{{ description }}">
+    <script src="{{ '/js/scripts.js' | url }}" type="module"></script>
   </head>
 
   <body>
     <nav class="menu">
-      <a href="{{ '/' | url }}">
+      <a href="{{ '/' | url }}" class="menu-logo">
         <img src="{{ 'logo.svg' | url }}" alt="Lume logo">
       </a>
 
-      <ul>
+      <ul class="menu-links">
         {% for section in menu %}
         <li>
           <strong>{{ search.data(section.folder).section }}</strong>
