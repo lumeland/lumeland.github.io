@@ -71,11 +71,9 @@ body {
 .menu-links::-webkit-scrollbar {
   width: 10px;
 }
- 
 .menu-links::-webkit-scrollbar-track {
   background: var(--color-background);
 }
- 
 .menu-links::-webkit-scrollbar-thumb {
   background-color: var(--color-brand);
   border-radius: 5px;
