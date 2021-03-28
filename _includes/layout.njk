@@ -39,9 +39,9 @@ menu:
           {% for page in search.pages(section.folder, section.order) %}
             <li>
               {% if page.data.url == url %}
-              <a href="{{ page.data.url | url }}" aria-current="page">{{ page.data.title }}</a>
+              <a href="{{ page.data.url | url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
               {% else %}
-              <a href="{{ page.data.url | url }}">{{ page.data.title }}</a>
+              <a href="{{ page.data.url | url }}" title="{{ page.data.description }}">{{ page.data.title }}</a>
               {% endif %}
             </li>
           {% endfor %}

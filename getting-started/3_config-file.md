@@ -53,7 +53,7 @@ const site = lume({
 
   // To generate pretty urls, for example `/about-us/` instead `/about-us.html`.
   // Set `false` to disable it.
-  prettyurls: false,
+  prettyUrls: false,
 
   // Local server configuration
   server: {
