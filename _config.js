@@ -1,4 +1,4 @@
-import lume from "https://deno.land/x/lume@v0.16.4/mod.js";
+import lume from "https://deno.land/x/lume@v0.16.5/mod.js";
 
 const site = lume();
 

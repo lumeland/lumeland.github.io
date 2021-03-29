@@ -16,3 +16,6 @@ const nav = new Navigator(async (load, event) => {
 });
 
 nav.init();
+
+const btn = document.querySelector('.menu-button');
+btn.addEventListener('click', () => btn.classList.toggle("is-selected"));
