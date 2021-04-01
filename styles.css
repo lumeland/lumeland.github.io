@@ -126,7 +126,7 @@ body {
 }
 .main {
   grid-area: main;
-  padding: 5vh 2vw;
+  padding: 5vh 5vw 5vh 2vw;
   overflow-y: auto;
 }
 .main > * {
@@ -146,7 +146,7 @@ code {
   color: var(--color-highlight-font);
   padding: 0 2px;
   border-radius: 2px;
-  font-size: 0.75em;
+  font-size: 0.85em;
 }
 pre {
   overflow-x: auto;
@@ -220,6 +220,7 @@ hr ~ * {
     grid-template-areas: "menu" "main";
     grid-template-columns: auto;
     grid-template-rows: auto 1fr;
+    height: auto;
   }
   .main {
     padding-left: 5vw;
@@ -228,12 +229,16 @@ hr ~ * {
 
   .menu {
     border: none;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
-  .menu-links {
+  .menu .menu-links {
     display: none;
     column-width: 10rem;
     background: var(--color-highlight);
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   .menu-button.is-selected + .menu-links {
     display: block;

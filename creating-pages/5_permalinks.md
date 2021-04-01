@@ -9,7 +9,7 @@ As said in [Page files](/creating-pages/page-files), the output filename is gene
 posts/my-first-post.md  =>  /posts/my-first-post/index.html
 ```
 
-By default, the pages are saved as `index.html` files, in order to generate pretty urls. This allows to access to the page with the url `/posts/my-fist-post/`. To disable this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file (see [Configuration](/getting-started/config-file/)).
+By default, the pages are saved as "pretty urls", using directories for the path and a `index.html` file. So the final url is `/posts/my-fist-post/`. To disable this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file (see [Configuration](/getting-started/config-file/)).
 
 ```
 prettyUrls = false;
@@ -19,7 +19,7 @@ posts/my-first-post.md  =>  /posts/my-first-post.html
 
 ## Slugify
 
-All output paths are automatically slugified: the spaces are replaced with `-`, problematic characters are convered to ascii equivalents and converted to lower case:
+All output paths are **automatically slugified:** the spaces are replaced with `-`, characters like `ñ` or `á` are replaced by ascii equivalents (`n` and `a`) and converted to lower case:
 
 ```
 posts/My First Post.md  =>  /posts/my-first-post/index.html
@@ -32,11 +32,11 @@ The variable `permalink` defined in the page allows to customize the output file
 ```yml
 ---
 title: My first post
-permalink: /post/welcome
+permalink: /posts/welcome
 ---
 ```
 
-In this example, the `permalink` value will be used to generate the output file instead the source filename:
+In this example, the `permalink` value will be used to generate the output file instead the filename:
 
 ```
 posts/my-first-post.md  =>  /posts/welcome/index.html
@@ -51,7 +51,7 @@ permalink: /Post/Teño fame, mamá
 ---
 ```
 
-The output filename would be `/post/teno-fame-mama`.
+The output filename would be `/post/teno-fame-mama/index.html`.
 
 ## Relative permalinks
 
