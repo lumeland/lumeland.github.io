@@ -28,6 +28,7 @@ There are some special variables that **lume** can understand:
 - `draft`: To ignore pages in production environment, but the page is visible during development.
 - `tags`: Tags are used to group pages. See [Tags](/creating-pages/tags/)
 - `templateEngine`: To override the template engine used to render the page. See [Template engines](advanced/template-engines/)
+- `url` This variable **is generated automatically** by lume (and override the existing variable, if exists). It's used to save the public url of the page, useful to create links.
 
 ```yaml
 ---

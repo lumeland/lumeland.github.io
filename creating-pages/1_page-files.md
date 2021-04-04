@@ -22,6 +22,20 @@ You can organize the pages into subfolders, and this structure will be used also
     └── doc2.md     => /documentation/doc2/index.html
 ```
 
+## Slugify
+
+By default, all output urls will be "slugified" (converted to lower case and replaced or removed the conflictive characters):
+
+```
+.
+├── Index.md            => /index.html
+└── Documentación
+    └── A-Mariña.md     => /documentacion/a-marina/index.html
+    └── Val_do_Dubra.md => /documentacion/val-do-dubra/index.html
+```
+
+To disable it, set `slugifyUrls` to `false` in [config file](/getting-started/config-file/).
+
 ## Page order
 
 Pages are ordered by date, using the file creation date as default. If you want to have full control over this, you can assign the data by prepending it to the filename using the `yyyy-mm-dd` syntax following by an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you need also the time). Note that this part is removed to generate the final name:

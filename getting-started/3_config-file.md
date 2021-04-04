@@ -53,7 +53,11 @@ const site = lume({
 
   // To generate pretty urls, for example `/about-us/` instead `/about-us.html`.
   // Set `false` to disable it.
-  prettyUrls: false,
+  prettyUrls: true,
+
+  // To slugify automatically all urls. For example, the file `/About Us.md` is converted to `/about-us/` instead `/About Us/`
+  // Set `false` to disable it
+  slugifyUrls: true,
 
   // Local server configuration
   server: {

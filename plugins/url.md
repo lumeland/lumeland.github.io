@@ -16,6 +16,15 @@ The filter `url` normalize a single path with the location value that you have c
 <a href="{{ '/about-us' | url(true) }}">
 ```
 
+Use the character `~` to use the source file name instead the final url. The plugin automatically will detect the final url for you. This is useful for dynamic permalinks or to update automatically all links to one page when the permalink of this page changes. For example:
+
+```html
+<a href="{{ '~/about-us.md' | url }}">
+
+<!-- Will be converted to -->
+<a href="/about-us/">
+```
+
 ## htmlUrl
 
 This filter is similar to `url` but it works with html code: it search and normalize all urls found in `href` and `src` attributes:
