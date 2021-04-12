@@ -50,4 +50,4 @@ site.loadPages([".html.toml"], tomlLoader);
 site.loadAssets([".toml"], tomlLoader);
 ```
 
-This is the same strategy used for javascript/typescript modules (`*.html.js` for pages and `*.js` for javascript assets).
+This is the same strategy used for javascript/typescript modules (`*.tmpl.js` for pages and `*.js` for javascript assets).

@@ -6,7 +6,7 @@ description: Pagination in Lume
 The same source file can generate many output pages. This is useful to paginate elements, for example. To do that, create a javascript page exporting a [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) as default.
 
 ```js
-//posts.html.js
+//posts.tmpl.js
 
 export const layout = "layouts/page-list.njk";
 

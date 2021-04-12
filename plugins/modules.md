@@ -24,7 +24,7 @@ export const users = [
 
 ## Creating pages
 
-To create pages using javascript or typescript, create a file with the extension `.html.js` or `.html.ts` (the `.html` subextension is required to differentiate html pages created from a javascript file from the javascript files to execute in the browser). To export the variables, use named exports and to export the main content you can use the default export.
+To create pages using javascript or typescript, create a file with the extension `.tmpl.js` or `.tmpl.ts` (the `.tmpl` subextension is required to differentiate html pages created from a javascript file from the javascript files to execute in the browser). To export the variables, use named exports and to export the main content you can use the default export.
 
 ```js
 export const title = "Welcome to my page";
