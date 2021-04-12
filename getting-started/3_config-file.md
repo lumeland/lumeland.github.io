@@ -3,7 +3,7 @@ title: Configuration
 description: Configuring Lume
 ---
 
-**Lume** processes files based on the file extension. Which file extensions are processed how is determined by tying extensions to **template engines** or **processors**. By default, the **Markdown** (`*.md`) and **Nunjucks** (`*.njk` or `*.html`) template engines are enabled, so by default all `*.md`, `*.njk` and `*.html` files with Markdown code and Nunjucks templates will be transformed and output as `*.html` files.
+**Lume** processes files based on the file extension. Which file extensions are processed how is determined by tying extensions to **template engines** or **processors**. Some extensions are enabled by default, for example **Markdown** (`*.md`) or **Nunjucks** (`*.njk` or `*.html`). This means that all `*.md`, `*.njk` and `*.html` files will be loaded, processed and saved as `*.html` files.
 
 You can customize this by adding a `_config.js` file, which adds to or overrides the default settings; for example, to use a different template engine, or process different file types with other extensions. Although you can code this in the config file, for convenience **Lume** includes **plugins** for common transformations, for example, Markdown and Nunjucks.
 

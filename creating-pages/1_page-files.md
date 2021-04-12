@@ -22,6 +22,20 @@ You can organize the pages into subfolders, and this structure will be used also
     └── doc2.md     => /documentation/doc2/index.html
 ```
 
+## Pretty urls
+
+By default, all html pages will generate *pretty urls* (urls without the `.html` extension). This means that, instead `/about-us.html`, the url is `/about-us/`. This is done by saving all files as `index.html` and create all directories as needed.
+
+If you want to disable it, set `prettyUrls` to `false` in [config file](/getting-started/config-file/), so you will have something like this:
+
+```
+.
+├── index.md        => /index.html
+└── documentation
+    └── doc1.md     => /documentation/doc1.html
+    └── doc2.md     => /documentation/doc2.html
+```
+
 ## Slugify
 
 By default, all output urls will be "slugified" (converted to lower case and replaced or removed the conflictive characters):
@@ -67,4 +81,4 @@ Dot files and folders (such `.git`, `.gitignore`, etc) are also ignored.
 
 ## Changing the output URL
 
-You might want to have a particular folder structure for your source files that is different for the built site. With the `permalink` variable you change the output filename of any page (see [Page data](/creating-pages/page-data))
+You might want to have a particular folder structure for your source files that is different for the built site. With the `url` variable you change the output filename of any page (see [Page data](/creating-pages/page-data))

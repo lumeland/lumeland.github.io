@@ -15,7 +15,7 @@ const data = await response.json();
 export default function *() {
   for (const item of data.items) {
     yield {
-      permalink: `item-${item.id}`,
+      url: `item-${item.id}`,
       title: item.title,
       tags: ["api-item"],
       content: item.text
@@ -32,7 +32,7 @@ export const layout = "layouts/api-pagination.njk";
 export default function *({ search, paginate }) {
   const items = search.pages("api-item");
   
-  for (const page of paginate(items, { permalink: "items/page/%d/", size: 10 })) {
+  for (const page of paginate(items, { url: (n) => `/page/${n}/`, size: 10 })) {
     yield page;
   }
 }
@@ -51,7 +51,7 @@ export const renderOrder = 1;
 export default function *({ search, paginate }) {
   const items = search.pages("api-item");
   
-  for (const page of paginate(items, { permalink: "items/page/%d/", size: 10 })) {
+  for (const page of paginate(items, { url: (n) => `/page/${n}/`, size: 10 })) {
     yield page;
   }
 }

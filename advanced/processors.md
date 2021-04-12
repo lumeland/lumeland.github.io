@@ -26,12 +26,10 @@ As you can see in the previous example, the function receives an object with the
 
 ```js
 function process(page) {
-  page.content;  // To get/set the content of the page
-  page.src;      // To get the info about the source file of this page
-  page.dest;     // To get/set the info about the destination of the page
-  page.data;     // To get the data of this page (ex: frontmatter)
-  page.fullData; // To get the full data of this page (frontmatter merged with _data)
-  page.tags;     // To get the tags assigned to the page
+  page.content;  // The content of the page
+  page.src;      // The info about the source file of this page
+  page.dest;     // The info about the destination of the page
+  page.data;     // All data available for this page (frontmatter merged with _data)
 }
 ```
 

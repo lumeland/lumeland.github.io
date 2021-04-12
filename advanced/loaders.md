@@ -30,7 +30,7 @@ To use this format to generate pages, use the `loadPages` function:
 site.loadPages([".toml"], tomlLoader);
 ```
 
-Now, any `*.toml` file in your site will be loaded and used to render a page. For example, the file `/about-us.toml` will be loaded and saved as `/about-us/index.html` (unless you configure a different name using the `permalink` value.
+Now, any `*.toml` file in your site will be loaded and used to render a page. For example, the file `/about-us.toml` will be loaded and saved as `/about-us/index.html` (unless you configure a different name using the `url` value.
 
 Instead html pages, you may want to use this loader to load toml files and save them with the same extension (instead html). To do that, you must register it with `loadAssets`:
 
@@ -43,11 +43,11 @@ Now, the `*.toml` files are loaded and saved as `toml`. The function `loadAssets
 **Note:** you can't use the same extension to generate pages and assets, so a way to have support for both is adding a subextension (like `tmpl`) for pages. Example:
 
 ```js
-//Use *.tmpl.toml extension for pages
-site.loadPages([".tmpl.toml"], tomlLoader);
+//Use *.html.toml extension for pages
+site.loadPages([".html.toml"], tomlLoader);
 
 //And any other *.toml files for assets
 site.loadAssets([".toml"], tomlLoader);
 ```
 
-This is the same strategy used for javascript/typescript modules (`*.tmpl.js` for pages and `*.js` for javascript assets).
+This is the same strategy used for javascript/typescript modules (`*.html.js` for pages and `*.js` for javascript assets).
