@@ -45,10 +45,13 @@ You can filter pages not only by tags but also any other field that you want. Fo
 
 The available operators for the conditions are:
 
-- `=` to search coincidences, for example `menu=true`.
-- `!=` to search non-coincidences, for example `menu!=true`.
+- `=` to search coincidences, for example `menu=true`. The strings `true` and `false` are converted to booleans automatically.
+- `!=` to search non-coincidences, for example `menu!=true`. The strings `true` and `false` are converted to booleans automatically.
 - `^=` to search values starting with another value. For example all categories starting with the letter `A`: `category^=A`.
 - `$=` to search values ending with another value. For example all categories ending with the letter `b`: `category$=b`.
+- `*=` to search values containing another value. For example all titles containing the string `security`: `title*=security`.
+- `&=` to search several values in an array that must contain all values. For example: pages containing the tags `javascript` AND `security`: `tags&=javascript,security`.
+- `|=` to search several values in an array values containing at least one value. For example, pages containing the tags `javascript` OR `security`: `tags|=javascript,security`.
 
 You can use the dot notation and even combine queries with tags. For example, let's say you want to select all pages with the value `taxonomy.category=sport` and with the tag `football`:
 

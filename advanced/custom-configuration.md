@@ -40,21 +40,3 @@ return site
   .use(markdown())
   .use(nunjucks())
 ```
-
-This allows to configure some plugins that by default are loaded and preconfigured. Let's say that you want change the markdown configure to disable support for html:
-
-```js
-import Site from "https://deno.land/x/lume/site.js";
-import markdown from "https://deno.land/x/lume/plugins/markdown.js";
-import nunjucks from "https://deno.land/x/lume/plugins/nunjucks.js";
-
-const site = new Site();
-
-return site
-  .use(markdown({
-    options: {
-      html: false
-    }
-  }))
-  .use(nunjucks())
-```
