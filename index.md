@@ -19,5 +19,6 @@ Try the [base-blog](https://github.com/lumeland/base-blog) template repository r
 ---
 
 - Created by: [Óscar Otero](https://github.com/oscarotero/)
-- [GitHub repository](https://github.com/lumeland/lume)
+- [GitHub](https://github.com/lumeland/lume)
+- [Discord](https://discord.gg/YbTmpACHWB)
 - [deno.land/x/lume](https://deno.land/x/lume)
