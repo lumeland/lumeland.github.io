@@ -50,8 +50,7 @@ The available operators for the conditions are:
 - `^=` to search values starting with another value. For example all categories starting with the letter `A`: `category^=A`.
 - `$=` to search values ending with another value. For example all categories ending with the letter `b`: `category$=b`.
 - `*=` to search values containing another value. For example all titles containing the string `security`: `title*=security`.
-- `&=` to search several values in an array that must contain all values. For example: pages containing the tags `javascript` AND `security`: `tags&=javascript,security`.
-- `|=` to search several values in an array values containing at least one value. For example, pages containing the tags `javascript` OR `security`: `tags|=javascript,security`.
+- `<`, `>`, `<=`, `>=` to search values lower or greater than other value. For example, all pages with level greater than 2: `level>2`.
 
 You can use the dot notation and even combine queries with tags. For example, let's say you want to select all pages with the value `taxonomy.category=sport` and with the tag `football`:
 
@@ -62,6 +61,12 @@ You can use the dot notation and even combine queries with tags. For example, le
 </a>
 {% endfor %}
 ```
+
+### Using `|` for OR conditions
+
+You can assign several values for any condition using the pipe character `|`. For example, if you want to search pages having the tag `html` OR `css`, you can do it with `search.pages("html|css")`. You can combine AND and OR using spaces and pipes. For example, to search all pages with the tag `post` and also one of the tags `html` or `css`: `search.pages("post html|css")`.
+
+OR conditions can be used with other fields. Example, to search pages with titles containing the words "html", "css" or "javascript": `search.pages("title*=html|css|javascript")`.
 
 In addition to space separated values, you can use an array of values, that sometimes is more practical.
 
