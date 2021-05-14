@@ -3,11 +3,14 @@ title: Url
 description: For url normalization
 ---
 
-The Url plugin is enabled by default and register two filters to normalize the urls in your pages:
+The Url plugin is enabled by default and register two filters to normalize the
+urls in your pages:
 
 ## url
 
-The filter `url` normalize a single path with the location value that you have configured in `_config.js`. It's useful if your site is in a subdirectory or you want to generate absolute urls.
+The filter `url` normalize a single path with the location value that you have
+configured in `_config.js`. It's useful if your site is in a subdirectory or you
+want to generate absolute urls.
 
 ```html
 <a href="{{ '/about-us' | url }}">
@@ -16,7 +19,10 @@ The filter `url` normalize a single path with the location value that you have c
 <a href="{{ '/about-us' | url(true) }}">
 ```
 
-Use the character `~` to use the source file name instead the final url. The plugin automatically will detect the final url for you. This is useful for dynamic urls and updating automatically all links to one page when the url of this page changes. For example:
+Use the character `~` to use the source file name instead the final url. The
+plugin automatically will detect the final url for you. This is useful for
+dynamic urls and updating automatically all links to one page when the url of
+this page changes. For example:
 
 ```html
 <a href="{{ '~/about-us.md' | url }}">
@@ -27,7 +33,8 @@ Use the character `~` to use the source file name instead the final url. The plu
 
 ## htmlUrl
 
-This filter is similar to `url` but it works with html code: it search and normalize all urls found in `href` and `src` attributes:
+This filter is similar to `url` but it works with html code: it search and
+normalize all urls found in `href` and `src` attributes:
 
 ```yml
 ---

@@ -3,11 +3,15 @@ title: Nunjucks
 description: Using Nunjucks for pages and layouts
 ---
 
-[Nunjucks](https://mozilla.github.io/nunjucks/) is powerful template language created by Mozilla and inspired by **ninja2**. This format is **enabled by default** and you can use it not only for page layouts, but also to create pages.
+[Nunjucks](https://mozilla.github.io/nunjucks/) is powerful template language
+created by Mozilla and inspired by **ninja2**. This format is **enabled by
+default** and you can use it not only for page layouts, but also to create
+pages.
 
 ## Creating layouts
 
-Add a file with `.njk` or `.html` extension in the `_includes` folder. Use the *front matter* to set data to the template.
+Add a file with `.njk` or `.html` extension in the `_includes` folder. Use the
+_front matter_ to set data to the template.
 
 ```html
 ---
@@ -28,11 +32,14 @@ intro: This is my first post using lume, I hope you like it!
 
 ## Creating pages
 
-Creating pages is the same as creating layouts, just place the `.njk` or `.html` file outside the `_includes` folder.
+Creating pages is the same as creating layouts, just place the `.njk` or `.html`
+file outside the `_includes` folder.
 
 ## njk filter
 
-The Nunjucks plugin also register the `njk` filter, to render any string value as a nunjucks template and output a html. The filter accepts an object with data.
+The Nunjucks plugin also register the `njk` filter, to render any string value
+as a nunjucks template and output a html. The filter accepts an object with
+data.
 
 ```html
 ---

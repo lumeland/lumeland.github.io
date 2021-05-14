@@ -3,30 +3,30 @@ title: Installation
 description: Installing Lume
 ---
 
-**lume** requires Deno installed on your computer. Read [Deno installation](https://deno.land/#installation) instructions if you don't have it yet.
+**lume** requires Deno (v1.10.0 or upper) installed on your computer. Read
+[Deno installation](https://deno.land/#installation) instructions if you don't
+have it yet.
 
-## Execute without install
+## Install lume in your computer
 
-You can execute **lume** remotely by executing the following command:
-
-```sh
-deno run --unstable -A https://deno.land/x/lume/cli.js
-```
-
-## Install as executable
-
-But it's easier if you install the script as an executable, by running:
+The easiest way to install lume is by executing the following command:
 
 ```sh
-deno install --unstable -A https://deno.land/x/lume/cli.js
+deno run --unstable -A https://deno.land/x/lume/cli.js install
 ```
 
-Now you have the `lume` command. In the Deno manual you can see more info about [how to install scripts in Deno](https://deno.land/manual/tools/script_installer).
-
-## Update
-
-To update **lume** to the latest version you can execute:
+Now you have the `lume` command.\
+Once installed, you can update **lume** to the latest version by running:
 
 ```sh
 lume upgrade
+```
+
+## Execute it without install
+
+The `ci.js` file works exactly like `cli.js` but without installation, useful
+for CI environments:
+
+```sh
+deno run --unstable -A https://deno.land/x/lume/ci.js
 ```

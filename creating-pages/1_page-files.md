@@ -3,7 +3,10 @@ title: Page files
 description: How Lume will output files based on the sites file structure
 ---
 
-Pages are the files that are loaded, processed and saved in your site. You can create pages using different formats but the simplest way is by adding a markdown file in the root directory with a suitable filename and `.md` as extension. Lume will load these files and generate html pages with them:
+Pages are the files that are loaded, processed and saved in your site. You can
+create pages using different formats but the simplest way is by adding a
+markdown file in the root directory with a suitable filename and `.md` as
+extension. Lume will load these files and generate html pages with them:
 
 ```
 .
@@ -12,7 +15,8 @@ Pages are the files that are loaded, processed and saved in your site. You can c
 └── contact.md   => /contact/index.html
 ```
 
-You can organize the pages into subfolders, and this structure will be used also in the output of the site build:
+You can organize the pages into subfolders, and this structure will be used also
+in the output of the site build:
 
 ```
 .
@@ -24,9 +28,14 @@ You can organize the pages into subfolders, and this structure will be used also
 
 ## Pretty urls
 
-By default, all html pages will generate *pretty urls* (urls without the `.html` extension). This means that, instead `/about-us.html`, the url is `/about-us/`. This is done by saving all files as `index.html` and create all directories as needed.
+By default, all html pages will generate _pretty urls_ (urls without the `.html`
+extension). This means that, instead `/about-us.html`, the url is `/about-us/`.
+This is done by saving all files as `index.html` and create all directories as
+needed.
 
-If you want to disable it, set `prettyUrls` to `false` in [config file](/getting-started/config-file/), so you will have something like this:
+If you want to disable it, set `prettyUrls` to `false` in
+[config file](/getting-started/config-file/), so you will have something like
+this:
 
 ```
 .
@@ -38,7 +47,8 @@ If you want to disable it, set `prettyUrls` to `false` in [config file](/getting
 
 ## Slugify
 
-By default, all output urls will be "slugified" (converted to lower case and replaced or removed the conflictive characters):
+By default, all output urls will be "slugified" (converted to lower case and
+replaced or removed the conflictive characters):
 
 ```
 .
@@ -48,11 +58,16 @@ By default, all output urls will be "slugified" (converted to lower case and rep
     └── Val_do_Dubra.md => /documentacion/val-do-dubra/index.html
 ```
 
-To disable it, set `slugifyUrls` to `false` in [config file](/getting-started/config-file/).
+To disable it, set `slugifyUrls` to `false` in
+[config file](/getting-started/config-file/).
 
 ## Page order
 
-Pages are ordered by date, using the file creation date as default. If you want to have full control over this, you can assign the data by prepending it to the filename using the `yyyy-mm-dd` syntax following by an underscore `_` (or `yyyy-mm-dd-hh-ii-ss` if you need also the time). Note that this part is removed to generate the final name:
+Pages are ordered by date, using the file creation date as default. If you want
+to have full control over this, you can assign the data by prepending it to the
+filename using the `yyyy-mm-dd` syntax following by an underscore `_` (or
+`yyyy-mm-dd-hh-ii-ss` if you need also the time). Note that this part is removed
+to generate the final name:
 
 ```
 .
@@ -62,7 +77,8 @@ Pages are ordered by date, using the file creation date as default. If you want 
     └── 2020-06-22_my-second-post.md  => /posts/my-second-post/index.html
 ```
 
-If you don't mind the exact date, only want to keep an order, you can use just numbers:
+If you don't mind the exact date, only want to keep an order, you can use just
+numbers:
 
 ```
 .
@@ -75,10 +91,17 @@ If you don't mind the exact date, only want to keep an order, you can use just n
 
 ## Ignored pages
 
-All files or directories starting with `_` are ignored by **lume** to generate pages. This convention allows to place stuff that you don't want to include in your site output. This is the reason why the config file is `_config.js`, the output folder is `_site`, the includes folder is `_includes`, or shared data is named `_data`, all these things starts with an underscore so they are ignored on loading page files.
+All files or directories starting with `_` are ignored by **lume** to generate
+pages. This convention allows to place stuff that you don't want to include in
+your site output. This is the reason why the config file is `_config.js`, the
+output folder is `_site`, the includes folder is `_includes`, or shared data is
+named `_data`, all these things starts with an underscore so they are ignored on
+loading page files.
 
 Dot files and folders (such `.git`, `.gitignore`, etc) are also ignored.
 
 ## Changing the output URL
 
-You might want to have a particular folder structure for your source files that is different for the built site. With the `url` variable you change the output filename of any page (see [Page data](/creating-pages/page-data))
+You might want to have a particular folder structure for your source files that
+is different for the built site. With the `url` variable you change the output
+filename of any page (see [Page data](/creating-pages/page-data))

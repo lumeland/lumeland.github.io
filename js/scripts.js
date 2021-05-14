@@ -1,7 +1,7 @@
 import Navigator from "./page-loader/navigator.js";
 const menu = document.querySelector(".menu-links");
-const btn = document.querySelector('.menu-button');
-btn.addEventListener('click', () => btn.classList.toggle("is-selected"));
+const btn = document.querySelector(".menu-button");
+btn.addEventListener("click", () => btn.classList.toggle("is-selected"));
 
 const nav = new Navigator(async (load, event) => {
   const page = await load();

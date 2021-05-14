@@ -3,53 +3,62 @@ title: Events
 description: A list of all the events which Lume will dispatch in the lifecycle
 ---
 
-Lume has events that you can use to run some code at certain times during the compiling process. You can configure those events in the `_config.js` file with the function `addEventListener`.
+Lume has events that you can use to run some code at certain times during the
+compiling process. You can configure those events in the `_config.js` file with
+the function `addEventListener`.
 
 ## beforeBuild
 
-This event is triggered just before the site build starts. Note that if you are watching the files with `lume --serve`, this is **only executed once** before the initial build. Use **beforeUpdate** for subsequent changes.
+This event is triggered just before the site build starts. Note that if you are
+watching the files with `lume --serve`, this is **only executed once** before
+the initial build. Use **beforeUpdate** for subsequent changes.
 
 ```js
 site.addEventListener("beforeBuild", () => {
   console.log("The build is about to start");
-})
+});
 ```
 
 ## afterBuild
 
-This event is triggered after build the site. Note that if you are watching the files with `lume --serve`, this is **only executed once** after the initial build. Use **afterUpdate** for subsequent changes.
+This event is triggered after build the site. Note that if you are watching the
+files with `lume --serve`, this is **only executed once** after the initial
+build. Use **afterUpdate** for subsequent changes.
 
 ```js
 site.addEventListener("afterBuild", () => {
   console.log("The build is finished");
-})
+});
 ```
 
 ## beforeUpdate
 
-This event is triggered every time a change is detected on build the site with `lume --serve`.
+This event is triggered every time a change is detected on build the site with
+`lume --serve`.
 
 ```js
 site.addEventListener("beforeUpdate", (event) => {
   console.log("New changes detected");
   console.log(event.files); //The files that have changed
-})
+});
 ```
 
 ## afterUpdate
 
-This event is triggered after re-build the site after detecting changes with `lume --serve`.
+This event is triggered after re-build the site after detecting changes with
+`lume --serve`.
 
 ```js
 site.addEventListener("afterUpdate", (event) => {
   console.log("Site updated");
   console.log(event.files); //The files that have changed
-})
+});
 ```
 
 ## Execute scripts with events
 
-In addition to functions, you can also execute [scripts](/advanced/scripts) in events by passing a string with the script name.
+In addition to functions, you can also execute [scripts](/advanced/scripts) in
+events by passing a string with the script name.
 
 ```js
 //Create the script

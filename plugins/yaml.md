@@ -3,15 +3,19 @@ title: Yaml
 description: Using Yaml for data and pages
 ---
 
-[YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data. It's **enabled by default** and is useful for pages with multiple pieces of text, like landing pages, guides, directories, etc.
+[YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data.
+It's **enabled by default** and is useful for pages with multiple pieces of
+text, like landing pages, guides, directories, etc.
 
 ## Creating _data files
 
-This format is useful for shared data, so you can create `_data.yml` or `_data/*.yml` files to save common variables.
+This format is useful for shared data, so you can create `_data.yml` or
+`_data/*.yml` files to save common variables.
 
 ## Creating pages in YAML
 
-This format can be used also to create pages, just add a file with `.yml` or `.yaml` extension to your site. For example:
+This format can be used also to create pages, just add a file with `.yml` or
+`.yaml` extension to your site. For example:
 
 ```yaml
 title: Welcome to my page
@@ -53,4 +57,3 @@ You will need a layout to render this page and generate the html:
   </body>
 </html>
 ```
-

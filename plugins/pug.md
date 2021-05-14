@@ -3,17 +3,20 @@ title: Pug
 description: Using Pug to create pages and layouts
 ---
 
-[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This format is **disabled by default**, so you have to enable it in the `_config.js` file:
+[Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This
+format is **disabled by default**, so you have to enable it in the `_config.js`
+file:
 
 ```js
-import pug from "https://deno.land/x/lume/plugins/pug.js";
+import pug from "lume/plugins/pug.js";
 
 site.use(pug());
 ```
 
 ## Creating layouts
 
-Add a file with `.pug` extension in the `_includes` folder. Use the *front matter* to set data to the template.
+Add a file with `.pug` extension in the `_includes` folder. Use the _front
+matter_ to set data to the template.
 
 ```pug
 ---
@@ -36,4 +39,5 @@ Note that the paths passed to `include` are relative to `_includes` folder.
 
 ## Creating pages
 
-Creating pages is the same as creating layouts, just place the `.pug` file outside the `_includes` folder.
+Creating pages is the same as creating layouts, just place the `.pug` file
+outside the `_includes` folder.

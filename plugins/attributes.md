@@ -3,7 +3,8 @@ title: Attributes
 description: To manage attributes and classNames of HTML elements
 ---
 
-The Attributes plugin is enabled by default and register two filters to normalize the attributes of your HTML:
+The Attributes plugin is enabled by default and register two filters to
+normalize the attributes of your HTML:
 
 ## attr
 

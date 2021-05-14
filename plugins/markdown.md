@@ -3,11 +3,15 @@ title: Markdown
 description: Using the markdown plugin
 ---
 
-[Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language to write content that is converted to html. This format is **enabled by default** and is useful for pages with long text like posts or articles.
+[Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
+to write content that is converted to html. This format is **enabled by
+default** and is useful for pages with long text like posts or articles.
 
 ## Creating pages in markdown
 
-To create a page using *markdown*, just add a file with `.md` or `.markdown` extension to your site. You can also add extra variables by including a *front matter,* a block delimited by two triple-dashed lines with YAML code:
+To create a page using _markdown_, just add a file with `.md` or `.markdown`
+extension to your site. You can also add extra variables by including a _front
+matter,_ a block delimited by two triple-dashed lines with YAML code:
 
 ```yaml
 ---
@@ -36,7 +40,9 @@ The markdown code is stored in the `content` variable:
 
 ## md filter
 
-The markdown plugin also register the `md` filter, to render any string value as markdown and output a html. The filter also accepts an argument to render the markdown in *inline* mode.
+The markdown plugin also register the `md` filter, to render any string value as
+markdown and output a html. The filter also accepts an argument to render the
+markdown in _inline_ mode.
 
 ```html
 <!-- Render to html code -->

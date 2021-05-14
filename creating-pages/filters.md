@@ -3,7 +3,10 @@ title: Filters
 description: Adding filters in the config file
 ---
 
-Filters are functions that can be applied to variables to transform content. Nunjucks template engine [has some builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters), for example:
+Filters are functions that can be applied to variables to transform content.
+Nunjucks template engine
+[has some builtin filters](https://mozilla.github.io/nunjucks/templating.html#builtin-filters),
+for example:
 
 ```html
 <h1>{{ 'Welcome' | upper }}</h1>
@@ -15,7 +18,8 @@ Output:
 <h1>WELCOME</h1>
 ```
 
-Lume allows to create your own filters to be used by all template engines. New filters must be registered in the `_config.js` file:
+Lume allows to create your own filters to be used by all template engines. New
+filters must be registered in the `_config.js` file:
 
 ```js
 // Filter to prepend a 👍 to any text
@@ -38,18 +42,23 @@ Output:
 
 Lume includes the following convenient preinstalled filters:
 
-- **md**: It's installed by the `markdown` plugin and allows to render markdown content to HTML. [More info](plugins/markdown)
-- **njk**: It's installed by the `nunjucks` plugin and allows to render nunjucks content to HTML. [More info](plugins/nunjucks)
-- **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize urls. [More info](plugins/url)
-- **attr / class**: It's installed by the `attributes` plugin and allows to work with HTML attributes. [More info](plugins/attributes)
-
+- **md**: It's installed by the `markdown` plugin and allows to render markdown
+  content to HTML. [More info](plugins/markdown)
+- **njk**: It's installed by the `nunjucks` plugin and allows to render nunjucks
+  content to HTML. [More info](plugins/nunjucks)
+- **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
+  urls. [More info](plugins/url)
+- **attr / class**: It's installed by the `attributes` plugin and allows to work
+  with HTML attributes. [More info](plugins/attributes)
 
 ## Using the filters in javascript modules
 
-If you're using javascript/typescript modules instead a template engine like Nunjucks, filters are passed as the second argument of your default exported function:
+If you're using javascript/typescript modules instead a template engine like
+Nunjucks, filters are passed as the second argument of your default exported
+function:
 
 ```js
-export default function(data, filters) {
-  return `<a href="${filters.url('/about-us')}">About us</a>`
+export default function (data, filters) {
+  return `<a href="${filters.url("/about-us")}">About us</a>`;
 }
 ```

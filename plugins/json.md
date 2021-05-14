@@ -11,7 +11,10 @@ Create `_data.json` or `_data/*.json` files to save common variables.
 
 ## Creating pages in JSON
 
-It's possible also create pages using JSON format. To do that, create a file with the extension `.tmpl.json` (the `.tmpl` subextension is required to differentiate these pages from other json files that you can include in your site).
+It's possible also create pages using JSON format. To do that, create a file
+with the extension `.tmpl.json` (the `.tmpl` subextension is required to
+differentiate these pages from other json files that you can include in your
+site).
 
 ```json
 {
