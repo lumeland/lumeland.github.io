@@ -60,10 +60,10 @@ way to have support for both is adding a subextension (like `tmpl`) for pages.
 Example:
 
 ```js
-//Use *.html.toml extension for pages
+// Use *.html.toml extension for pages
 site.loadPages([".html.toml"], tomlLoader);
 
-//And any other *.toml files for assets
+// And any other *.toml files for assets
 site.loadAssets([".toml"], tomlLoader);
 ```
 

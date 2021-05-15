@@ -231,7 +231,7 @@ export default class Page {
      * Reset the scroll position
      */
   resetScroll() {
-    //Go to anchor if exists
+    // Go to anchor if exists
     const anchor = this.url.split("#", 2).pop();
 
     if (anchor) {

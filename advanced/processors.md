@@ -64,10 +64,10 @@ import textLoader from "https://deno.land/x/lume/loaders/text.js";
 
 const site = lume();
 
-//Load JavaScript files as plain text:
+// Load JavaScript files as plain text:
 site.loadAssets([".js"], textLoader);
 
-//Process the JavaScript files
+// Process the JavaScript files
 site.process([".js"], function (page) {
   page.content = myBundler(page.content);
 

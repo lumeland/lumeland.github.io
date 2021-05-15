@@ -34,7 +34,7 @@ export class UrlLoader {
      * @return {Promise}
      */
   load() {
-    //It's cached?
+    // It's cached?
     if (this.html) {
       return new Promise((accept) =>
         accept(new Page(this.url, parseHtml(this.html), this.status))

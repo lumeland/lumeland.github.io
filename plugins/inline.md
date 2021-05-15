@@ -34,7 +34,7 @@ It's converted to:
 </style>
 
 <script>
-  //Content of the js file
+  // Content of the js file
 </script>
 
 <img src="data:image/png;base64,...">

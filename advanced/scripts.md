@@ -60,11 +60,11 @@ Scripts can execute other scripts, just use the name of a registered script as a
 command in another script. For example:
 
 ```js
-//Create two scripts
+// Create two scripts
 site.script("compress", "gzip -r _site site.gz");
 site.script("upload", "scp site.gz user@host.com:/home/user/archive");
 
-//Create a third scripts that runs the two previous scripts
+// Create a third scripts that runs the two previous scripts
 site.script("compress-and-upload", "compress", "upload");
 ```
 
@@ -87,9 +87,9 @@ site.script("add-date-published", () => {
 To run a script from JavaScript instead of CLI, use the `site.run()` function:
 
 ```js
-//Create the script
+// Create the script
 site.script("compress", "gzip -r _site site.gz");
 
-//Run it
+// Run it
 site.run("compress");
 ```

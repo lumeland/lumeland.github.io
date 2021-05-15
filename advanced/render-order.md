@@ -61,7 +61,7 @@ example, `1`:
 ```js
 export const layout = "layouts/api-pagination.njk";
 
-//Changed this to render this page after the others
+// Changed this to render this page after the others
 export const renderOrder = 1;
 
 export default function* ({ search, paginate }) {

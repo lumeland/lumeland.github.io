@@ -9,7 +9,7 @@ elements, for example. To do that, create a JavaScript page exporting a
 as default.
 
 ```js
-//posts.tmpl.js
+// posts.tmpl.js
 
 export const layout = "layouts/page-list.njk";
 
@@ -67,15 +67,15 @@ the following values:
 
 ```js
 for (const page of paginate(posts, { url: (n) => `posts/page/${n}/`, size: 10 })) {
-  page.url;        //URL of the page, for example "post/page/1"
-  page.result;     //Array with the results of this page
+  page.url;        // URL of the page, for example "post/page/1"
+  page.result;     // Array with the results of this page
 
-  //Pagination info:
-  page.pagination.page;         //The current page
-  page.pagination.totalPages;   //Total pages
-  page.pagination.totalResults; //Total results
-  page.pagination.previous;     //The URL of the previous page
-  page.pagination.next;         //The URL of the next page
+  // Pagination info:
+  page.pagination.page;         // The current page
+  page.pagination.totalPages;   // Total pages
+  page.pagination.totalResults; // Total results
+  page.pagination.previous;     // The URL of the previous page
+  page.pagination.next;         // The URL of the next page
 
   yield page;
 }

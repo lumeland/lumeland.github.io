@@ -39,7 +39,7 @@ This event is triggered every time a change is detected on build the site with
 ```js
 site.addEventListener("beforeUpdate", (event) => {
   console.log("New changes detected");
-  console.log(event.files); //The files that have changed
+  console.log(event.files); // The files that have changed
 });
 ```
 
@@ -51,7 +51,7 @@ This event is triggered after re-build the site after detecting changes with
 ```js
 site.addEventListener("afterUpdate", (event) => {
   console.log("Site updated");
-  console.log(event.files); //The files that have changed
+  console.log(event.files); // The files that have changed
 });
 ```
 
@@ -61,9 +61,9 @@ In addition to functions, you can also execute [scripts](/advanced/scripts) in
 events by passing a string with the script name.
 
 ```js
-//Create the script
+// Create the script
 site.script("compress", "gzip -r _site site.gz");
 
-//Execute it after build the site
+// Execute it after build the site
 site.addEventListener("afterBuild", "compress").
 ```
