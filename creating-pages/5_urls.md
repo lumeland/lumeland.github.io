@@ -1,5 +1,5 @@
 ---
-title: Urls
+title: URLs
 description: How define the output filename
 ---
 
@@ -132,7 +132,7 @@ Using `../welcome/` as URL will remove also the last directory.
 posts/my-first-post.md  =>  /welcome/index.html
 ```
 
-## Urls as functions
+## URLs as functions
 
 The variable `url` accepts also a function that will be used to generate the
 final value. This function will receive the current page as the first argument.

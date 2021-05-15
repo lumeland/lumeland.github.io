@@ -12,7 +12,7 @@ import bundler from "lume/plugins/bundler.js";
 site.use(bundler());
 ```
 
-This plugin load `.js` and `.ts` files and output a single Javascript file
+This plugin load `.js` and `.ts` files and output a single JavaScript file
 including all dependencies of the input. Internally uses the
 [bundle](https://deno.land/manual/tools/bundler) Deno tool.
 

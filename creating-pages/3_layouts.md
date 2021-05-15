@@ -21,7 +21,7 @@ layout: layouts/main.njk
 ---
 
 # This is the page content
-Here you can write markdown content
+Here you can write Markdown content
 ```
 
 **Lume** has support for many template engines. In this example, the layout file
@@ -49,7 +49,7 @@ has the extension `njk`, used by the
 layouts are relative to `_includes` folder).
 
 The template can use any variable from the page, for example `title` to render
-the title, and `content` with the rendered markdown content of the page.
+the title, and `content` with the rendered Markdown content of the page.
 
 ## Layout front matter
 

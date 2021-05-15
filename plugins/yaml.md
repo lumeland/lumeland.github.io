@@ -1,6 +1,6 @@
 ---
-title: Yaml
-description: Using Yaml for data and pages
+title: YAML
+description: Using YAML for data and pages
 ---
 
 [YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data.

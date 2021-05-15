@@ -3,7 +3,7 @@ title: URL
 description: For URL normalization
 ---
 
-The Url plugin is enabled by default and register two filters to normalize the
+The URL plugin is enabled by default and register two filters to normalize the
 URLs in your pages:
 
 ## url

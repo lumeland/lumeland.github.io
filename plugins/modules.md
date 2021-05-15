@@ -3,8 +3,8 @@ title: Modules
 description: Using JS/TS files for data, pages, and layouts
 ---
 
-Because Lume is built for Deno, it has native support for Javascript and
-Typescript.
+Because Lume is built for Deno, it has native support for JavaScript and
+TypeScript.
 
 ## Creating _data files
 
@@ -52,7 +52,7 @@ export default (data, filters) =>
   <a href="${filters.url("/")}">Back to home</a>`;
 ```
 
-Javascript/Typescript allows to generate multiple pages from the same file, see
+JavaScript/TypeScript allows to generate multiple pages from the same file, see
 [Pagination](/creating-pages/pagination/) for more info.
 
 ## Creating layouts

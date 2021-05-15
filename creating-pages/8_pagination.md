@@ -67,7 +67,7 @@ the following values:
 
 ```js
 for (const page of paginate(posts, { url: (n) => `posts/page/${n}/`, size: 10 })) {
-  page.url;        //Url of the page, for example "post/page/1"
+  page.url;        //URL of the page, for example "post/page/1"
   page.result;     //Array with the results of this page
 
   //Pagination info:

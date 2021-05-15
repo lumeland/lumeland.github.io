@@ -12,7 +12,7 @@ page having this variable will use it to decide the template engine, instead the
 extension.
 
 The following example is a `.md` file but is configured to use Nunjucks to
-render (instead markdown).
+render (instead Markdown).
 
 ```md
 ---

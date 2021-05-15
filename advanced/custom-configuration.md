@@ -15,7 +15,7 @@ return site;
 ```
 
 The function `lume()` creates a `Site` instance with default settings and some
-plugins configured, like markdown, yaml, nunjucks, etc.
+plugins configured, like Markdown, YAML, Nunjucks, etc.
 
 If you want to setup lume from scratch, without this default configuration, you
 can import only the `Site` class in order to create an empty instance:
@@ -31,7 +31,7 @@ return site;
 ```
 
 The `Site` instance is empty, so you have to add any plugin or configure it
-somehow. For example, if you only need markdown and nunjucks, you could do
+somehow. For example, if you only need Markdown and Nunjucks, you could do
 something like this:
 
 ```js

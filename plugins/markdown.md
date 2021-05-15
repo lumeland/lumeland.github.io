@@ -1,15 +1,15 @@
 ---
 title: Markdown
-description: Using the markdown plugin
+description: Using the Markdown plugin
 ---
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
 to write content that is converted to HTML. This format is **enabled by
 default** and is useful for pages with long text like posts or articles.
 
-## Creating pages in markdown
+## Creating pages in Markdown
 
-To create a page using _markdown_, just add a file with `.md` or `.markdown`
+To create a page using _Markdown_, just add a file with `.md` or `.markdown`
 extension to your site. You can also add extra variables by including a _front
 matter,_ a block delimited by two triple-dashed lines with YAML code:
 
@@ -25,7 +25,7 @@ layout: layouts/main.njk
 I hope you like it!
 ```
 
-The markdown code is stored in the `content` variable:
+The Markdown code is stored in the `content` variable:
 
 ```html
 <html>
@@ -40,9 +40,9 @@ The markdown code is stored in the `content` variable:
 
 ## md filter
 
-The markdown plugin also register the `md` filter, to render any string value as
-markdown and output a HTML. The filter also accepts an argument to render the
-markdown in _inline_ mode.
+The Markdown plugin also register the `md` filter, to render any string value as
+Markdown and output a HTML. The filter also accepts an argument to render the
+Markdown in _inline_ mode.
 
 ```html
 <!-- Render to HTML code -->

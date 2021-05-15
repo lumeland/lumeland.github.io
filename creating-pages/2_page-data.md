@@ -3,7 +3,7 @@ title: Page data
 description: Page data with Lume
 ---
 
-Pages can contain arbitrary data. In markdown files, the data is defined in the
+Pages can contain arbitrary data. In Markdown files, the data is defined in the
 **front matter** block, a block delimited by two triple-dashed lines containing
 [YAML](https://yaml.org/) code. Let's see an example:
 
@@ -14,12 +14,12 @@ url: custom-url.html
 ---
 
 # This is the page content
-Here you can write markdown content
+Here you can write Markdown content
 ```
 
 In this example, the frontmatter contains two variables: `title`, that can be
 used as the page title, and `url`, a variable to customize the output file name
-of the page. Below the front matter you can write the markdown with the page
+of the page. Below the front matter you can write the Markdown with the page
 content.
 
 ## Standard variables

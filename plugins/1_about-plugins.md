@@ -27,4 +27,4 @@ export default site;
 - [JSON](/plugins/json)
 - [Modules](/plugins/modules)
 - [Nunjucks](/plugins/nunjucks)
-- [Yaml](/plugins/yaml)
+- [YAML](/plugins/yaml)
