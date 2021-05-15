@@ -3,7 +3,7 @@ title: Command line usage
 description: Using Lume on the command line
 ---
 
-These examples assume that you have installed lume as the `lume` executable:
+These examples assume that you have installed Lume as the `lume` executable:
 
 ```sh
 # Show the version
@@ -28,7 +28,7 @@ lume --src=from --dest=build --location=https://my-site.com/blog/
 lume ./my-site
 
 # Build the site and boot up a web server
-# that refresh automatically for every change
+# that refreshes automatically for every change
 lume --serve # or -s
 
 # Change the web server port to localhost:8000
