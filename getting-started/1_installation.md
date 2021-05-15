@@ -7,7 +7,7 @@ description: Installing Lume
 the [Deno installation](https://deno.land/#installation) instructions if you
 don't have it yet.
 
-## Install Lume in your computer
+## Install Lume on your computer
 
 The easiest way to install Lume is by executing the following command:
 
@@ -24,8 +24,8 @@ lume upgrade
 
 ## Execute it without install
 
-The `ci.js` file works exactly like the `lume` command but without installation. It's
-useful for CI environments:
+The `ci.js` file works exactly like the `lume` command but without installation.
+It's useful for CI environments:
 
 ```sh
 deno run -A https://deno.land/x/lume/ci.js
