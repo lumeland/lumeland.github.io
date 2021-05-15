@@ -17,7 +17,7 @@ site.use(postcss());
 By default it uses the following plugins:
 
 - [postcss-import](https://deno.land/x/postcss_import), to inline the local
-  `@imports` looking in the `_includes` folder.
+  `@imports` looking in the `_includes` directory.
 - [postcss-nesting](https://github.com/lumeland/postcss-nesting) to give support
   to nested rules.
 - [postcss_autoprefixer](https://deno.land/x/postcss_autoprefixer) to add

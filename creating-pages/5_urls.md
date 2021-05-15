@@ -192,7 +192,7 @@ have any effect.
 ## Combine functions and objects
 
 Combining functions and objects is useful to change the URL generation for a
-specific folder. For example, let's say we want to disable the pretty URLs to
+specific directory. For example, let's say we want to disable the pretty URLs to
 all pages in a directory. We only need to create a function in the `_data.js`
 file returning an object:
 

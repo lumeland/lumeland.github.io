@@ -7,9 +7,9 @@ Layouts are templates that wrap around your content. They allow you to have the
 source code for your template in one place so you don’t have to repeat things
 like the navigation and footer on every page.
 
-Layout files are loaded from a special folder named `_includes`. This folder can
-contain not only layouts but other files, so a good practice is to save them in
-a subfolder like `_includes/layouts`.
+Layout files are loaded from a special directory named `_includes`. This
+directory can contain not only layouts but other files, so a good practice is to
+save them in a subdirectory like `_includes/layouts`.
 
 In the following page, we have defined the variable `layout` with the name of
 the template that we want to use:
@@ -46,7 +46,7 @@ has the extension `njk`, used by the
 ```
 
 **Lume** will search the file `_includes/layouts/main.njk` (note that all
-layouts are relative to `_includes` folder).
+layouts are relative to `_includes` directory).
 
 The template can use any variable from the page, for example `title` to render
 the title, and `content` with the rendered Markdown content of the page.

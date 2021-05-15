@@ -147,9 +147,9 @@ example, to list all tags used by pages with the category `sport`:
 
 ## Searching data
 
-The function `data` returns the data associated to any file or folder in the
+The function `data` returns the data associated to any file or directory in the
 source directory. This is useful to get the data stored in any `_data` of any
-folder. For example:
+directory. For example:
 
 ```html
 {{ set companyData = search.data("about/the-company") }}

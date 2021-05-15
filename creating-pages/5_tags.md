@@ -46,5 +46,6 @@ Unlikely other values, when you define `tags` in a `_data.*` file and in the
 front matter of the pages, the value is not overrided, but aggregated. In other
 words: the page will have all tags defined in `_data.*` **and** in the front
 matter. In the previous example, instead of assigning the "post" tag to all
-pages manually, you could define it in a `_data.*` file in the folder where all
-posts are stored and use the front matter to assign the other tags individually.
+pages manually, you could define it in a `_data.*` file in the directory where
+all posts are stored and use the front matter to assign the other tags
+individually.

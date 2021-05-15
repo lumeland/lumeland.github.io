@@ -36,7 +36,7 @@ can mix different template languages like Nunjucks and JSX)
 ## Creating layouts
 
 To create layouts in JSX, just add `.jsx` or `.tsx` files to the `_includes`
-folder. Note that we need to use the variable `children` to render the page
+directory. Note that we need to use the variable `children` to render the page
 content instead of `content`. The difference is that `content` is a string and
 cannot be easily used in JSX because it's escaped, and `children` is the JSX
 object un-rendered.

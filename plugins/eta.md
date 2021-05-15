@@ -16,7 +16,7 @@ site.use(eta());
 
 ## Creating layouts
 
-Add a file with `.eta` extension in the `_includes` folder. Use the _front
+Add a file with `.eta` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
 ```html
@@ -39,9 +39,9 @@ intro: This is my first post using lume, I hope you like it!
 ```
 
 Note that the paths passed to `includeFile()` function are always relative to
-`_includes` folder.
+`_includes` directory.
 
 ## Creating pages
 
 Creating pages is the same as creating layouts, just place the `.eta` file
-outside the `_includes` folder.
+outside the `_includes` directory.

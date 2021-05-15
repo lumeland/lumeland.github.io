@@ -15,7 +15,7 @@ site.use(pug());
 
 ## Creating layouts
 
-Add a file with `.pug` extension in the `_includes` folder. Use the _front
+Add a file with `.pug` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
 ```pug
@@ -28,16 +28,16 @@ doctype html
 html
   head
     title= title
-  
+
   body
     include partials/nav.pug
 
     p= title
 ```
 
-Note that the paths passed to `include` are relative to `_includes` folder.
+Note that the paths passed to `include` are relative to `_includes` directory.
 
 ## Creating pages
 
 Creating pages is the same as creating layouts, just place the `.pug` file
-outside the `_includes` folder.
+outside the `_includes` directory.

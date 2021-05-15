@@ -15,8 +15,8 @@ extension. Lume will load these files and generate HTML pages with them:
 └── contact.md   => /contact/index.html
 ```
 
-You can organize the pages into subfolders, and this structure will be used also
-in the output of the site build:
+You can organize the pages into subdirectories, and this structure will be used
+also in the output of the site build:
 
 ```
 .
@@ -94,14 +94,14 @@ numbers:
 All files or directories starting with `_` are ignored by **lume** to generate
 pages. This convention allows to place stuff that you don't want to include in
 your site output. This is the reason why the config file is `_config.js`, the
-output folder is `_site`, the includes folder is `_includes`, or shared data is
-named `_data`, all these things starts with an underscore so they are ignored on
-loading page files.
+output directory is `_site`, the includes directory is `_includes`, or shared
+data is named `_data`, all these things starts with an underscore so they are
+ignored on loading page files.
 
-Dot files and folders (such as `.git`, `.gitignore`, etc) are also ignored.
+Dot files and directories (such as `.git`, `.gitignore`, etc) are also ignored.
 
 ## Changing the output URL
 
-You might want to have a particular folder structure for your source files that
-is different for the built site. With the `url` variable you change the output
-filename of any page (see [Page data](/creating-pages/page-data))
+You might want to have a particular directory structure for your source files
+that is different for the built site. With the `url` variable you change the
+output filename of any page (see [Page data](/creating-pages/page-data))

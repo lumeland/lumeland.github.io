@@ -5,7 +5,7 @@ description: Creating shared data that can be used between different pages
 
 In addition to the variables defined in the front matter of the pages and
 layouts, you can store other data accessible by some or all pages and layouts.
-Shared data must be saved in the `_data` folder or `_data.*` files with
+Shared data must be saved in the `_data` directory or `_data.*` files with
 extensions like `.json`, `.yaml`, `.js` or `.ts`.
 
 ## The `_data.*` files
@@ -26,15 +26,15 @@ directory or subdirectory.
         └── example2.md
 ```
 
-As you can see, the shared data is propagated in cascade following the folder
+As you can see, the shared data is propagated in cascade following the directory
 structure. A typical use case is to store those variables that are common to all
 pages in the same directory so you don't have to repeat it for every page.
 
-## The `_data` folders
+## The `_data` directories
 
-`_data` folders are similar to `_data` files, but instead of using only one
-file, the data is stored in several files inside that folder. The _basename_ of
-each file determines the variable name that is used. Let's see an example:
+`_data` directories are similar to `_data` files, but instead of using only one
+file, the data is stored in several files inside that directory. The _basename_
+of each file determines the variable name that is used. Let's see an example:
 
 ```
 └── _data
@@ -61,5 +61,5 @@ via `users` variable and documents via `documents.one`, `documents.two` and
 </ul>
 ```
 
-Like `_data.*` files, you can have `_data` folders in different directories so
-they are shared only with all pages in the same directory or subdirectories.
+Like `_data.*` files, you can have `_data` directories in different directories
+so they are shared only with all pages in the same directory or subdirectories.
