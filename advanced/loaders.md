@@ -42,9 +42,9 @@ For example, the file `/about-us.toml` will be loaded and saved as
 `/about-us/index.html` (unless you configure a different name using the `url`
 value.
 
-Instead HTML pages, you may want to use this loader to load toml files and save
-them with the same extension (instead `html`). To do that, you must register it
-with `loadAssets`:
+Instead of HTML pages, you may want to use this loader to load toml files and
+save them with the same extension (instead of `html`). To do that, you must
+register it with `loadAssets`:
 
 ```js
 site.loadAssets([".toml"], tomlLoader);
@@ -53,7 +53,7 @@ site.loadAssets([".toml"], tomlLoader);
 Now, the `*.toml` files are loaded and saved as `toml`. The function
 `loadAssets` is useful to load assets files like `css`, `js`, `svg` that you
 want to transform (bundle, minify...) and save them keeping the same extension,
-instead rename to `html`.
+instead of renaming to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
 way to have support for both is adding a subextension (like `tmpl`) for pages.

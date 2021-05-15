@@ -32,9 +32,9 @@ pages in the same directory so you don't have to repeat it for every page.
 
 ## The `_data` folders
 
-`_data` folders are similar to `_data` files, but instead using only one file,
-the data is stored in several files inside that folder. The _basename_ of each
-file determines the variable name that is used. Let's see an example:
+`_data` folders are similar to `_data` files, but instead of using only one
+file, the data is stored in several files inside that folder. The _basename_ of
+each file determines the variable name that is used. Let's see an example:
 
 ```
 └── _data

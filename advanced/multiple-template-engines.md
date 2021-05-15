@@ -8,11 +8,11 @@ the file extension. For example, a `.md` file uses Markdown, `.njk` file uses
 Nunjucks and so on.
 
 You can override this default behaviour with the `templateEngine` option. Any
-page having this variable will use it to decide the template engine, instead the
-extension.
+page having this variable will use it to decide the template engine, instead of
+the extension.
 
 The following example is a `.md` file but is configured to use Nunjucks to
-render (instead Markdown).
+render (instead of Markdown).
 
 ```md
 ---

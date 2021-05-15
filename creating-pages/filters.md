@@ -53,7 +53,7 @@ Lume includes the following convenient preinstalled filters:
 
 ## Using the filters in JavaScript modules
 
-If you're using JavaScript/TypeScript modules instead a template engine like
+If you're using JavaScript/TypeScript modules instead of a template engine like
 Nunjucks, filters are passed as the second argument of your default exported
 function:
 

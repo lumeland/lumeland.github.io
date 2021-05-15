@@ -84,7 +84,7 @@ site.script("add-date-published", () => {
 
 ## Running scripts from JavaScript
 
-To run a script from JavaScript instead CLI, use the `site.run()` function:
+To run a script from JavaScript instead of CLI, use the `site.run()` function:
 
 ```js
 //Create the script

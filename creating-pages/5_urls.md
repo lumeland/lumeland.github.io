@@ -76,7 +76,7 @@ url: /posts/welcome/
 ```
 
 In this example, the `url` value will be used to generate the output file
-instead the filename:
+instead of the filename:
 
 ```
 posts/my-first-post.md  =>  /posts/welcome/index.html
@@ -172,7 +172,7 @@ url:
 ```
 
 Due the slugifier will remove the character `_`, we wanted to disable it but
-only for this specific page. So, instead a string, we use an object with the
+only for this specific page. So, instead of a string, we use an object with the
 `path` and the `slugify` option set to `false`.
 
 Another example is if we want to disable `prettyUrls` option:

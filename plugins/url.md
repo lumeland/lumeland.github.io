@@ -19,7 +19,7 @@ want to generate absolute URLs.
 <a href="{{ '/about-us' | url(true) }}">
 ```
 
-Use the character `~` to use the source file name instead the final URL. The
+Use the character `~` to use the source file name instead of the final URL. The
 plugin automatically will detect the final URL for you. This is useful for
 dynamic URLs and updating automatically all links to one page when the URL of
 this page changes. For example:

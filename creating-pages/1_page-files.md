@@ -29,9 +29,9 @@ in the output of the site build:
 ## Pretty URLs
 
 By default, all HTML pages will generate _pretty urls_ (URLs without the `.html`
-extension). This means that, instead `/about-us.html`, the URL is `/about-us/`.
-This is done by saving all files as `index.html` and create all directories as
-needed.
+extension). This means that, instead of `/about-us.html`, the URL is
+`/about-us/`. This is done by saving all files as `index.html` and create all
+directories as needed.
 
 If you want to disable it, set `prettyUrls` to `false` in
 [config file](/getting-started/config-file/), so you will have something like
