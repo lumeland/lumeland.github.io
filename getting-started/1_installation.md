@@ -12,7 +12,7 @@ have it yet.
 The easiest way to install lume is by executing the following command:
 
 ```sh
-deno run --unstable -A https://deno.land/x/lume/cli.js install
+deno run -A https://deno.land/x/lume/install.js
 ```
 
 Now you have the `lume` command.\
