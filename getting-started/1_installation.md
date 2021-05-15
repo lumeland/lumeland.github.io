@@ -24,9 +24,9 @@ lume upgrade
 
 ## Execute it without install
 
-The `ci.js` file works exactly like `cli.js` but without installation. It's
+The `ci.js` file works exactly like the `lume` command but without installation. It's
 useful for CI environments:
 
 ```sh
-deno run --unstable -A https://deno.land/x/lume/ci.js
+deno run -A https://deno.land/x/lume/ci.js
 ```
