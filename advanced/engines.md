@@ -3,7 +3,7 @@ title: Template engines
 description: Extending Lume to use other template engines
 ---
 
-Lume supports several template engines to render your pages like Nunjucks, Pug
+Lume supports several template engines to render your pages, like Nunjucks, Pug
 or Eta. It's easy to extend this suppoprt for more template engines, you only
 need to create a class extending the `TemplateEngine` class. Let's see an
 example using [handlebars](https://github.com/handlebars-lang/handlebars.js):

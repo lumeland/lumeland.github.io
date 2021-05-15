@@ -3,9 +3,9 @@ title: Inline
 description: Using the inline plugin to inline sources
 ---
 
-This plugin allows to inline some sources like CSS, images or JavaScript in the
-HTML automatically. It is **disabled by default**, so you have to enable it in
-the `_config.js` file:
+This plugin allows to inline some sources, like CSS, images or JavaScript, in
+the HTML automatically. It is **disabled by default**, so you have to enable it
+in the `_config.js` file:
 
 ```js
 import inline from "lume/plugins/inline.js";

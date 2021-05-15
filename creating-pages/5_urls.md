@@ -28,7 +28,7 @@ posts/my-first-post.md  =>  /posts/my-first-post.html
 ## Slugify
 
 All output paths are **automatically slugified:** the spaces are replaced with
-`-`, characters like `ñ` or `á` are replaced by ascii equivalents (`n` and `a`)
+`-`, characters like `ñ` or `á` are replaced by ASCII equivalents (`n` and `a`)
 and converted to lower case:
 
 ```

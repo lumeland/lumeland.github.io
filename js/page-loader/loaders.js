@@ -1,7 +1,7 @@
 import Page from "./page.js";
 
 /**
- * Class to load an URL and generate a page with the result
+ * Class to load a URL and generate a page with the result
  */
 export class UrlLoader {
   constructor(url, options = {}) {

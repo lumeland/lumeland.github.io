@@ -1,6 +1,6 @@
 ---
 title: Attributes
-description: To manage attributes and classNames of HTML elements
+description: To manage attributes and class names of HTML elements
 ---
 
 The Attributes plugin is enabled by default and register two filters to
@@ -42,7 +42,7 @@ link:
 
 ## class
 
-To work with HTML classNames:
+To work with HTML class names:
 
 ```html
 ---

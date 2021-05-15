@@ -11,7 +11,7 @@ custom functions. To create a new script, use the function `script()` in your
 site.script("deploy", "rsync -r _site/** user@server.com:/var/www/");
 ```
 
-Now, you can run this script from CLI with `lume run deploy`.
+Now, you can run this script from the CLI with `lume run deploy`.
 
 ## Running multiple commands
 
@@ -70,7 +70,7 @@ site.script("compress-and-upload", "compress", "upload");
 
 ## Custom functions
 
-Scripts not only can execute cli commands but also JavaScript functions. For
+Scripts not only can execute CLI commands but also JavaScript functions. For
 example:
 
 ```js
@@ -84,7 +84,8 @@ site.script("add-date-published", () => {
 
 ## Running scripts from JavaScript
 
-To run a script from JavaScript instead of CLI, use the `site.run()` function:
+To run a script from JavaScript instead of the CLI, use the `site.run()`
+function:
 
 ```js
 // Create the script

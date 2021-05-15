@@ -98,7 +98,7 @@ output folder is `_site`, the includes folder is `_includes`, or shared data is
 named `_data`, all these things starts with an underscore so they are ignored on
 loading page files.
 
-Dot files and folders (such `.git`, `.gitignore`, etc) are also ignored.
+Dot files and folders (such as `.git`, `.gitignore`, etc) are also ignored.
 
 ## Changing the output URL
 

@@ -3,7 +3,7 @@ title: Flags
 description: The different flags that can be passed to the Lume CLI
 ---
 
-Flags are arbitrary data that you can pass to lume from the cli. This is useful
+Flags are arbitrary data that you can pass to lume from the CLI. This is useful
 for configuration or to passing arguments to scripts. All arguments after `--`
 are stored in the `site.flags` array:
 
