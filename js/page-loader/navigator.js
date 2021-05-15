@@ -12,13 +12,13 @@ export default class Navigator {
     this.downloadHandler;
     this.events = { beforeFilter: [], beforeLoad: [], load: [], error: [] };
     this.filters = [
-      (el, url) =>
+      (_el, url) =>
         url &&
         url.indexOf(
             `${document.location.protocol}//${document.location.host}`,
           ) === 0,
       (el, url) => el.tagName === "FORM" || !isAnchor(url),
-      (el, url, submitter) => !el.target && (!submitter || submitter.target),
+      (el, _url, submitter) => !el.target && (!submitter || submitter.target),
       (el) => !el.hasAttribute("download"),
     ];
   }
@@ -109,10 +109,10 @@ export default class Navigator {
       delegate(
         "click",
         'form button,input[type="submit"]',
-        (event, button) => (submitter = button),
+        (_event, button) => (submitter = button),
       );
 
-      getSubmitter = (event, form) => {
+      getSubmitter = (_event, form) => {
         if (!submitter) {
           return null;
         }
