@@ -7,7 +7,7 @@ description: Installing Lume
 the [Deno installation](https://deno.land/#installation) instructions if you
 don't have it yet.
 
-## Install lume in your computer
+## Install Lume in your computer
 
 The easiest way to install Lume is by executing the following command:
 
@@ -16,7 +16,7 @@ deno run --unstable -A https://deno.land/x/lume/cli.js install
 ```
 
 Now you have the `lume` command.\
-Once installed, you can update **Lume** to the latest version by running:
+Once installed, you can update Lume to the latest version by running:
 
 ```sh
 lume upgrade
