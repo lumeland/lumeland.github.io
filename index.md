@@ -7,7 +7,7 @@ description: Lume – A static site generator for Deno
 **Lume** is the Galician word for _fire_ but also a (yet another) static site
 generator for [Deno](https://deno.land/).
 
-It's inspired by other static site generators such as
+It's inspired by other static site generators, such as
 [Jekyll](https://jekyllrb.com/) and [Eleventy](https://www.11ty.dev/), but it's
 faster, simpler and easier to use and configure, besides being super flexible.
 
