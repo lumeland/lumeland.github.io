@@ -4,7 +4,7 @@ description: Small guide on adding custom loaders to Lume
 ---
 
 Loaders are functions that read and return the content of files. There are
-different loaders for different formats, like `json`, `yaml`, javascript modules
+different loaders for different formats, like `json`, `yaml`, JavaScript modules
 or plain text. Creating a custom loader is really easy, you only have to create
 a function that reads the content of a file and return an object with that
 content.
@@ -42,8 +42,8 @@ For example, the file `/about-us.toml` will be loaded and saved as
 `/about-us/index.html` (unless you configure a different name using the `url`
 value.
 
-Instead html pages, you may want to use this loader to load toml files and save
-them with the same extension (instead html). To do that, you must register it
+Instead HTML pages, you may want to use this loader to load toml files and save
+them with the same extension (instead `html`). To do that, you must register it
 with `loadAssets`:
 
 ```js
@@ -53,7 +53,7 @@ site.loadAssets([".toml"], tomlLoader);
 Now, the `*.toml` files are loaded and saved as `toml`. The function
 `loadAssets` is useful to load assets files like `css`, `js`, `svg` that you
 want to transform (bundle, minify...) and save them keeping the same extension,
-instead rename to html.
+instead rename to `html`.
 
 **Note:** you can't use the same extension to generate pages and assets, so a
 way to have support for both is adding a subextension (like `tmpl`) for pages.
@@ -67,5 +67,5 @@ site.loadPages([".html.toml"], tomlLoader);
 site.loadAssets([".toml"], tomlLoader);
 ```
 
-This is the same strategy used for javascript/typescript modules (`*.tmpl.js`
-for pages and `*.js` for javascript assets).
+This is the same strategy used for JavaScript/TypeScript modules (`*.tmpl.js`
+for pages and `*.js` for JavaScript assets).

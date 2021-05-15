@@ -32,8 +32,8 @@ export default class Navigator {
   }
 
   /**
-     * Add a filter to discard some urls and forms.
-     * It must be a function accepting two arguments: the element clicked and url
+     * Add a filter to discard some URLs and forms.
+     * It must be a function accepting two arguments: the element clicked and URL
      *
      * @param {Function} filter
      *
@@ -154,7 +154,7 @@ export default class Navigator {
   }
 
   /**
-     * Go to other url.
+     * Go to other URL.
      *
      * @param  {string} url
      * @param  {Event} event

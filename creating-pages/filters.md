@@ -47,13 +47,13 @@ Lume includes the following convenient preinstalled filters:
 - **njk**: It's installed by the `nunjucks` plugin and allows to render nunjucks
   content to HTML. [More info](plugins/nunjucks)
 - **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
-  urls. [More info](plugins/url)
+  URLs. [More info](plugins/url)
 - **attr / class**: It's installed by the `attributes` plugin and allows to work
   with HTML attributes. [More info](plugins/attributes)
 
-## Using the filters in javascript modules
+## Using the filters in JavaScript modules
 
-If you're using javascript/typescript modules instead a template engine like
+If you're using JavaScript/TypeScript modules instead a template engine like
 Nunjucks, filters are passed as the second argument of your default exported
 function:
 

@@ -1,9 +1,9 @@
 ---
-title: Relative urls
-description: Convert all urls to relative
+title: Relative URLs
+description: Convert all URLs to relative
 ---
 
-The `relative_urls` plugin converts all urls in your html documents to relative,
+The `relative_urls` plugin converts all URLs in your HTML documents to relative,
 so you can publish the site under different domains and even subfolders and all
 links will continue working. This plugin **is disabled by default** so to enable
 it you have to import and use it in the `_config.js` file:
@@ -14,7 +14,7 @@ import relativeUrls from "lume/plugins/relative_urls.js";
 site.use(relativeUrls());
 ```
 
-All internal urls of your site will be relative. For example:
+All internal URLs of your site will be relative. For example:
 
 ```html
 <!-- /articles/my-first-article/ -->

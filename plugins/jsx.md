@@ -3,10 +3,10 @@ title: JSX
 description: Using JSX for templates
 ---
 
-[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for typescript) is
+[JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is
 a template language to create and render HTML code, very popular in some
 frameworks like React. This format **is disabled by default** so you have to
-enable it by using the jsx plugin in the `_config.js` file:
+enable it by using the JSX plugin in the `_config.js` file:
 
 ```js
 import jsx from "lume/plugins/jsx.js";
@@ -18,14 +18,14 @@ site.use(jsx());
 
 To create a page with this format, just add a file with `.jsx` or `.tsx`
 extension to your site. This format works exactly the same as
-[javascript/typescript files](/plugins/modules), but with the addition of you
+[JavaScript/TypeScript files](/plugins/modules), but with the addition of you
 can export JSX code in the default export:
 
 ```jsx
 export const title = "Welcome to my page";
 export const layout = "layouts/main.njk";
 
-export default (data) => 
+export default (data) =>
   <h1>{ data.title }</h1>
   <p>This is my first post using lume. I hope you like it!</p>
 ```

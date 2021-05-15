@@ -38,7 +38,7 @@ file outside the `_includes` folder.
 ## njk filter
 
 The Nunjucks plugin also register the `njk` filter, to render any string value
-as a nunjucks template and output a html. The filter accepts an object with
+as a nunjucks template and output a HTML. The filter accepts an object with
 data.
 
 ```html

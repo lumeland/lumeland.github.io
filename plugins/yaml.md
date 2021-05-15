@@ -31,10 +31,10 @@ sections:
 
   - title: Development
     image: img/section2.jpg
-    text: And can write html and css code!
+    text: And can write HTML and CSS code!
 ```
 
-You will need a layout to render this page and generate the html:
+You will need a layout to render this page and generate the HTML:
 
 ```html
 <html>

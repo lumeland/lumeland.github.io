@@ -4,7 +4,7 @@ description: A guide on extending Lume with custom processors
 ---
 
 A processor is a function to transform the content of pages and assets. Let's
-see an example of a processor to minify html pages:
+see an example of a processor to minify HTML pages:
 
 ```js
 function minifyHTML(page) {
@@ -53,10 +53,10 @@ engine).
 ## Process assets
 
 Note that processors only can transform pages or assets that are previously
-loaded. So if you want to process some assets (like css or javascript files),
+loaded. So if you want to process some assets (like CSS or JavaScript files),
 make sure that they are loaded before. See [Loaders](/advanced/loaders/) for
 more information about how to register a new loader. Let's see an example of how
-to load and transform javascript files:
+to load and transform JavaScript files:
 
 ```js
 import lume from "https://deno.land/x/lume/mod.js";
@@ -64,10 +64,10 @@ import textLoader from "https://deno.land/x/lume/loaders/text.js";
 
 const site = lume();
 
-//Load javascript files as plain text:
+//Load JavaScript files as plain text:
 site.loadAssets([".js"], textLoader);
 
-//Process the javascript files
+//Process the JavaScript files
 site.process([".js"], function (page) {
   page.content = myBundler(page.content);
 

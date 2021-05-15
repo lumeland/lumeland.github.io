@@ -107,7 +107,7 @@ export default class Page {
   }
 
   /**
-     * Change the css of the current page
+     * Change the CSS of the current page
      *
      * @param {string} context
      *

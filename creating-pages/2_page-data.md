@@ -28,7 +28,7 @@ There are some special variables that **lume** can understand:
 
 - `url`: To change the output path of the page. If it doesn't exist, it's
   generated automatically by lume. And it may be modified according with
-  `prettyUrls` and `slugifyUrls` options. It's used to save the public url of
+  `prettyUrls` and `slugifyUrls` options. It's used to save the public URL of
   the page, useful to create links.
 - `date`: By default it's the file creation date but you can override with this
   variable (or prepending it to the filename). This value is used to sort the

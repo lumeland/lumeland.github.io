@@ -70,7 +70,7 @@ site.script("compress-and-upload", "compress", "upload");
 
 ## Custom functions
 
-Scripts not only can execute cli commands but also javascript functions. For
+Scripts not only can execute cli commands but also JavaScript functions. For
 example:
 
 ```js
@@ -82,9 +82,9 @@ site.script("add-date-published", () => {
 });
 ```
 
-## Running scripts from javascript
+## Running scripts from JavaScript
 
-To run a script from javascript instead CLI, use the `site.run()` function:
+To run a script from JavaScript instead CLI, use the `site.run()` function:
 
 ```js
 //Create the script

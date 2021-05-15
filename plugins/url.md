@@ -1,27 +1,27 @@
 ---
-title: Url
-description: For url normalization
+title: URL
+description: For URL normalization
 ---
 
 The Url plugin is enabled by default and register two filters to normalize the
-urls in your pages:
+URLs in your pages:
 
 ## url
 
 The filter `url` normalize a single path with the location value that you have
 configured in `_config.js`. It's useful if your site is in a subdirectory or you
-want to generate absolute urls.
+want to generate absolute URLs.
 
 ```html
 <a href="{{ '/about-us' | url }}">
 
-<!-- Full url -->
+<!-- Full URL -->
 <a href="{{ '/about-us' | url(true) }}">
 ```
 
-Use the character `~` to use the source file name instead the final url. The
-plugin automatically will detect the final url for you. This is useful for
-dynamic urls and updating automatically all links to one page when the url of
+Use the character `~` to use the source file name instead the final URL. The
+plugin automatically will detect the final URL for you. This is useful for
+dynamic URLs and updating automatically all links to one page when the URL of
 this page changes. For example:
 
 ```html
@@ -33,8 +33,8 @@ this page changes. For example:
 
 ## htmlUrl
 
-This filter is similar to `url` but it works with html code: it search and
-normalize all urls found in `href` and `src` attributes:
+This filter is similar to `url` but it works with HTML code: it search and
+normalize all URLs found in `href` and `src` attributes:
 
 ```yml
 ---

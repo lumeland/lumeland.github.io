@@ -1,7 +1,7 @@
 import Page from "./page.js";
 
 /**
- * Class to load an url and generate a page with the result
+ * Class to load an URL and generate a page with the result
  */
 export class UrlLoader {
   constructor(url, options = {}) {
@@ -12,7 +12,7 @@ export class UrlLoader {
   }
 
   /**
-     * Go natively to the url. Used as fallback
+     * Go natively to the URL. Used as fallback
      */
   fallback() {
     document.location = this.url;

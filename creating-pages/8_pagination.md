@@ -4,7 +4,7 @@ description: Pagination in Lume
 ---
 
 The same source file can generate many output pages. This is useful to paginate
-elements, for example. To do that, create a javascript page exporting a
+elements, for example. To do that, create a JavaScript page exporting a
 [generator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 as default.
 
@@ -28,7 +28,7 @@ export default function* (data, filters) {
 In this example, the page returns a generator that create three pages. Every
 `yield` must return an unique `url` (to generate different pages without
 override each other), and can include other data needed to render the final
-html. Note also that you can use named exports for those variables that are
+HTML. Note also that you can use named exports for those variables that are
 common to all pages, like the layout.
 
 ## `paginate` helper
@@ -60,7 +60,7 @@ options are:
 | Name   | Default            | Description                                                                             |
 | ------ | ------------------ | --------------------------------------------------------------------------------------- |
 | `size` | `10`               | Number of elements per page                                                             |
-| `url`  | (n) => `page-${n}` | The function to generate the url of each page. It receives the page number as argument. |
+| `url`  | (n) => `page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
 
 This helper returns a generator with which that you can iterate. Each item has
 the following values:
@@ -74,8 +74,8 @@ for (const page of paginate(posts, { url: (n) => `posts/page/${n}/`, size: 10 })
   page.pagination.page;         //The current page
   page.pagination.totalPages;   //Total pages
   page.pagination.totalResults; //Total results
-  page.pagination.previous;     //The url of the previous page
-  page.pagination.next;         //The url of the next page
+  page.pagination.previous;     //The URL of the previous page
+  page.pagination.next;         //The URL of the next page
 
   yield page;
 }

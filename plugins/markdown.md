@@ -4,7 +4,7 @@ description: Using the markdown plugin
 ---
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
-to write content that is converted to html. This format is **enabled by
+to write content that is converted to HTML. This format is **enabled by
 default** and is useful for pages with long text like posts or articles.
 
 ## Creating pages in markdown
@@ -41,11 +41,11 @@ The markdown code is stored in the `content` variable:
 ## md filter
 
 The markdown plugin also register the `md` filter, to render any string value as
-markdown and output a html. The filter also accepts an argument to render the
+markdown and output a HTML. The filter also accepts an argument to render the
 markdown in _inline_ mode.
 
 ```html
-<!-- Render to html code -->
+<!-- Render to HTML code -->
 <div>{{ text | md }}<div>
 
 <!-- Single line rendering, without paragraph wrap: -->

@@ -3,7 +3,7 @@ title: PostCSS
 description: Using the PostCSS plugin to transform CSS
 ---
 
-The `PostCSS` plugin load and transform your css files using
+The `PostCSS` plugin load and transform your CSS files using
 [PostCSS](https://postcss.org/) processor. This plugin **is disabled by
 default** so to enable it you have to import and use it in the `_config.js`
 file:
@@ -24,10 +24,10 @@ By default it uses the following plugins:
   automatically the vendor prefixes.
 
 ```css
-/* Import the css file from _includes/css/reset.css */
+/* Import the CSS file from _includes/css/reset.css */
 @import "css/reset.css";
 
-/* Import the relative css file */
+/* Import the relative CSS file */
 @import "./variables.css";
 ```
 

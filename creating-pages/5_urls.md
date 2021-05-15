@@ -10,8 +10,8 @@ generated using the original source file path:
 posts/my-first-post.md  =>  /posts/my-first-post/index.html
 ```
 
-By default, the pages are saved as "pretty urls", using directories for the path
-and a `index.html` file. So the final url is `/posts/my-fist-post/`. To disable
+By default, the pages are saved as "pretty URLs", using directories for the path
+and a `index.html` file. So the final URL is `/posts/my-fist-post/`. To disable
 this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file
 (see [Configuration](/getting-started/config-file/)).
 
@@ -82,7 +82,7 @@ instead the filename:
 posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
-Note that defining manually the url of a page will makes that `prettyUrls`
+Note that defining manually the URL of a page will makes that `prettyUrls`
 option **won't have any effect.** For example:
 
 ```yml
@@ -107,9 +107,9 @@ url: /Post/Teño fame, mamá/
 
 The output filename would be `/post/teno-fame-mama/index.html`.
 
-## Relative urls
+## Relative URLs
 
-If you only want to change the last part of the url, you can use relative paths.
+If you only want to change the last part of the URL, you can use relative paths.
 For example:
 
 ```yml
@@ -120,13 +120,13 @@ url: ./welcome/
 ```
 
 In this example, the page will be saved using the directory path where the
-source file is saved but adding `welcome` in the last part of the url.
+source file is saved but adding `welcome` in the last part of the URL.
 
 ```
 posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
-Using `../welcome/` as url will remove also the last directory.
+Using `../welcome/` as URL will remove also the last directory.
 
 ```
 posts/my-first-post.md  =>  /welcome/index.html
@@ -137,7 +137,7 @@ posts/my-first-post.md  =>  /welcome/index.html
 The variable `url` accepts also a function that will be used to generate the
 final value. This function will receive the current page as the first argument.
 
-For example, let's say that we want to generate automatically all urls of our
+For example, let's say that we want to generate automatically all URLs of our
 posts, using the title value. We can create a `_data.js` file in the `/post/`
 directory, with the following code:
 
@@ -147,25 +147,25 @@ export function url(page) {
 }
 ```
 
-Now, all pages in the post directory share the same url function, that returns
-the title of the page as a relative url, for example `./My first post/` (See
+Now, all pages in the post directory share the same `url` function, that returns
+the title of the page as a relative URL, for example `./My first post/` (See
 [Shared data](/creating-pages/shared-data/)).
 
-Due the url is relative, the current directory is appended automatically (it
+Due the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And due all output paths are
 slugified automatically, the final page will be `/post/my-fist-post/`.
 
-Using functions as urls gives a lot of flexibility to generate the urls as you
+Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
 
-## Configure individual urls
+## Configure individual URLs
 
-You may want to change how the url is generated for specific pages. To do that,
+You may want to change how the URL is generated for specific pages. To do that,
 `url` accepts also an object with different options:
 
 ```yml
 ---
-url: 
+url:
   path: _headers
   slugify: false
 ---
@@ -184,15 +184,15 @@ url:
 ---
 ```
 
-Now, the final url of this page won't be _pretty_. Note that we don't have the
-`path` property because the url is calculated using the source filename.
-Remember that on including manually the url path, the `pretty` option wouldn't
+Now, the final URL of this page won't be _pretty_. Note that we don't have the
+`path` property because the URL is calculated using the source filename.
+Remember that on including manually the URL path, the `pretty` option wouldn't
 have any effect.
 
 ## Combine functions and objects
 
-Combining functions and objects is useful to change the url generation for a
-specific folder. For example, let's say we want to disable the pretty urls to
+Combining functions and objects is useful to change the URL generation for a
+specific folder. For example, let's say we want to disable the pretty URLs to
 all pages in a directory. We only need to create a function in the `_data.js`
 file returning an object:
 

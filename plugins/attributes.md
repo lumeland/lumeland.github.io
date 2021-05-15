@@ -8,7 +8,7 @@ normalize the attributes of your HTML:
 
 ## attr
 
-Provide a convenient way to work with html attributes.
+Provide a convenient way to work with HTML attributes.
 
 ```html
 ---
@@ -42,7 +42,7 @@ link:
 
 ## class
 
-To work with html classNames:
+To work with HTML classNames:
 
 ```html
 ---

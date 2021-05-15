@@ -8,7 +8,7 @@ Typescript.
 
 ## Creating _data files
 
-Create `_data.js` or `_data/*.js` (or the typescript equivalent `_data.ts` or
+Create `_data.js` or `_data/*.js` (or the TypeScript equivalent `_data.ts` or
 `_data/*.ts`) files to save shared data.
 
 ```js
@@ -26,9 +26,9 @@ export const users = [
 
 ## Creating pages
 
-To create pages using javascript or typescript, create a file with the extension
+To create pages using JavaScript or TypeScript, create a file with the extension
 `.tmpl.js` or `.tmpl.ts` (the `.tmpl` subextension is required to differentiate
-html pages created from a javascript file from the javascript files to execute
+HTML pages created from a JavaScript file from the JavaScript files to execute
 in the browser). To export the variables, use named exports and to export the
 main content you can use the default export.
 
@@ -57,7 +57,7 @@ Javascript/Typescript allows to generate multiple pages from the same file, see
 
 ## Creating layouts
 
-It's possible to create layouts using javascript/typescript. Just create `.js`
+It's possible to create layouts using JavaScript/TypeScript. Just create `.js`
 or `.ts` files inside the `_includes` folder (here it's not necessary to prepend
 `.tmpl` to the extension).
 

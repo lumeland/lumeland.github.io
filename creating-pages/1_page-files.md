@@ -6,7 +6,7 @@ description: How Lume will output files based on the sites file structure
 Pages are the files that are loaded, processed and saved in your site. You can
 create pages using different formats but the simplest way is by adding a
 markdown file in the root directory with a suitable filename and `.md` as
-extension. Lume will load these files and generate html pages with them:
+extension. Lume will load these files and generate HTML pages with them:
 
 ```
 .
@@ -26,10 +26,10 @@ in the output of the site build:
     └── doc2.md     => /documentation/doc2/index.html
 ```
 
-## Pretty urls
+## Pretty URLs
 
-By default, all html pages will generate _pretty urls_ (urls without the `.html`
-extension). This means that, instead `/about-us.html`, the url is `/about-us/`.
+By default, all HTML pages will generate _pretty urls_ (URLs without the `.html`
+extension). This means that, instead `/about-us.html`, the URL is `/about-us/`.
 This is done by saving all files as `index.html` and create all directories as
 needed.
 
@@ -47,7 +47,7 @@ this:
 
 ## Slugify
 
-By default, all output urls will be "slugified" (converted to lower case and
+By default, all output URLs will be "slugified" (converted to lower case and
 replaced or removed the conflictive characters):
 
 ```
