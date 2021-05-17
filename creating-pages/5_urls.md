@@ -45,7 +45,10 @@ const site = lume({
     alphanumeric: true, // Replace non alphanumeric characters for the equivalent. Example: ñ to n.
     separator: "-", // Character used as separator for words
     replace: { // An object with individual characters replacements
+      "Ð": "D", // eth
       "ð": "d",
+      "Đ": "D", // crossed D
+      "đ": "d",
       "ø": "o",
       "ß": "ss",
       "æ": "ae",

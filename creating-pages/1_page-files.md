@@ -28,7 +28,7 @@ also in the output of the site build:
 
 ## Pretty URLs
 
-By default, all HTML pages will generate _pretty urls_ (URLs without the `.html`
+By default, all HTML pages will generate _pretty URLs_ (URLs without the `.html`
 extension). This means that, instead of `/about-us.html`, the URL is
 `/about-us/`. This is done by saving all files as `index.html` and create all
 directories as needed.
