@@ -74,3 +74,13 @@ site.process([".js"], function (page) {
   page.dest.path += ".min"; //append .min to the filename, so it will saved as example.min.js
 });
 ```
+
+## Preprocess
+
+Processors are executed just after render the pages. If you need to execute a function before rendering (for example, to configure a custom template engine, or add extra data to some pages), you can use a **preprocessor**. It works exactly like a processor but before rendering.
+
+For example, let's create a preprocess to include a variable with the source filename:
+
+```js
+site.preprocess([".html"], (page) => page.data.filename = page.src.path + page.src.ext);
+```
