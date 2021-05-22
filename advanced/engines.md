@@ -10,7 +10,7 @@ example using [handlebars](https://github.com/handlebars-lang/handlebars.js):
 
 ```js
 import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
-import TemplateEngine from "https://deno.land/x/lume/engines/templateEngine.js";
+import TemplateEngine from "lume/engines/templateEngine.js";
 
 class HandlebarsEngine extends TemplateEngine {
   render(content, data, filename) {

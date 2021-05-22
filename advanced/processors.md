@@ -59,8 +59,8 @@ more information about how to register a new loader. Let's see an example of how
 to load and transform JavaScript files:
 
 ```js
-import lume from "https://deno.land/x/lume/mod.js";
-import textLoader from "https://deno.land/x/lume/loaders/text.js";
+import lume from "lume/mod.js";
+import textLoader from "lume/loaders/text.js";
 
 const site = lume();
 
