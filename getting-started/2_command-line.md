@@ -25,7 +25,7 @@ lume # or lume build
 lume --src=from --dest=build --location=https://my-site.com/blog/
 
 # Build the site located in a different directory
-lume ./my-site
+lume --root ./my-site
 
 # Build the site and boot up a web server
 # that refreshes automatically for every change
