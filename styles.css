@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-@import url('https://dev.jspm.io/npm:highlight.js@10.1.2/styles/monokai-sublime.css');
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/github-dark.min.css";
 
 :root {
-  --color-brand: #c45402;
-  --color-black: #23241f;
+  --color-brand: #c84f47;
+  --color-black: #0d1117;
   --color-gray: #555;
   --color-gray-light: #eee;
   --font-serif: Charter, serif;
@@ -154,23 +154,14 @@ a {
 code {
   font-family: 'PT Mono', monospace;
   background-color: var(--color-highlight);
-  color: var(--color-highlight-font);
   padding: 0 2px;
   border-radius: 2px;
   font-size: 0.85em;
-}
-pre {
-  overflow-x: auto;
-  background-color: var(--color-black);
-  padding: 1em;
-  border-radius: 5px;
-  line-height: 1.2;
 }
 pre code {
   background: none;
   padding: 0;
   border-radius: 0;
-  color: var(--color-gray-light);
   font-size: var(--font-small);
 }
 header p:first-child {

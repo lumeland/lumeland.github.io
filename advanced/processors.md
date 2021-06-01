@@ -30,6 +30,7 @@ to many other data:
 ```js
 function process(page) {
   page.content; // The content of the page
+  page.document; // The parsed HTML code, to use the DOM API
   page.src; // The info about the source file of this page
   page.dest; // The info about the destination of the page
   page.data; // All data available for this page (frontmatter merged with _data)
@@ -44,6 +45,20 @@ function minifyHTML(page) {
   if (page.data.minify) {
     page.content = minify(page.content);
   }
+}
+```
+
+Note that you can use the `DOM API` with methods like `querySelector`,
+`addAttribute`, etc to modify `HTML` code. For example, let's create a processor
+to add automatically the `alt` attribute to all images:
+
+```js
+function altAttribute(page) {
+  page.document.querySelectorAll("img").forEach((img) => {
+    if (!img.hasAttribute("alt")) {
+      img.setAttribute("alt", "This is a random alt");
+    }
+  });
 }
 ```
 
@@ -77,10 +92,17 @@ site.process([".js"], function (page) {
 
 ## Preprocess
 
-Processors are executed just after render the pages. If you need to execute a function before rendering (for example, to configure a custom template engine, or add extra data to some pages), you can use a **preprocessor**. It works exactly like a processor but before rendering.
+Processors are executed just after render the pages. If you need to execute a
+function before rendering (for example, to configure a custom template engine,
+or add extra data to some pages), you can use a **preprocessor**. It works
+exactly like a processor but before rendering.
 
-For example, let's create a preprocess to include a variable with the source filename:
+For example, let's create a preprocess to include a variable with the source
+filename:
 
 ```js
-site.preprocess([".html"], (page) => page.data.filename = page.src.path + page.src.ext);
+site.preprocess(
+  [".html"],
+  (page) => page.data.filename = page.src.path + page.src.ext,
+);
 ```

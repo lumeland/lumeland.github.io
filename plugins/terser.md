@@ -39,3 +39,19 @@ different options for some files and not for others.
 Source maps can be produced by passing `sourceMap: true` as a top-level option.
 This will create a source map in the same directory as the file with `.map`
 appended to the file name.
+
+## The `terser` filter
+
+In addition to the javascript loader and processor, this plugin register also
+the `terser` filter so you can transform javascript code in the template
+engines. For example:
+
+```html
+{% set js %}
+  console.log("Hello, the JavaScript world!");
+{% endset %}
+
+<script type="module">
+  {{- js | terser | safe -}}
+</script>
+```

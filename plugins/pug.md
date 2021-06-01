@@ -18,7 +18,7 @@ site.use(pug());
 Add a file with `.pug` extension in the `_includes` directory. Use the _front
 matter_ to set data to the template.
 
-```pug
+```yml
 ---
 title: Welcome to my page
 intro: This is my first post using lume, I hope you like it!

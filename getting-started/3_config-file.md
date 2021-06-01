@@ -123,6 +123,14 @@ site.use(svg());
 export default site;
 ```
 
+For convenience, the command `lume init` accepts also the `--plugins` argument
+that automatically create the code to install and register a plugin. For
+example, to create a config file including the `postcss` and `svg` plugins:
+
+```sh
+lume init --plugins=postcss,svg
+```
+
 ## Copy static files
 
 Static files are files that don't have to be processed, like images, PDFs,

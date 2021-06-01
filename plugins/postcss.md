@@ -56,3 +56,21 @@ site.use(postcss({
   sourceMap: true,
 }));
 ```
+
+## The `postcss` filter
+
+In addition to the css loader and processor, this plugin register also the
+`postcss` filter so you can transform css code in the template engines. For
+example:
+
+```html
+{% set css %}
+  body::after {
+    content: "Hello, the CSS world!";
+  }
+{% endset %}
+
+<style>
+  {{- css | postcss | safe -}}
+</style>
+```

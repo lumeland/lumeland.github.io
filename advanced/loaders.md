@@ -1,5 +1,5 @@
 ---
-title: Adding custom loaders
+title: Loaders and engines
 description: Small guide on adding custom loaders to Lume
 ---
 
@@ -15,11 +15,16 @@ Let's say you want to add support for `toml` format, using the
 ```js
 import { parse } from "https://deno.land/std@0.83.0/encoding/toml.ts";
 
-async function tomlLoader(path) {
-  const content = await Deno.readTextFile(path);
-  return parse(content);
+function tomlLoader(path, source) {
+  return source.readFile(path, (content) => parse(content));
 }
 ```
+
+The loaders accepts two arguments: the path of the file to load and a source
+object, with interesting functions like `readFile`. This function reads a file
+and, optionally transform the content before return it. In addition to that, the
+content is cached so it won't be read and transform again, which is good for
+performance.
 
 If you want to use this loader to build your site, just register it in the
 `_config.js` file, specifying the file extensions to apply:
@@ -69,3 +74,51 @@ site.loadAssets([".toml"], tomlLoader);
 
 This is the same strategy used for JavaScript/TypeScript modules (`*.tmpl.js`
 for pages and `*.js` for JavaScript assets).
+
+## Loading plain text
+
+To load text files but without parsing or transform the content, you don't need
+to pass any loader because the text loader is used by default:
+
+```js
+// Load html pages
+site.loadPages([".html"]);
+
+// Load js and css files
+site.loadAssets([".css", ".js"]);
+```
+
+## Template engines
+
+Lume supports several template engines to render your pages, like Nunjucks, Pug
+or Eta. It's easy to extend this suppoprt for more template engines, you only
+need to create a class extending the `TemplateEngine` class. Let's see an
+example using [handlebars](https://github.com/handlebars-lang/handlebars.js):
+
+```js
+import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
+import TemplateEngine from "lume/engines/templateEngine.js";
+
+class HandlebarsEngine extends TemplateEngine {
+  render(content, data, filename) {
+    const template = HandlebarsJS.compile(content);
+    return template(data);
+  }
+}
+```
+
+To use this template engine you have to set as third argument of the `loadPages`
+function:
+
+```js
+import textLoader from "lume/loaders/text.js";
+import HandlebarsEngine from "./handlebars-engine.js";
+
+site.loadPages([".hbs"], textLoader, new HandlebarsEngine(site));
+```
+
+Now, all files with the `.hbs` extension will be loaded using the `textLoader`
+and rendered using the Handlebars engine.
+
+**Note:** this is a very basic implementation only for example. You can see the
+code of the available template engines in Lume for real examples.

@@ -10,8 +10,8 @@ pages.
 
 ## Creating layouts
 
-Add a file with `.njk` or `.html` extension in the `_includes` directory. Use
-the _front matter_ to set data to the template.
+Add a file with `.njk` extension in the `_includes` directory. Use the _front
+matter_ to set data to the template.
 
 ```html
 ---
@@ -32,8 +32,8 @@ intro: This is my first post using lume, I hope you like it!
 
 ## Creating pages
 
-Creating pages is the same as creating layouts, just place the `.njk` or `.html`
-file outside the `_includes` directory.
+Creating pages is the same as creating layouts, just place the `.njk` file
+outside the `_includes` directory.
 
 ## njk filter
 

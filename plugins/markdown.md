@@ -9,9 +9,9 @@ default** and is useful for pages with long text like posts or articles.
 
 ## Creating pages in Markdown
 
-To create a page using _Markdown_, just add a file with `.md` or `.markdown`
-extension to your site. You can also add extra variables by including a _front
-matter,_ a block delimited by two triple-dashed lines with YAML code:
+To create a page using _Markdown_, just add a file with `.md` extension to your
+site. You can also add extra variables by including a _front matter,_ a block
+delimited by two triple-dashed lines with YAML code:
 
 ```yaml
 ---
