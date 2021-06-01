@@ -25,7 +25,7 @@ import Site from "lume/site.js";
 
 const site = new Site();
 
-//Add stuff to your site here
+// Add stuff to your site here
 
 return site;
 ```
