@@ -12,17 +12,17 @@
   margin-top: auto;
 
   & img {
-    width: 25vw;
-    height: 25vw;
+    width: max(25vw, 150px);
+    height: max(25vw, 150px);
   }
   & .logo-name {
     margin: 0;
-    font-size: 7vw;
+    font-size: max(7vw, 3.5rem);
     line-height: 1.1;
   }
   & .logo-description {
     margin: 0;
-    font-size: 3vw;
+    font-size: max(3vw, 1.2rem);
     line-height: 1.1;
   }
 }
