@@ -19,7 +19,7 @@ including all dependencies of the input. Internally uses the
 When bundling `.ts` files to run in the browser, use a triple slash reference to
 include helpful libraries, like `dom` in your scripts. For example,
 
-```
+```ts
 /// <reference lib="dom" />
 
 document.getElementById("foo");

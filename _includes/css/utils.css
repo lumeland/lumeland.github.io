@@ -1,0 +1,64 @@
+.scrollbar {
+  --color: var(--color-brand);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color) var(--color-background);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+    border-radius: 5px;
+    border: solid 2px var(--color-background);
+  }
+}
+
+.logo {
+  display: grid;
+  white-space: nowrap;
+
+  & img {
+    grid-area: 1 / 1 / span 2;
+  }
+  & .logo-name {
+    grid-area: 1 / 2;
+    text-transform: lowercase;
+    align-self: end;
+    line-height: 1;
+  }
+  & .logo-description {
+    grid-area: 2 / 2;
+    font-style: normal;
+    align-self: start;
+  }
+}
+
+.button {
+  --color: var(--color-white);
+  --background: var(--color-brand);
+  --background-hover: var(--color-brand-dark);
+
+  display: inline-block;
+  text-decoration: none;
+  font: var(--font-small-bold);
+  color: var(--color);
+  background: var(--background);
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: var(--background-hover);
+  }
+
+  &.is-secondary {
+    --color: var(--color-brand);
+    --background: var(--color-background-10);
+    --background-hover: var(--color-background-20);
+  }
+}

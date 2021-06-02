@@ -1,7 +1,6 @@
 ---
-title: 🔥 Lume – A static site generator for Deno
-layout: layout.njk
-description: Lume – A static site generator for Deno
+title: Overview
+description: About Lume
 ---
 
 **Lume** is the Galician word for _fire_ but also a (yet another) static site
@@ -19,14 +18,7 @@ faster, simpler and easier to use and configure, besides being super flexible.
   complex bundlers. **Lume** only installs what you need. Clean, fast and
   secure.
 
-### Do you want to create a blog?
+## Do you want to create a blog?
 
 Try the [base-blog](https://github.com/lumeland/base-blog) template repository,
 ready to start a blog in seconds.
-
----
-
-- Created by [Óscar Otero](https://github.com/oscarotero)
-- [GitHub](https://github.com/lumeland/lume)
-- [Discord](https://discord.gg/YbTmpACHWB)
-- [deno.land/x/lume](https://deno.land/x/lume)

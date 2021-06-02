@@ -1,0 +1,33 @@
+---
+title: 🔥 Lume – A static site generator for Deno
+layout: base.njk
+description: Lume – A static site generator for Deno
+body_class: landing
+buttons:
+  - text: Read the Docs
+    url: /getting-started/overview/
+    class: button
+  - text: Code in Github
+    url: https://github.com/lumeland/lume
+    class: button is-secondary
+---
+
+<header class="landing-header logo">
+  <img src="{{ 'logo.svg' | url }}">
+  <h1 class="logo-name">Lume</h1>
+  <p class="logo-description">A Static Site Generator<br>for Deno</p>
+</header>
+
+<nav class="landing-buttons">
+  <ul>
+    {% for item in buttons %}
+    <li>
+      <a href="{{ item.url | url }}" class="{{ item.class }}">{{ item.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<footer class="landing-footer">
+  Created by <a href="https://twitter.com/misteroom">Oscar Otero</a>
+</footer>

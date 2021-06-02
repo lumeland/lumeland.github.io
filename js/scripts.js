@@ -1,7 +1,10 @@
 import Navigator from "./page-loader/navigator.js";
-const menu = document.querySelector(".menu-links");
+const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
-btn.addEventListener("click", () => btn.classList.toggle("is-selected"));
+btn.addEventListener("click", (ev) => {
+  menu.classList.toggle("is-open");
+  ev.stopPropagation();
+});
 
 const nav = new Navigator(async (load, event) => {
   const page = await load();
@@ -15,7 +18,11 @@ const nav = new Navigator(async (load, event) => {
   );
 
   event.target.setAttribute("aria-current", "page");
-  btn.classList.remove("is-selected");
+  // menu.classList.remove("is-open");
 });
 
 nav.init();
+
+document.body.addEventListener("click", () => {
+  menu.classList.remove("is-open");
+})

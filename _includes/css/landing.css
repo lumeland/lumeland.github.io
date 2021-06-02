@@ -1,0 +1,41 @@
+.landing {
+  min-height: 100vh;
+  display: grid;
+  padding: 5vw;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  box-sizing: border-box;
+  row-gap: 5vw;
+}
+.landing-header {
+  margin-top: auto;
+
+  & img {
+    width: 25vw;
+    height: 25vw;
+  }
+  & .logo-name {
+    margin: 0;
+    font-size: 7vw;
+    line-height: 1.1;
+  }
+  & .logo-description {
+    margin: 0;
+    font-size: 3vw;
+    line-height: 1.1;
+  }
+}
+.landing-buttons ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.landing-footer {
+  margin-bottom: auto;
+  font: var(--font-xsmall);
+  color: var(--color-foreground-50);
+}

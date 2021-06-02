@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/github-dark.min.css";
+
+:root {
+  --font-family-serif: Charter, serif;
+  --font-family-sans: -apple-system, system-ui, sans-serif;
+  --font-family-mono: 'PT Mono', monospace;
+
+  --font-size-xsmall: 0.85rem;
+  --font-size-small: clamp(0.85rem, 2vw, 1rem);
+  --font-size-normal: clamp(1.1rem, 3vw, 1.4rem);
+  --font-size-big: clamp(1.5rem, 4vw, 2rem);
+  --font-size-xbig: clamp(2rem, 5vw, 4rem);
+
+  --font-xsmall: var(--font-size-xsmall) / 1.1 var(--font-family-sans);
+  --font-xsmall-bold: bold var(--font-xsmall);
+  --font-small: var(--font-size-small) / 1.5 var(--font-family-sans);
+  --font-small-bold: bold var(--font-small);
+  --font-text: var(--font-size-normal) / 1.5 var(--font-family-serif);
+  --font-text-bold: bold var(--font-text);
+  --font-title: bold var(--font-size-big) / 1.2 var(--font-family-serif);
+  --font-display: bold var(--font-size-xbig) / 1 var(--font-family-serif);
+
+  --color-brand: hsl(4deg, 54%, 53%);
+  --color-brand-dark: hsl(4deg, 54%, 40%);
+  --color-white: #FFF;
+  --color-foreground:     hsl(216deg, 20%, 13%);
+  --color-foreground-50:  hsl(216deg, 20%, 40%);
+  --color-background:     hsl(216deg, 20%, 97%);
+  --color-background-10:  hsl(216deg, 20%, 93%);
+  --color-background-20:  hsl(216deg, 20%, 85%);
+  --color-shadow: #0003;
+
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+    --color-foreground:     hsl(216deg, 20%, 90%);
+    --color-foreground-50:  hsl(216deg, 20%, 50%);
+    --color-background:     hsl(216deg, 20%, 10%);
+    --color-background-10:  hsl(216deg, 20%, 13%);
+    --color-background-20:  hsl(216deg, 20%, 20%);
+    --color-shadow: #000;
+  }
+}

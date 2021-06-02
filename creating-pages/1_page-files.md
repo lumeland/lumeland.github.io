@@ -8,7 +8,7 @@ create pages using different formats but the simplest way is by adding a
 Markdown file in the root directory with a suitable filename and `.md` as
 extension. Lume will load these files and generate HTML pages with them:
 
-```
+```txt
 .
 ├── index.md     => /index.html
 ├── about.md     => /about/index.html
@@ -18,7 +18,7 @@ extension. Lume will load these files and generate HTML pages with them:
 You can organize the pages into subdirectories, and this structure will be used
 also in the output of the site build:
 
-```
+```txt
 .
 ├── index.md        => /index.html
 └── documentation
@@ -37,7 +37,7 @@ If you want to disable it, set `prettyUrls` to `false` in
 [config file](/getting-started/config-file/), so you will have something like
 this:
 
-```
+```txt
 .
 ├── index.md        => /index.html
 └── documentation
@@ -50,7 +50,7 @@ this:
 By default, all output URLs will be "slugified" (converted to lower case and
 replaced or removed the conflictive characters):
 
-```
+```txt
 .
 ├── Index.md            => /index.html
 └── Documentación
@@ -69,7 +69,7 @@ filename using the `yyyy-mm-dd` syntax following by an underscore `_` (or
 `yyyy-mm-dd-hh-ii-ss` if you need also the time). Note that this part is removed
 to generate the final name:
 
-```
+```txt
 .
 ├── index.md                          => /index.html
 └── posts
@@ -80,7 +80,7 @@ to generate the final name:
 If you don't mind the exact date, only want to keep an order, you can use just
 numbers:
 
-```
+```txt
 .
 ├── index.md                   => /index.html
 └── docs

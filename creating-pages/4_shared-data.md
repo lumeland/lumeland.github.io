@@ -36,7 +36,7 @@ pages in the same directory so you don't have to repeat it for every page.
 file, the data is stored in several files inside that directory. The _basename_
 of each file determines the variable name that is used. Let's see an example:
 
-```
+```txt
 └── _data
     └── users.json
     └── documents

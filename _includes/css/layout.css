@@ -1,0 +1,41 @@
+.ly-main {
+  display: grid;
+  grid-template-areas: "navbar navbar navbar"
+                       "menu content ."
+                       "footer footer .";
+  grid-template-columns: 0 minmax(0, 1fr) 0;
+  grid-template-rows: 85px 1fr auto;
+  grid-column-gap: 5vw;
+  align-content: start;
+
+  @media (min-width: 800px) {
+    min-height: 100vh;
+    grid-template-columns: calc(5vw + 15rem) minmax(0, 1fr) 0;
+    grid-template-areas: "navbar navbar navbar"
+                          "menu content ."
+                          "menu footer -";
+  }
+}
+.ly-navbar {
+  grid-area: navbar;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.ly-menu {
+  grid-area: menu;
+  overflow-y: auto;
+  height: calc(100vh - 85px);
+  position: fixed;
+  top: 85px;
+}
+.ly-content {
+  grid-area: content;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.ly-footer {
+  grid-area: footer;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font: var(--font-text);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+a {
+  color: var(--color-brand);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+code {
+  font-family: var(--font-family-mono);
+  background-color: var(--color-background-10);
+  border-radius: 2px;
+  font-size: 0.85em;
+  padding: 0 2px;
+  display: inline-block;
+}

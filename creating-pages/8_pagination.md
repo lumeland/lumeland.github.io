@@ -60,7 +60,7 @@ options are:
 | Name   | Default            | Description                                                                             |
 | ------ | ------------------ | --------------------------------------------------------------------------------------- |
 | `size` | `10`               | Number of elements per page                                                             |
-| `url`  | (n) => `page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
+| `url`  | `(n) => page-${n}` | The function to generate the URL of each page. It receives the page number as argument. |
 
 This helper returns a generator with which that you can iterate. Each item has
 the following values:

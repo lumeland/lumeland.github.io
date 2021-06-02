@@ -6,7 +6,7 @@ description: How define the output filename
 As said in [Page files](/creating-pages/page-files), the output filename is
 generated using the original source file path:
 
-```
+```txt
 posts/my-first-post.md  =>  /posts/my-first-post/index.html
 ```
 
@@ -21,7 +21,7 @@ const site = lume({
 });
 ```
 
-```
+```txt
 posts/my-first-post.md  =>  /posts/my-first-post.html
 ```
 
@@ -31,7 +31,7 @@ All output paths are **automatically slugified:** the spaces are replaced with
 `-`, characters like `ñ` or `á` are replaced by ASCII equivalents (`n` and `a`)
 and converted to lower case:
 
-```
+```txt
 posts/My First Post.md  =>  /posts/my-first-post/index.html
 ```
 
@@ -81,7 +81,7 @@ url: /posts/welcome/
 In this example, the `url` value will be used to generate the output file
 instead of the filename:
 
-```
+```txt
 posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
@@ -125,13 +125,13 @@ url: ./welcome/
 In this example, the page will be saved using the directory path where the
 source file is saved but adding `welcome` in the last part of the URL.
 
-```
+```txt
 posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
 Using `../welcome/` as URL will remove also the last directory.
 
-```
+```txt
 posts/my-first-post.md  =>  /welcome/index.html
 ```
 
