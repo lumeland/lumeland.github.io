@@ -4,25 +4,30 @@
   padding: 5vw;
   justify-content: center;
   align-content: center;
-  justify-items: center;
   box-sizing: border-box;
-  row-gap: 5vw;
+  row-gap: 2.5vh;
+  grid-template-columns: minmax(0, 1fr);
+}
+.landing-code pre {
+  margin: 0 auto;
+  max-width: max-content;
 }
 .landing-header {
   margin-top: auto;
+  justify-self: center;
 
   & img {
-    width: max(25vw, 130px);
-    height: max(25vw, 130px);
+    width: clamp(130px, 25vw, 350px);
+    height: clamp(130px, 25vw, 350px);
   }
   & .logo-name {
     margin: 0;
-    font-size: max(7vw, 3.5rem);
+    font-size: clamp(3.5rem, 7vw, 7rem);
     line-height: 1.1;
   }
   & .logo-description {
     margin: 0;
-    font-size: max(3vw, 1.2rem);
+    font-size: clamp(1.2rem, 3vw, 3rem);
     line-height: 1.1;
     max-width: 10em;
   }
@@ -40,4 +45,5 @@
   margin-bottom: auto;
   font: var(--font-xsmall);
   color: var(--color-foreground-50);
+  justify-self: center;
 }

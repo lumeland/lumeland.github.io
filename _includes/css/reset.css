@@ -3,6 +3,7 @@ body {
   font: var(--font-text);
   color: var(--color-foreground);
   background-color: var(--color-background);
+  min-width: 320px;
 }
 
 a {
@@ -19,4 +20,7 @@ code {
   font-size: 0.85em;
   padding: 0 2px;
   display: inline-block;
+}
+pre code {
+  border-radius: 4px;
 }
