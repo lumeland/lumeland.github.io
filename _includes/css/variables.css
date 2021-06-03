@@ -7,10 +7,10 @@
   --font-family-mono: 'PT Mono', monospace;
 
   --font-size-xsmall: 0.85rem;
-  --font-size-small: clamp(0.85rem, 2vw, 1rem);
+  --font-size-small: 0.9rem;
   --font-size-normal: clamp(1.1rem, 3vw, 1.4rem);
   --font-size-big: clamp(1.5rem, 4vw, 2rem);
-  --font-size-xbig: clamp(2rem, 5vw, 4rem);
+  --font-size-xbig: clamp(2.5rem, 5vw, 4rem);
 
   --font-xsmall: var(--font-size-xsmall) / 1.1 var(--font-family-sans);
   --font-xsmall-bold: bold var(--font-xsmall);
@@ -24,20 +24,20 @@
   --color-brand: hsl(4deg, 54%, 53%);
   --color-brand-dark: hsl(4deg, 54%, 40%);
   --color-white: #FFF;
-  --color-foreground:     hsl(216deg, 20%, 13%);
-  --color-foreground-50:  hsl(216deg, 20%, 40%);
-  --color-background:     hsl(216deg, 20%, 97%);
-  --color-background-10:  hsl(216deg, 20%, 93%);
-  --color-background-20:  hsl(216deg, 20%, 85%);
+  --color-foreground:     hsl(216deg, 15%, 13%);
+  --color-foreground-50:  hsl(216deg, 15%, 40%);
+  --color-background:     hsl(216deg, 15%, 97%);
+  --color-background-10:  hsl(216deg, 15%, 93%);
+  --color-background-20:  hsl(216deg, 15%, 85%);
   --color-shadow: #0003;
 
   /* Dark mode */
   @media (prefers-color-scheme: dark) {
-    --color-foreground:     hsl(216deg, 20%, 90%);
-    --color-foreground-50:  hsl(216deg, 20%, 50%);
-    --color-background:     hsl(216deg, 20%, 10%);
-    --color-background-10:  hsl(216deg, 20%, 13%);
-    --color-background-20:  hsl(216deg, 20%, 20%);
+    --color-foreground:     hsl(216deg, 15%, 90%);
+    --color-foreground-50:  hsl(216deg, 15%, 50%);
+    --color-background:     hsl(216deg, 15%, 10%);
+    --color-background-10:  hsl(216deg, 15%, 13%);
+    --color-background-20:  hsl(216deg, 15%, 20%);
     --color-shadow: #000;
   }
 }

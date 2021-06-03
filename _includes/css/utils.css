@@ -19,7 +19,6 @@
 
 .logo {
   display: grid;
-  white-space: nowrap;
 
   & img {
     grid-area: 1 / 1 / span 2;
@@ -51,6 +50,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 200ms;
+  text-align: center;
 
   &:hover {
     background-color: var(--background-hover);

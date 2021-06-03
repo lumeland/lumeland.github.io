@@ -12,8 +12,8 @@
   margin-top: auto;
 
   & img {
-    width: max(25vw, 150px);
-    height: max(25vw, 150px);
+    width: max(25vw, 130px);
+    height: max(25vw, 130px);
   }
   & .logo-name {
     margin: 0;
@@ -24,6 +24,7 @@
     margin: 0;
     font-size: max(3vw, 1.2rem);
     line-height: 1.1;
+    max-width: 10em;
   }
 }
 .landing-buttons ul {
@@ -31,8 +32,9 @@
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 .landing-footer {
   margin-bottom: auto;

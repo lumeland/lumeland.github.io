@@ -23,7 +23,7 @@
     overflow-x: auto;
     border-radius: 4px;
 
-    @media (prefers-color-scheme: light) {
+    @media (prefers-color-scheme: dark) {
       border: solid 1px var(--color-background-20);
     }
   }

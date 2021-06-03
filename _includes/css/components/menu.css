@@ -2,6 +2,7 @@
   background: var(--color-background-10);
   padding-left: 5vw;
   padding-right: 1em;
+  box-sizing: border-box;
   
   & ul {
     list-style: none;
@@ -25,6 +26,7 @@
       animation: showMenu 200ms;
       animation-fill-mode: both;
       box-shadow: 0 1px 10px var(--color-shadow);
+      max-width: 80%;
     }
   }
   @media (min-width: 800px) {
