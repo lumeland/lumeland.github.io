@@ -66,7 +66,7 @@ the query `menu=true`:
 
 ```html
 {% for option in search.pages("menu=true") %}
-<a href="{{ option.data.url | url }}">
+<a href="{{ option.data.url }}">
   {{ option.data.title }}
 </a>
 {% endfor %}
@@ -93,7 +93,7 @@ and with the tag `football`:
 
 ```html
 {% for post in search.pages("taxonomy.category=sport football") %}
-<a href="{{ post.data.url | url }}">
+<a href="{{ post.data.url }}">
   {{ post.data.title }}
 </a>
 {% endfor %}
@@ -116,7 +116,7 @@ sometimes is more practical.
 
 ```html
 {% for post in search.pages(["taxonomy.category=sport", "football"]) %}
-<a href="{{ post.data.url | url }}">
+<a href="{{ post.data.url }}">
   {{ post.data.title }}
 </a>
 {% endfor %}
@@ -136,13 +136,13 @@ current page. Let's see an example:
 {% set post = search.previousPage(url, "html") %}
 
 {% if post %}
-  <a href="{{ post.data.url | url }}" rel="prev">← {{ post.data.title }}</a>
+  <a href="{{ post.data.url }}" rel="prev">← {{ post.data.title }}</a>
 {% else %}
 
 {% set post = search.nextPage(url, "html") %}
 
 {% if post %}
-  <a href="{{ post.data.url | url }}" rel="next">{{ post.data.title }} →</a>
+  <a href="{{ post.data.url }}" rel="next">{{ post.data.title }} →</a>
 {% endif %}
 ```
 

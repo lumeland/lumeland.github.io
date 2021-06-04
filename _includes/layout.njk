@@ -11,8 +11,8 @@ menu:
 <nav class="navbar ly-navbar">
   <button class="menu-button" type="button" id="menu-button">Menu</button>
 
-  <a href="{{ '/' | url }}" class="logo navbar-logo">
-    <img src="{{ 'logo.svg' | url }}" width="64" height="64" alt="Lume logotype">
+  <a href="/" class="logo navbar-logo">
+    <img src="/logo.svg" width="64" height="64" alt="Lume logotype">
     <strong class="logo-name">Lume</strong>
     <em class="logo-description">SSG for Deno</em>
   </a>
@@ -46,9 +46,9 @@ menu:
       {% for page in search.pages(section, "section_order order title") %}
         <li>
           {% if page.data.url == url %}
-          <a href="{{ page.data.url | url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
+          <a href="{{ page.data.url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
           {% else %}
-          <a href="{{ page.data.url | url }}" title="{{ page.data.description }}">{{ page.data.title }}</a>
+          <a href="{{ page.data.url }}" title="{{ page.data.description }}">{{ page.data.title }}</a>
           {% endif %}
         </li>
       {% endfor %}

@@ -17,7 +17,7 @@ buttons:
 ---
 
 <header class="landing-header logo">
-  <img src="{{ 'logo.svg' | url }}">
+  <img src="/logo.svg">
   <h1 class="logo-name">Lume</h1>
   <p class="logo-description">A Static Site Generator for Deno</p>
 </header>
@@ -31,7 +31,7 @@ deno run -A https://deno.land/x/lume/install.js</code></pre>
   <ul>
     {% for item in buttons %}
     <li>
-      <a href="{{ item.url | url }}" class="{{ item.class }}">{{ item.text }}</a>
+      <a href="{{ item.url }}" class="{{ item.class }}">{{ item.text }}</a>
     </li>
     {% endfor %}
   </ul>
