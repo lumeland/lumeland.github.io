@@ -23,7 +23,7 @@ const site = lume({
 ```
 
 ```txt
-posts/my-first-post.md  =>  /posts/my-first-post.html
+/posts/my-first-post.md  =>  /posts/my-first-post.html
 ```
 
 ## Slugify
@@ -33,7 +33,7 @@ All output paths are **automatically slugified:** the spaces are replaced with
 and converted to lower case:
 
 ```txt
-posts/My First Post.md  =>  /posts/my-first-post/index.html
+/posts/My First Post.md  =>  /posts/my-first-post/index.html
 ```
 
 You can configure the slugifier in your `_config.js` file with the following
@@ -83,7 +83,7 @@ In this example, the `url` value will be used to generate the output file
 instead of the filename:
 
 ```txt
-posts/my-first-post.md  =>  /posts/welcome/index.html
+/posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
 Note that defining manually the URL of a page will makes that `prettyUrls`
@@ -127,13 +127,13 @@ In this example, the page will be saved using the directory path where the
 source file is saved but adding `welcome` in the last part of the URL.
 
 ```txt
-posts/my-first-post.md  =>  /posts/welcome/index.html
+/posts/my-first-post.md  =>  /posts/welcome/index.html
 ```
 
 Using `../welcome/` as URL will remove also the last directory.
 
 ```txt
-posts/my-first-post.md  =>  /welcome/index.html
+/posts/my-first-post.md  =>  /welcome/index.html
 ```
 
 ## URLs as functions
@@ -170,7 +170,7 @@ You may want to change how the URL is generated for specific pages. To do that,
 ```yml
 ---
 url:
-  path: _headers
+  path: /_headers
   slugify: false
 ---
 ```

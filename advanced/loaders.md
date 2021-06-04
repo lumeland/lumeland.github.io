@@ -10,21 +10,16 @@ a function that reads the content of a file and return an object with that
 content.
 
 Let's say you want to add support for `toml` format, using the
-[encoding/toml](https://deno.land/std@0.83.0/encoding#toml) Deno std module:
+[encoding/toml](https://deno.land/std/encoding#toml) Deno std module:
 
 ```js
-import { parse } from "https://deno.land/std@0.83.0/encoding/toml.ts";
+import { parse } from "https://deno.land/std/encoding/toml.ts";
 
-function tomlLoader(path, source) {
-  return source.readFile(path, (content) => parse(content));
+async function tomlLoader(path) {
+  const content = await Deno.readTextFile(path);
+  return parse(content);
 }
 ```
-
-The loaders accepts two arguments: the path of the file to load and a source
-object, with interesting functions like `readFile`. This function reads a file
-and, optionally transform the content before return it. In addition to that, the
-content is cached so it won't be read and transform again, which is good for
-performance.
 
 If you want to use this loader to build your site, just register it in the
 `_config.js` file, specifying the file extensions to apply:

@@ -24,6 +24,8 @@ you have to execute `search.pages("post html")`:
 </ul>
 ```
 
+## Sort pages
+
 The second argument is the value used to sort. By default the pages are sorted
 by `date`, but you can use any field. For example, if you want sort by title:
 
@@ -37,6 +39,22 @@ by `date`, but you can use any field. For example, if you want sort by title:
 
 Note: You can use dot notation to sort by any subfield. For example:
 `header.title`.
+
+Sorting allows to specify multiple fields. For example let's sort by "order" and "title" fields:
+
+```html
+{% for post in search.pages("post html", "order title") %}
+  {{ post.data.title }}
+{% endfor %}
+```
+
+By default, sort is ascendent, but this can be changed appending `=desc` to the field name:
+
+```html
+{% for post in search.pages("post html", "order=asc title=desc") %}
+  {{ post.data.title }}
+{% endfor %}
+```
 
 ### Filtering by a field
 

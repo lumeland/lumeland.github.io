@@ -19,6 +19,6 @@ site.use(codeHighlight());
 
 site.preprocess([".html"], (page) => {
   page.data.sourceFile = page.src.path + page.src.ext;
-})
+});
 
 export default site;

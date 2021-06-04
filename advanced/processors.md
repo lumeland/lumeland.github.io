@@ -49,7 +49,7 @@ function minifyHTML(page) {
 ```
 
 Note that you can use the `DOM API` with methods like `querySelector`,
-`addAttribute`, etc to modify `HTML` code. For example, let's create a processor
+`setAttribute`, etc to modify `HTML` code. For example, let's create a processor
 to add automatically the `alt` attribute to all images:
 
 ```js
@@ -92,13 +92,17 @@ site.process([".js"], function (page) {
 
 ## Preprocess
 
-Processors are executed just after rendering the pages. If you need to execute a
-function before rendering (for example, to configure a custom template engine or
-add extra data to some pages), you can use a **preprocessor**. It works exactly
-like a processor but is run before rendering.
+If you need to execute a function **before rendering** (for example, to
+configure a custom template engine or add extra data to some pages), you can use
+a **preprocessor**. Preprocessors work like processors but with two differences.
 
-For example, let's create a preprocessor to include a variable with the source
-filename:
+- They are excuted before rendering (instead after).
+- They use the input and output extension of the page. For example, you can
+  register a preprocessor to nunjucks pages (the extension `.njk`) or a
+  preprocessor to all pages that will be exported as HTML (the extension
+  `.html`).
+
+Let's create a preprocessor to include a variable with the source filename:
 
 ```js
 site.preprocess(

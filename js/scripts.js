@@ -18,7 +18,9 @@ const nav = new Navigator(async (load, event) => {
     link.removeAttribute("aria-current")
   );
 
-  const target = menu.querySelectorAll(`a[href="${event.target.getAttribute("href")}"]`);
+  const target = menu.querySelectorAll(
+    `a[href="${event.target.getAttribute("href")}"]`,
+  );
 
   if (target) {
     target.setAttribute("aria-current", "page");
@@ -29,4 +31,4 @@ nav.init();
 
 document.body.addEventListener("click", () => {
   menu.classList.remove("is-open");
-})
+});
