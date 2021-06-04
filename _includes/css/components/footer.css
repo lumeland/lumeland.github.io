@@ -1,6 +1,7 @@
 .footer {
   color: var(--color-foreground-50);
   border-top: solid 1px var(--color-background-20);
+  font: var(--font-xsmall);
 }
 .footer-pagination {
   list-style: none;
@@ -11,10 +12,13 @@
 
   & > li:last-child {
     margin-left: auto;
+    text-align: right;
   }
 
   & a {
     text-decoration: none;
+    display: block;
+    font: var(--font-text);
 
     &:hover {
       text-decoration: underline;
@@ -23,5 +27,4 @@
 }
 .footer-credits {
   text-align: center;
-  font: var(--font-xsmall);
 }
