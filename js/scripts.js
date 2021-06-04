@@ -1,6 +1,7 @@
 import Navigator from "./page-loader/navigator.js";
 const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
+
 btn.addEventListener("click", (ev) => {
   menu.classList.toggle("is-open");
   ev.stopPropagation();
@@ -17,8 +18,11 @@ const nav = new Navigator(async (load, event) => {
     link.removeAttribute("aria-current")
   );
 
-  event.target.setAttribute("aria-current", "page");
-  // menu.classList.remove("is-open");
+  const target = menu.querySelectorAll(`a[href="${event.target.getAttribute("href")}"]`);
+
+  if (target) {
+    target.setAttribute("aria-current", "page");
+  }
 });
 
 nav.init();

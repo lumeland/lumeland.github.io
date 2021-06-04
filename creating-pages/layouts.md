@@ -1,6 +1,7 @@
 ---
 title: Layouts
 description: Using layouts in Lume
+order: 3
 ---
 
 Layouts are templates that wrap around your content. They allow you to have the

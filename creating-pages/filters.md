@@ -1,6 +1,7 @@
 ---
 title: Filters
 description: Adding filters in the config file
+order: 4
 ---
 
 Filters are functions that can be applied to variables to transform content.

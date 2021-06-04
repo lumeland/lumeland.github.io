@@ -1,6 +1,7 @@
 ---
 title: Pagination
 description: Pagination in Lume
+order: 9
 ---
 
 The same source file can generate many output pages. This is useful to paginate

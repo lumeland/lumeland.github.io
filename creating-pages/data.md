@@ -1,6 +1,7 @@
 ---
 title: Extra data
 description: Adding special data in the config
+order: 7
 ---
 
 You can assign extra data to your site available everywhere. This allows to have

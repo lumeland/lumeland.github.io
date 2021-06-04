@@ -1,6 +1,7 @@
 ---
 title: Tags
 description: Grouping pages with tags
+order: 5
 ---
 
 You can assign one or multiple tags to pages using the `tags` variable. Tags

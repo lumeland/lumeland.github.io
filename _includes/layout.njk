@@ -2,14 +2,10 @@
 layout: base.njk
 body_class: ly-main
 menu:
-  - folder: getting-started
-    order: date
-  - folder: creating-pages
-    order: date
-  - folder: plugins
-    order: title
-  - folder: advanced
-    order: title
+  - getting-started
+  - creating-pages
+  - plugins
+  - advanced
 ---
 
 <nav class="navbar ly-navbar">
@@ -45,9 +41,9 @@ menu:
   <ul class="menu-links">
     {% for section in menu %}
     <li>
-      <strong>{{ search.data(section.folder).section }}</strong>
+      <strong>{{ search.data(section).section }}</strong>
       <ul>
-      {% for page in search.pages(section.folder, section.order) %}
+      {% for page in search.pages(section, "section_order order title") %}
         <li>
           {% if page.data.url == url %}
           <a href="{{ page.data.url | url }}" aria-current="page" title="{{ page.data.description }}">{{ page.data.title }}</a>
@@ -73,6 +69,24 @@ menu:
   <div class="article-content">
     {{ content | safe }}
   </div>
+
+  <nav class="article-pagination">
+    <ul>
+      {%- set previousPost = search.previousPage(url, "url!=/", "section_order order title") %}
+      {%- if previousPost %}
+      <li>
+        ← Previous: <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
+      </li>
+      {% endif %}
+
+      {%- set nextPost = search.nextPage(url, "url!=/", "section_order order title") %}
+      {%- if nextPost %}
+      <li>
+        Next: <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }} →</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
 </main>
 
 <footer class="footer ly-footer">

@@ -63,3 +63,22 @@
     border-bottom: solid 1px var(--color-background-20);
   }
 }
+.article-pagination {
+  margin-top: 5rem;
+
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

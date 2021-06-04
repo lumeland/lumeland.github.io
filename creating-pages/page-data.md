@@ -1,6 +1,7 @@
 ---
 title: Page data
 description: Page data with Lume
+order: 2
 ---
 
 Pages can contain arbitrary data. In Markdown files, the data is defined in the

@@ -1,6 +1,7 @@
 ---
 title: Overview
 description: About Lume
+order: 0
 ---
 
 **Lume** is the Galician word for _fire_ but also a (yet another) static site

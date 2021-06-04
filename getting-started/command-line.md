@@ -1,6 +1,7 @@
 ---
 title: Command line usage
 description: Using Lume on the command line
+order: 2
 ---
 
 These examples assume that you have installed Lume as the `lume` executable:

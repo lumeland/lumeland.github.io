@@ -1,6 +1,7 @@
 ---
 title: Page files
 description: How Lume will output files based on the sites file structure
+order: 1
 ---
 
 Pages are the files that are loaded, processed and saved in your site. You can

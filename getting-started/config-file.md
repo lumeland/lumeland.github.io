@@ -1,6 +1,7 @@
 ---
 title: Configuration
 description: Configuring Lume
+order: 3
 ---
 
 **Lume** processes files based on the file extension. Which file extensions are

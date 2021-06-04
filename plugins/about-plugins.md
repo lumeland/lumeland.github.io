@@ -1,5 +1,6 @@
 ---
 title: About plugins
+order: 0
 ---
 
 **Lume** has a plugin system that allows to extend its functionality with new
