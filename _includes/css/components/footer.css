@@ -1,5 +1,27 @@
 .footer {
-  font: var(--font-xsmall);
   color: var(--color-foreground-50);
   border-top: solid 1px var(--color-background-20);
+}
+.footer-pagination {
+  list-style: none;
+  margin: 0 0 3rem 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+
+  & > li:last-child {
+    margin-left: auto;
+  }
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.footer-credits {
+  text-align: center;
+  font: var(--font-xsmall);
 }
