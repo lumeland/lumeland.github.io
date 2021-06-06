@@ -2,7 +2,7 @@
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/github-dark.min.css";
 
 :root {
-  --font-family-serif: Charter, serif;
+  --font-family-serif: Charter, Palatino, 'Palatino Linotype', "Droid Serif", serif;
   --font-family-sans: -apple-system, system-ui, sans-serif;
   --font-family-mono: 'PT Mono', monospace;
 
