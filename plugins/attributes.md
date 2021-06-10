@@ -13,7 +13,7 @@ Provide a convenient way to work with HTML attributes.
 ```html
 ---
 link:
-  title: Go to Github
+  title: Go to GitHub
   href: https://github.com
   target: _blank
 ---
@@ -26,7 +26,7 @@ You can also filter the attributes names:
 ```html
 ---
 link:
-  text: Go to Github
+  text: Go to GitHub
   href: https://github.com
   target: _blank
   noopen: true
