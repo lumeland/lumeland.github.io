@@ -45,7 +45,7 @@ Sorting allows to specify multiple fields. For example let's sort by "order" and
 
 ```html
 {% for post in search.pages("post html", "order title") %}
-  {{ post.data.title }}
+  ...
 {% endfor %}
 ```
 
@@ -54,7 +54,25 @@ field name:
 
 ```html
 {% for post in search.pages("post html", "order=asc title=desc") %}
-  {{ post.data.title }}
+  ...
+{% endfor %}
+```
+
+### Limit the results
+
+The third argument of `search.pages()` allow to limit the number of results. You
+can use a positive number to return the first `n` results or a negative number
+to return the latests `n` results:
+
+```html
+<!-- Get the 3 first values -->
+{% for post in search.pages("post html", "order title", 3) %}
+  ...
+{% endfor %}
+
+<!-- Get the 3 latest values -->
+{% for post in search.pages("post html", "order title", -3) %}
+  ...
 {% endfor %}
 ```
 
