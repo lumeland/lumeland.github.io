@@ -15,6 +15,7 @@ site.data("lastVersion", versions.latest);
 site.ignore("README.md");
 site.copy("js");
 site.copy("logo.svg");
+site.copy("lume.png");
 site.copy("favicon.ico");
 site.copy("favicon-32x32.png");
 site.use(postcss());
