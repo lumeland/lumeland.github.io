@@ -3,7 +3,9 @@ import codeHighlight from "lume/plugins/code_highlight.js";
 import postcss from "lume/plugins/postcss.js";
 import basePath from "lume/plugins/base_path.js";
 
-const site = lume();
+const site = lume({
+  location: "https://lumeland.github.io"
+});
 
 const response = await fetch("https://cdn.deno.land/lume/meta/versions.json");
 const versions = await response.json();
