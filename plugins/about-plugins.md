@@ -1,5 +1,6 @@
 ---
 title: About plugins
+description: How to enable plugin in Lume
 order: 0
 ---
 

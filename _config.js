@@ -4,7 +4,7 @@ import postcss from "lume/plugins/postcss.js";
 import basePath from "lume/plugins/base_path.js";
 
 const site = lume({
-  location: "https://lumeland.github.io"
+  location: "https://lumeland.github.io",
 });
 
 const response = await fetch("https://cdn.deno.land/lume/meta/versions.json");
