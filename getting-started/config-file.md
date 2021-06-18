@@ -194,3 +194,53 @@ site.filter("async_filter", async (value) => value, true);
 ```
 
 Note that not all template engines support async filters.
+
+## Helpers
+
+Some templates filter allows to add other helpers different to filters, like
+custom tags. To configure that, there's the `helper()` method that allows to add
+any generical helper. Example:
+
+```js
+site.helper("uppercase", (text) => text.toUpperCase(), { type: "tag" });
+```
+
+```html
+{% uppercase user.name %}
+```
+
+The third argument is an object with different properties:
+
+| Name    | Description                                                                                    |
+| ------- | ---------------------------------------------------------------------------------------------- |
+| `type`  | The type of helper. It can be `tag`, `filter` or any other, depending on the template engine.  |
+| `async` | Set `true` to configure as async helper                                                        |
+| `body`  | Set `true` to configure that the helper accept a body (supported only by nunjucks custom tags) |
+
+Example of custom tag with body:
+
+```js
+site.helper("uppercase", (body) => body.toUpperCase(), {
+  type: "tag",
+  body: "true",
+});
+```
+
+Now the tag includes a body:
+
+```html
+{% uppercase %}
+Hello, {{ user.name }}
+{% enduppercase %}
+```
+
+Note: The function `filter` is just a shortcut of `helper` with some
+configurations:
+
+```js
+// This:
+site.filter("uppercase", (text) => text.toUpperCase());
+
+// is equivalent to:
+site.helper("uppercase", (text) => text.toUpperCase(), { type: "filter" });
+```

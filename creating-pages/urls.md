@@ -26,47 +26,6 @@ const site = lume({
 /posts/my-first-post.md  =>  /posts/my-first-post.html
 ```
 
-## Slugify
-
-All output paths are **automatically slugified:** the spaces are replaced with
-`-`, characters like `ñ` or `á` are replaced by ASCII equivalents (`n` and `a`)
-and converted to lower case:
-
-```txt
-/posts/My First Post.md  =>  /posts/my-first-post/index.html
-```
-
-You can configure the slugifier in your `_config.js` file with the following
-options:
-
-```js
-const site = lume({
-  slugifyUrls: {
-    lowercase: true, // Converts all characters to lowercase
-    alphanumeric: true, // Replace non alphanumeric characters for the equivalent. Example: ñ to n.
-    separator: "-", // Character used as separator for words
-    replace: { // An object with individual characters replacements
-      "Ð": "D", // eth
-      "ð": "d",
-      "Đ": "D", // crossed D
-      "đ": "d",
-      "ø": "o",
-      "ß": "ss",
-      "æ": "ae",
-      "œ": "oe",
-    },
-  },
-});
-```
-
-Set `false` to disable the slugifier:
-
-```js
-const site = lume({
-  slugifyUrls: false,
-});
-```
-
 ## The `url` variable
 
 The variable `url` defined in the page allows to customize the output file
@@ -99,17 +58,6 @@ url: /posts/welcome
 # This outputs /posts/welcome.html
 url: /posts/welcome.html
 ```
-
-The `slugifyUrls` option can modify the `url` value:
-
-```yml
----
-title: Teño fame, mamá
-url: /Post/Teño fame, mamá/
----
-```
-
-The output filename would be `/post/teno-fame-mama/index.html`.
 
 ## Relative URLs
 
@@ -161,49 +109,3 @@ slugified automatically, the final page will be `/post/my-fist-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
-
-## Configure individual URLs
-
-You may want to change how the URL is generated for specific pages. To do that,
-`url` accepts also an object with different options:
-
-```yml
----
-url:
-  path: /_headers
-  slugify: false
----
-```
-
-Due the slugifier will remove the character `_`, we wanted to disable it but
-only for this specific page. So, instead of a string, we use an object with the
-`path` and the `slugify` option set to `false`.
-
-Another example is if we want to disable `prettyUrls` option:
-
-```yml
----
-url:
-  pretty: false
----
-```
-
-Now, the final URL of this page won't be _pretty_. Note that we don't have the
-`path` property because the URL is calculated using the source filename.
-Remember that on including manually the URL path, the `pretty` option wouldn't
-have any effect.
-
-## Combine functions and objects
-
-Combining functions and objects is useful to change the URL generation for a
-specific directory. For example, let's say we want to disable the pretty URLs to
-all pages in a directory. We only need to create a function in the `_data.js`
-file returning an object:
-
-```js
-export function url() {
-  return {
-    pretty: false,
-  };
-}
-```

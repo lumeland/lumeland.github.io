@@ -13,25 +13,27 @@ in order to configure and register new elements to it.
 
 For example, to register a new template engine, you have to create an instance
 and decide the extensions to apply,
-[as you can see in the docs](advanced/engines/):
+[as you can see in the docs](advanced/loaders/):
 
 ```js
+import textLoader from "lume/loaders/text.js";
 import CustomEngine from "https://deno.land/x/my-custom-engine/mod.js";
 
 const myEngine = new CustomEngine(site);
-site.engine([".me"], myEngine);
+site.loadPages([".me"], textLoader, new CustomEngine(myEngine));
 ```
 
 You can encapsulate this code in a plugin:
 
 ```js
+import textLoader from "lume/loaders/text.js";
 import CustomEngine from "https://deno.land/x/my-custom-engine/mod.js";
 
 export default function () {
   return (site) => {
     const myEngine = new CustomEngine(site);
 
-    site.engine([".me"], myEngine);
+    site.loadPages([".me"], textLoader, new CustomEngine(myEngine));
   };
 }
 ```
@@ -49,13 +51,14 @@ functions returning the plugin. For example, let's say you want to customize the
 file extensions to apply the template engine:
 
 ```js
+import textLoader from "lume/loaders/text.js";
 import CustomEngine from "https://deno.land/x/my-custom-engine/mod.js";
 
-export default function (ext = [".me"]) {
+export default function (extensions = [".me"]) {
   return (site) => {
     const myEngine = new CustomEngine(site);
 
-    site.engine(ext, myEngine);
+    site.loadPages(extensions, textLoader, new CustomEngine(myEngine));
   };
 }
 ```

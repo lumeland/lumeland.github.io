@@ -55,6 +55,26 @@ site.addEventListener("afterUpdate", (event) => {
 });
 ```
 
+## afterRender
+
+This event is triggered just after all pages are rendered but before process.
+
+```js
+site.addEventListener("afterRender", (event) => {
+  console.log("All pages rendered");
+});
+```
+
+## beforeSave
+
+This event is triggered just before saving the generated pages.
+
+```js
+site.addEventListener("beforeSave", (event) => {
+  console.log("All pages are about to be saved");
+});
+```
+
 ## Execute scripts with events
 
 In addition to functions, you can also execute [scripts](/advanced/scripts) in

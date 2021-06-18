@@ -24,6 +24,17 @@ you have to execute `search.pages("post html")`:
 </ul>
 ```
 
+You can use quotes to search tags containing spaces. For example to search by
+the tags `post` and `static site generator`:
+
+```html
+<ul>
+  {% for post in search.pages("post 'static site generator'") %}
+  <li>{{ post.data.title }}</li>
+  {% endfor %}
+</ul>
+```
+
 ## Sort pages
 
 The second argument is the value used to sort. By default the pages are sorted

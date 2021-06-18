@@ -3,8 +3,20 @@ title: Attributes
 description: To manage attributes and class names of HTML elements
 ---
 
-The Attributes plugin is enabled by default and register two filters to
-normalize the attributes of your HTML:
+The `attributes` plugin register two template filters to normalize the
+attributes of your HTML. This plugin **is disabled by default** so to enable it,
+you have to edit your `_config.js` file:
+
+```js
+import lume from "lume/mod.js";
+import attributes from "lume/plugins/attributes.js";
+
+const site = lume();
+
+site.use(attributes());
+```
+
+The filters included in this plugin are the following:
 
 ## attr
 

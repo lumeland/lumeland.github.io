@@ -49,8 +49,6 @@ Lume includes the following convenient preinstalled filters:
   content to HTML. [More info](plugins/nunjucks)
 - **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
   URLs. [More info](plugins/url)
-- **attr / class**: It's installed by the `attributes` plugin and allows to work
-  with HTML attributes. [More info](plugins/attributes)
 
 ## Using the filters in JavaScript modules
 
