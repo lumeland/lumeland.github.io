@@ -57,9 +57,8 @@ JavaScript/TypeScript allows to generate multiple pages from the same file, see
 
 ## Creating layouts
 
-It's possible to create layouts using JavaScript/TypeScript. Just create `.js`
-or `.ts` files inside the `_includes` directory (here it's not necessary to
-prepend `.tmpl` to the extension).
+It's possible to create layouts using JavaScript/TypeScript. Just create `.tmpl.js`
+or `.tmpl.ts` files inside the `_includes` directory.
 
 ```js
 export default ({ title, content }, filters) =>
