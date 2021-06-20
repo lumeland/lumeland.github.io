@@ -104,8 +104,9 @@ the title of the page as a relative URL, for example `./My first post/` (See
 [Shared data](/creating-pages/shared-data/)).
 
 Due the URL is relative, the current directory is appended automatically (it
-will be resolved to `/post/My first post/`). And due all output paths are
-slugified automatically, the final page will be `/post/my-fist-post/`.
+will be resolved to `/post/My first post/`). And if you are using the
+[`slugify_urls`](/plugins/slugify_urls/) plugin all output paths are slugified
+automatically, so the final url will be `/post/my-fist-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you
 want.
