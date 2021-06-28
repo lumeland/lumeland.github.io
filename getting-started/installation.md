@@ -23,6 +23,8 @@ Once installed, you can update Lume to the latest version by running:
 lume upgrade
 ```
 
+Note: If you get an error upgrading from old versions or Lume, just install again.
+
 ## Execute it without install
 
 The `ci.js` file works exactly like the `lume` command but without installation.

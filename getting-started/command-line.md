@@ -6,21 +6,18 @@ order: 2
 
 These examples assume that you have installed Lume as the `lume` executable:
 
-```sh
+```bash
 # Show the version
-lume --version # or -v
+lume --version # or -V
 
 # Show help information
 lume --help # or -h
-
-# Show help information for the build command
-lume build --help
 
 # Create a _config.js file
 lume init
 
 # Build the site in the current directory
-lume # or lume build
+lume
 
 # Build the site overriding some config values
 lume --src=from --dest=build --location=https://my-site.com/blog/
@@ -37,6 +34,9 @@ lume --serve --port=8000
 
 # Build in development mode to view draft pages
 lume --dev
+
+# Build and watch changes but without starting a webserver
+lume --watch # or -w
 
 # Pass additional flags to your site code
 lume -- flag1 flag2
