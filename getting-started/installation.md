@@ -23,7 +23,7 @@ Once installed, you can update Lume to the latest version by running:
 lume upgrade
 ```
 
-Note: If you get an error upgrading from old versions or Lume, just install again.
+Note: If you get an error upgrading from an old versions of Lume, just install it again.
 
 ## Execute it without install
 
