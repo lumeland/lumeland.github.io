@@ -28,7 +28,7 @@ The `_config.js` file is a JavaScript module that exports a Lume instance. The
 minimal required code is:
 
 ```js
-import lume from "lume/mod.js";
+import lume from "lume/mod.ts";
 
 const site = lume();
 
@@ -39,7 +39,7 @@ You can pass an object with configuration data to your site. This is an example
 with the default values:
 
 ```js
-import lume from "lume/mod.js";
+import lume from "lume/mod.ts";
 
 const site = lume({
   // The "src" and "dest" directories are relative to this path.
@@ -113,13 +113,13 @@ example, to add the `svg` plugin (that optimizes SVG files), you have to import
 the plugin and enable it with `use()` in the config file:
 
 ```js
-import lume from "lume/mod.js";
-import svg from "lume/plugins/svg.js";
+import lume from "lume/mod.ts";
+import svgo from "lume/plugins/svgo.ts";
 
 const site = lume();
 
 // Add svg plugin
-site.use(svg());
+site.use(svgo());
 
 export default site;
 ```

@@ -7,7 +7,7 @@ The Date plugin **is disabled by default** so you need to enable it in
 `_config.js` file:
 
 ```js
-import date from "lume/plugins/date.js";
+import date from "lume/plugins/date.ts";
 
 site.use(date());
 ```
@@ -52,7 +52,7 @@ On register the value you can edit or add more formats under a name, so it's
 more easy to apply them in the templates:
 
 ```js
-import date from "lume/plugins/date.js";
+import date from "lume/plugins/date.ts";
 
 site.use(date({
   formats: {
@@ -73,7 +73,7 @@ Now you can use this format by its name:
 want to use them, just import and register them in `_config.js`:
 
 ```js
-import date from "lume/plugins/date.js";
+import date from "lume/plugins/date.ts";
 import gl from "date_fns@v2.15.0/locale/gl/index.js";
 import es from "date_fns@v2.15.0/locale/es/index.js";
 

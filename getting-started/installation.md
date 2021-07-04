@@ -13,7 +13,7 @@ don't have it yet.
 The easiest way to install Lume is by executing the following command:
 
 ```sh
-deno run -A https://deno.land/x/lume/install.js
+deno run -A https://deno.land/x/lume/install.ts
 ```
 
 Now you have the `lume` command.\
@@ -25,9 +25,9 @@ lume upgrade
 
 ## Execute it without install
 
-The `ci.js` file works exactly like the `lume` command but without installation.
+The `ci.ts` file works exactly like the `lume` command but without installation.
 It's useful for CI environments:
 
 ```sh
-deno run -A https://deno.land/x/lume/ci.js
+deno run -A https://deno.land/x/lume/ci.ts
 ```

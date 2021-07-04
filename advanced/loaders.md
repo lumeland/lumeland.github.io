@@ -87,14 +87,14 @@ site.loadAssets([".css", ".js"]);
 
 Lume supports several template engines to render your pages, like Nunjucks, Pug
 or Eta. It's easy to extend this suppoprt for more template engines, you only
-need to create a class extending the `TemplateEngine` class. Let's see an
+need to create a class extending the `Engine` class. Let's see an
 example using [handlebars](https://github.com/handlebars-lang/handlebars.js):
 
-```js
+```ts
 import HandlebarsJS from "https://dev.jspm.io/handlebars@4.7.6";
-import TemplateEngine from "lume/engines/templateEngine.js";
+import Engine from "lume/engines/engine.ts";
 
-class HandlebarsEngine extends TemplateEngine {
+class HandlebarsEngine extends Engine {
   render(content, data, filename) {
     const template = HandlebarsJS.compile(content);
     return template(data);
@@ -105,9 +105,9 @@ class HandlebarsEngine extends TemplateEngine {
 To use this template engine you have to set as third argument of the `loadPages`
 function:
 
-```js
-import textLoader from "lume/loaders/text.js";
-import HandlebarsEngine from "./handlebars-engine.js";
+```ts
+import textLoader from "lume/loaders/text.ts";
+import HandlebarsEngine from "./handlebars-engine.ts";
 
 site.loadPages([".hbs"], textLoader, new HandlebarsEngine(site));
 ```

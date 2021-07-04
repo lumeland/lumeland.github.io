@@ -8,7 +8,7 @@ The Terser plugin minifies `.js` files using the
 enable it you have to import and use it in the `_config.js` file:
 
 ```js
-import terser from "lume/plugins/terser.js";
+import terser from "lume/plugins/terser.ts";
 
 site.use(terser());
 ```
@@ -22,7 +22,7 @@ option, as well as the `compress` and `mangle` options, are by default set to
 options in an `options` object in the `use` function:
 
 ```js
-import terser from "lume/plugins/terser.js";
+import terser from "lume/plugins/terser.ts";
 
 site.use(terser({
   options: {

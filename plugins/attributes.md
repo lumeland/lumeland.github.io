@@ -8,8 +8,8 @@ attributes of your HTML. This plugin **is disabled by default** so to enable it,
 you have to edit your `_config.js` file:
 
 ```js
-import lume from "lume/mod.js";
-import attributes from "lume/plugins/attributes.js";
+import lume from "lume/mod.ts";
+import attributes from "lume/plugins/attributes.ts";
 
 const site = lume();
 

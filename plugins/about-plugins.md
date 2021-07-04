@@ -12,8 +12,8 @@ To enable a plugin, just import the plugin module and use the `use()` function.
 For example:
 
 ```js
-import lume from "lume/mod.js";
-import jsx from "lume/plugins/jsx.js";
+import lume from "lume/mod.ts";
+import jsx from "lume/plugins/jsx.ts";
 
 const site = lume();
 

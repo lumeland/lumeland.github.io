@@ -9,7 +9,7 @@ frameworks, like React. This format **is disabled by default** so you have to
 enable it by using the JSX plugin in the `_config.js` file:
 
 ```js
-import jsx from "lume/plugins/jsx.js";
+import jsx from "lume/plugins/jsx.ts";
 
 site.use(jsx());
 ```

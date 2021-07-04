@@ -7,7 +7,7 @@ The plugin Bundler **is disabled by default** so to enable it you have to import
 and use it in the `_config.js` file:
 
 ```js
-import bundler from "lume/plugins/bundler.js";
+import bundler from "lume/plugins/bundler.ts";
 
 site.use(bundler());
 ```

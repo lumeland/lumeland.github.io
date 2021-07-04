@@ -8,7 +8,7 @@ format is **disabled by default**, so you have to enable it in the `_config.js`
 file:
 
 ```js
-import pug from "lume/plugins/pug.js";
+import pug from "lume/plugins/pug.ts";
 
 site.use(pug());
 ```

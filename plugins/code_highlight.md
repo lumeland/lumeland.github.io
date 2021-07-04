@@ -9,7 +9,7 @@ default** so to enable it you have to import and use it in the `_config.js`
 file:
 
 ```js
-import codeHighlight from "lume/plugins/code_highlight.js";
+import codeHighlight from "lume/plugins/code_highlight.ts";
 
 site.use(codeHighlight());
 ```
@@ -19,7 +19,7 @@ See the
 for available config options. Example:
 
 ```js
-import codeHighlight from "lume/plugins/code_highlight.js";
+import codeHighlight from "lume/plugins/code_highlight.ts";
 
 site.use(codeHighlight({
   options: {

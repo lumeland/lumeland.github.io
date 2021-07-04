@@ -74,8 +74,8 @@ more information about how to register a new loader. Let's see an example of how
 to load and transform JavaScript files:
 
 ```js
-import lume from "lume/mod.js";
-import textLoader from "lume/loaders/text.js";
+import lume from "lume/mod.ts";
+import textLoader from "lume/loaders/text.ts";
 
 const site = lume();
 

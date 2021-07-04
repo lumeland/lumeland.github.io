@@ -9,7 +9,7 @@ default** so to enable it you have to import and use it in the `_config.js`
 file:
 
 ```js
-import postcss from "lume/plugins/postcss.js";
+import postcss from "lume/plugins/postcss.ts";
 
 site.use(postcss());
 ```
@@ -47,8 +47,8 @@ The available options are:
   `postcss_import` plugin.
 
 ```js
-import postcss from "lume/plugins/postcss.js";
-import { autoprefixer } from "lume/deps/postcss.js";
+import postcss from "lume/plugins/postcss.ts";
+import { autoprefixer } from "lume/deps/postcss.ts";
 import csso from "https://esm.sh/postcss-csso";
 
 site.use(postcss({

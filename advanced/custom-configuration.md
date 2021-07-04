@@ -7,7 +7,7 @@ In the `_config.js` file, the most easy way to setup lume is by using the
 `mod.js` module in this way:
 
 ```js
-import lume from "lume/mod.js";
+import lume from "lume/mod.ts";
 
 const site = lume();
 
@@ -21,7 +21,7 @@ If you want to setup lume from scratch, without this default configuration, you
 can import only the `Site` class in order to create an empty instance:
 
 ```js
-import Site from "lume/site.js";
+import Site from "lume/site.ts";
 
 const site = new Site();
 
@@ -35,9 +35,9 @@ somehow. For example, if you only need Markdown and Nunjucks, you could do
 something like this:
 
 ```js
-import Site from "lume/site.js";
-import markdown from "lume/plugins/markdown.js";
-import nunjucks from "lume/plugins/nunjucks.js";
+import Site from "lume/site.ts";
+import markdown from "lume/plugins/markdown.ts";
+import nunjucks from "lume/plugins/nunjucks.ts";
 
 const site = new Site();
 

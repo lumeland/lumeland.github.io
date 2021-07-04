@@ -1,7 +1,7 @@
-import lume from "lume/mod.js";
-import codeHighlight from "lume/plugins/code_highlight.js";
-import postcss from "lume/plugins/postcss.js";
-import basePath from "lume/plugins/base_path.js";
+import lume from "lume/mod.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
+import postcss from "lume/plugins/postcss.ts";
+import basePath from "lume/plugins/base_path.ts";
 
 const site = lume({
   location: "https://lumeland.github.io",

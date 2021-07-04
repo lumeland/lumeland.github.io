@@ -8,7 +8,7 @@ the HTML automatically. It is **disabled by default**, so you have to enable it
 in the `_config.js` file:
 
 ```js
-import inline from "lume/plugins/inline.js";
+import inline from "lume/plugins/inline.ts";
 
 site.use(inline());
 ```

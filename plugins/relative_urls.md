@@ -9,7 +9,7 @@ all links will continue working. This plugin **is disabled by default** so to
 enable it you have to import and use it in the `_config.js` file:
 
 ```js
-import relativeUrls from "lume/plugins/relative_urls.js";
+import relativeUrls from "lume/plugins/relative_urls.ts";
 
 site.use(relativeUrls());
 ```

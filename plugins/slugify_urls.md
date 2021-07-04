@@ -9,7 +9,7 @@ disabled by default** so to enable it you have to import and use it in the
 `_config.js` file:
 
 ```js
-import slugifyUrls from "lume/plugins/slugify_urls.js";
+import slugifyUrls from "lume/plugins/slugify_urls.ts";
 
 site.use(slugifyUrls());
 
@@ -28,7 +28,7 @@ You can configure the slugifier in your `_config.js` file with the following
 options:
 
 ```js
-import slugifyUrls from "lume/plugins/slugify_urls.js";
+import slugifyUrls from "lume/plugins/slugify_urls.ts";
 
 site.use(slugifyUrls({
   lowercase: true, // Converts all characters to lowercase

@@ -16,8 +16,8 @@ Note that if the path of your [location setting](/getting-started/config-file/)
 is `/`, **it won't have any effect.**
 
 ```js
-import lume from "lume/mod.js";
-import basePath from "lume/plugins/base_path.js";
+import lume from "lume/mod.ts";
+import basePath from "lume/plugins/base_path.ts";
 
 const site = lume({
   location: "https://my-site.com/blog/", // ← Note the path /blog/

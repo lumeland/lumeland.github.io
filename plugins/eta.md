@@ -9,7 +9,7 @@ similar to EJS but with
 **disabled by default**, so you have to enable it in the `_config.js` file:
 
 ```js
-import eta from "lume/plugins/eta.js";
+import eta from "lume/plugins/eta.ts";
 
 site.use(eta());
 ```
