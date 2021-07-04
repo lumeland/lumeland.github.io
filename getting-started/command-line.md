@@ -35,6 +35,9 @@ lume --root ./my-site
 # Build in development mode to view draft pages
 lume --dev
 
+# Build and watch changes but without starting a webserver
+lume --watch # or -w
+
 # Pass additional flags to your site code
 lume -- flag1 flag2
 
