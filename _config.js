@@ -9,7 +9,7 @@ const site = lume({
 }, {
   markdown: {
     plugins: [
-      [anchor, { permalink: anchor.permalink.headerLink() }]
+      [anchor, { permalink: anchor.permalink.headerLink() }],
     ],
   },
 });
