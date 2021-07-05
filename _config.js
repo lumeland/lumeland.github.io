@@ -2,9 +2,16 @@ import lume from "lume/mod.ts";
 import codeHighlight from "lume/plugins/code_highlight.ts";
 import postcss from "lume/plugins/postcss.ts";
 import basePath from "lume/plugins/base_path.ts";
+import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
 
 const site = lume({
-  location: "https://lumeland.github.io",
+  location: new URL("https://lumeland.github.io"),
+}, {
+  markdown: {
+    plugins: [
+      [anchor, { permalink: anchor.permalink.headerLink() }]
+    ],
+  },
 });
 
 const response = await fetch("https://cdn.deno.land/lume/meta/versions.json");
