@@ -68,25 +68,6 @@ const site = lume({
   // Set `false` to disable it.
   prettyUrls: true,
 
-  // To automatically slugify all URLs.
-  // For example, the file `/About Us.md` is converted to `/about-us/` instead of `/About Us/`.
-  // Set `false` to disable it.
-  slugifyUrls: {
-    lowercase: true,
-    alphanumeric: true,
-    separator: "-",
-    replace: {
-      "Ð": "D", // eth
-      "ð": "d",
-      "Đ": "D", // crossed D
-      "đ": "d",
-      "ø": "o",
-      "ß": "ss",
-      "æ": "ae",
-      "œ": "oe",
-    },
-  },
-
   // Local server configuration
   server: {
     // You can override the value from the CLI with `--port`.
