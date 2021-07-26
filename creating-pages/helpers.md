@@ -1,8 +1,16 @@
 ---
-title: Filters
+title: Helpers
 description: Adding filters in the config file
 order: 4
 ---
+
+Helpers are functions accessible from pages and layouts that help to render the
+content. More info about how to create helpers in the
+[Configuration page](/getting-started/config-file/#helpers).
+
+There are different types of helpers, the most common type is a **filter**.
+
+## Filters
 
 Filters are functions that can be applied to variables to transform content.
 Nunjucks template engine
@@ -39,7 +47,7 @@ Output:
 <h1>👍 WELCOME</h1>
 ```
 
-## Builtin filters
+### Builtin filters
 
 Lume includes the following convenient preinstalled filters:
 
@@ -50,7 +58,7 @@ Lume includes the following convenient preinstalled filters:
 - **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
   URLs. [More info](plugins/url)
 
-## Using the filters in JavaScript modules
+### Using the filters in JavaScript modules
 
 If you're using JavaScript/TypeScript modules instead of a template engine like
 Nunjucks, filters are passed as the second argument of your default exported
@@ -60,4 +68,16 @@ function:
 export default function (data, filters) {
   return `<a href="${filters.url("/about-us")}">About us</a>`;
 }
+```
+
+## Tags
+
+Tags are available only in Nunjucks templates. They allows to create a custom
+tag to format and manipulate content. The tags can contain a body or not. This
+is an example with a tag with a body:
+
+```html
+{% uppercase %}
+Hello, {{ user.name }}
+{% enduppercase %}
 ```

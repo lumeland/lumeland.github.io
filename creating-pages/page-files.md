@@ -5,9 +5,10 @@ order: 1
 ---
 
 Pages are the files that are loaded, processed and saved in your site. You can
-create pages using different formats but the simplest way is by adding a
-Markdown file in the root directory with a suitable filename and `.md` as
-extension. Lume will load these files and generate HTML pages with them:
+create pages using different formats (`md`, `js`, `ts`, `jsx`, `tsx`, `yml`,
+etc) but the simplest way is by adding a Markdown file in the root directory
+with a suitable filename and `.md` as extension. Lume will load these files and
+generate HTML pages with them:
 
 ```txt
 .
@@ -45,22 +46,6 @@ this:
     └── doc1.md     => /documentation/doc1.html
     └── doc2.md     => /documentation/doc2.html
 ```
-
-## Slugify
-
-By default, all output URLs will be "slugified" (converted to lower case and
-replaced or removed the conflictive characters):
-
-```txt
-.
-├── Index.md            => /index.html
-└── Documentación
-    └── A-Mariña.md     => /documentacion/a-marina/index.html
-    └── Val_do_Dubra.md => /documentacion/val-do-dubra/index.html
-```
-
-To disable it, set `slugifyUrls` to `false` in
-[config file](/getting-started/config-file/).
 
 ## Page order
 

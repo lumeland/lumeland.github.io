@@ -1,6 +1,7 @@
 ---
 title: Shared data
 description: Creating shared data that can be used between different pages
+order: 3
 ---
 
 In addition to the variables defined in the front matter of the pages and
@@ -10,8 +11,8 @@ extensions like `.json`, `.yaml`, `.js` or `.ts`.
 
 ## The `_data.*` files
 
-Any file named as `_data.*` is loaded and shared with all pages in the same
-directory or subdirectory.
+Any file named as `_data.*` is loaded and its content is accessible by all pages
+in the same directory or subdirectory.
 
 ```sh
 ├── _data.yaml      # Data shared with all pages
@@ -34,7 +35,8 @@ pages in the same directory so you don't have to repeat it for every page.
 
 `_data` directories are similar to `_data` files, but instead of using only one
 file, the data is stored in several files inside that directory. The _basename_
-of each file determines the variable name that is used. Let's see an example:
+of each file determines the variable name used to store the data. Let's see an
+example:
 
 ```txt
 └── _data

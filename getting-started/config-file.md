@@ -11,11 +11,11 @@ processed how is determined by tying the extensions to **template engines** or
 `*.njk` and `*.html` files will be loaded, processed and saved as `*.html`
 files.
 
-You can customize this by adding a `_config.ts` or `_config.js` file, which adds to or overrides
-the default options; for example, to use a different template engine or to
-process different file types with other extensions. Although you can code this
-in the config file, for convenience, **Lume** includes **plugins** for common
-transformations, such as Markdown and Nunjucks.
+You can customize this by adding a `_config.ts` or `_config.js` file, which adds
+to or overrides the default options; for example, to use a different template
+engine or to process different file types with other extensions. Although you
+can code this in the config file, for convenience, **Lume** includes **plugins**
+for common transformations, such as Markdown and Nunjucks.
 
 The config file must be placed in the site's root directory, which you can
 create yourself or with the following command:
