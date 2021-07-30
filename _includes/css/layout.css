@@ -28,6 +28,7 @@
   height: calc(100vh - 85px);
   position: fixed;
   top: 85px;
+  z-index: 1;
 }
 .ly-content {
   grid-area: content;
