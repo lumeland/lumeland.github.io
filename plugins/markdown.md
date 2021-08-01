@@ -62,6 +62,17 @@ export interface Options {
   options: Partial<MarkdownItOptions>;
   plugins: unknown[];
 }
+
+export interface MarkdownItOptions {
+  html?: boolean;
+  xhtmlOut?: boolean;
+  breaks?: boolean;
+  langPrefix?: string;
+  linkify?: boolean;
+  typographer?: boolean;
+  quotes?: string | string[];
+  highlight?: (str: string, lang: string) => string | null;
+}
 ```
 
 For example, apply [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor):
