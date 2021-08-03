@@ -51,3 +51,22 @@ Markdown in _inline_ mode.
 <!-- Single line rendering, without paragraph wrap: -->
 <p>{{ text | md(true) }}<p>
 ```
+
+## Apply markdown-it plugins
+In `_config.ts`, the second parameter of `lume()` is used to configure the plugins that are loaded by default (markdown, url, nunjucks, etc). So it's possible to configure [markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples), all specific APIs can be found in [deno docs](https://doc.deno.land/https/deno.land%2Fx%2Flume%2Fplugins%2Fmarkdown.ts).
+
+For example, to use [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin:
+
+``` ts
+import anchor from "https://jspm.dev/markdown-it-anchor";
+
+const site = lume({
+  location: new URL("https://lumeland.github.io"),
+}, {
+  markdown: {
+    plugins: [
+      [anchor, { permalink: anchor.permalink.headerLink() }],
+    ],
+  },
+});
+```
