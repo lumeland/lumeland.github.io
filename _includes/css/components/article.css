@@ -4,14 +4,36 @@
 }
 
 .article-header {
+  margin-bottom: 3rem;
+
   & p {
     margin: 0;
   }
 
   & h1 {
-    margin-top: 0;
+    margin: 0;
     font: var(--font-display);
     letter-spacing: -0.015em;
+  }
+}
+
+.article-nav {
+  font: var(--font-small);
+  display: flex;
+  gap: 1em;
+  margin-top: 1rem;
+
+  & a {
+    background: var(--color-background-10);
+    border: solid 1px var(--color-background-20);
+    color: var(--color-brand);
+    border-radius: 4px;
+    padding: .5em 1em;
+  }
+
+  & img {
+    vertical-align: middle;
+    margin: 0 .5em 0 0;
   }
 }
 

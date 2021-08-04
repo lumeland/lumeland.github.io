@@ -1,6 +1,7 @@
 ---
 title: JSON
 description: Using the JSON plugin to allow using JSON for data
+docs: plugins/json.ts
 ---
 
 JSON files are useful to store data not written by humans (for example APIs).

@@ -1,6 +1,7 @@
 ---
 title: Nunjucks
-description: Using Nunjucks for pages and layouts
+description: Using the template engine Nunjucks for pages and layouts
+docs: plugins/nunjucks.ts
 ---
 
 [Nunjucks](https://mozilla.github.io/nunjucks/) is powerful template language

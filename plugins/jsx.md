@@ -1,6 +1,7 @@
 ---
 title: JSX
 description: Using JSX for templates
+docs: plugins/jsx.ts
 ---
 
 [JSX](https://facebook.github.io/jsx/) (or the equivalent TSX for TypeScript) is

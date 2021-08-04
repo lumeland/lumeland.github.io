@@ -1,6 +1,7 @@
 ---
 title: URL
 description: For URL normalization
+docs: plugins/url.ts
 ---
 
 The URL plugin is enabled by default and register two filters to normalize the

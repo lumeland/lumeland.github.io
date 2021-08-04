@@ -1,6 +1,7 @@
 ---
 title: Bundler
 description: Enabling the bundler plugin
+docs: plugins/bundler.ts
 ---
 
 The plugin Bundler **is disabled by default** so to enable it you have to import

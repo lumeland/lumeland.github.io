@@ -1,6 +1,7 @@
 ---
 title: PostCSS
 description: Using the PostCSS plugin to transform CSS
+docs: plugins/postcss.ts
 ---
 
 The `PostCSS` plugin load and transform your CSS files using

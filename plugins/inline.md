@@ -1,6 +1,7 @@
 ---
 title: Inline
 description: Using the inline plugin to inline sources
+docs: plugins/inline.ts
 ---
 
 This plugin allows to inline some sources, like CSS, images or JavaScript, in

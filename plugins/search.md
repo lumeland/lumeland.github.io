@@ -1,6 +1,7 @@
 ---
 title: Search
 description: Using the search plugin to sort pages and directories
+docs: plugins/search.ts
 ---
 
 This plugin, **enabled by default**, adds the `search` helper to your templates.

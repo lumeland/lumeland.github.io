@@ -1,6 +1,7 @@
 ---
 title: Eta
 description: Enabling the Eta template engine
+docs: plugins/eta.ts
 ---
 
 [Eta](https://eta.js.org/) is a JavaScript template engine with a syntax very

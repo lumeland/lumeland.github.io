@@ -1,6 +1,7 @@
 ---
 title: YAML
 description: Using YAML for data and pages
+docs: plugins/yaml.ts
 ---
 
 [YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data.

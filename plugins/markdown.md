@@ -1,6 +1,7 @@
 ---
 title: Markdown
 description: Using the Markdown plugin
+docs: plugins/markdown.ts
 ---
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
@@ -53,11 +54,16 @@ Markdown in _inline_ mode.
 ```
 
 ## Apply markdown-it plugins
-In `_config.ts`, the second parameter of `lume()` is used to configure the plugins that are loaded by default (markdown, url, nunjucks, etc). So it's possible to configure [markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples), all specific APIs can be found in [deno docs](https://doc.deno.land/https/deno.land%2Fx%2Flume%2Fplugins%2Fmarkdown.ts).
 
-For example, to use [markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin:
+In `_config.ts`, the second parameter of `lume()` is used to configure the
+plugins that are loaded by default (markdown, url, nunjucks, etc). So it's
+possible to configure
+[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples).
 
-``` ts
+For example, to use
+[markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin:
+
+```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
 
 const site = lume({

@@ -1,6 +1,7 @@
 ---
 title: Attributes
 description: To manage attributes and class names of HTML elements
+docs: plugins/attributes.ts
 ---
 
 The `attributes` plugin register two template filters to normalize the

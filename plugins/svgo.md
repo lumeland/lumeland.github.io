@@ -1,6 +1,7 @@
 ---
 title: SVGO
 description: Using the SVGO plugin to optimize SVG files
+docs: plugins/svgo.ts
 ---
 
 The plugin SVG **is disabled by default** so to enable it you have to import and

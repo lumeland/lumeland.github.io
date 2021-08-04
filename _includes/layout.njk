@@ -65,8 +65,18 @@ menu:
   <header class="article-header">
     <p>{{ section }}</p>
     <h1>{{ title }}</h1>
+
+    {% if docs %}
+    <nav class="article-nav">
+      <a href="https://doc.deno.land/https/deno.land/x/lume@{{ lastVersion }}/{{ docs }}">
+        <img src="/deno.svg" alt="Deno logo" width="20" height="20" />
+        Documentation in <strong>deno doc</strong>
+      </a>
+    </nav>
+    {% endif %}
   </header>
   {% endif %}
+
 
   <div class="article-content">
     {{ content | safe }}
