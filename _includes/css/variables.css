@@ -24,6 +24,7 @@
   --color-brand: hsl(4deg, 54%, 53%);
   --color-brand-dark: hsl(4deg, 54%, 40%);
   --color-white: #FFF;
+  --color-black: hsl(216deg, 15%, 13%);
   --color-foreground:     hsl(216deg, 15%, 13%);
   --color-foreground-50:  hsl(216deg, 15%, 40%);
   --color-background:     hsl(216deg, 15%, 97%);

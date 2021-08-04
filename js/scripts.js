@@ -1,4 +1,8 @@
+import Searcher from "./searcher.js";
 import Navigator from "./page-loader/navigator.js";
+
+customElements.define("lume-search", Searcher);
+
 const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
 
@@ -31,4 +35,18 @@ nav.init();
 
 document.body.addEventListener("click", () => {
   menu.classList.remove("is-open");
+});
+
+document.querySelectorAll("lume-search").forEach((search) => {
+  search.addEventListener("selected", (ev) => {
+    nav.go(ev.detail.value);
+
+    const target = menu.querySelectorAll(
+      `a[href="${ev.detail.value}"]`,
+    );
+
+    if (target) {
+      target.scrollIntoView();
+    }
+  });
 });

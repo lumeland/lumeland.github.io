@@ -1,6 +1,6 @@
 ---
 title: Modules
-description: Using JS/TS files for data, pages, and layouts
+description: Using javascript and typescript modules for data, pages, and layouts
 ---
 
 Because Lume is built for Deno, it has native support for JavaScript and
