@@ -3,6 +3,7 @@ import codeHighlight from "lume/plugins/code_highlight.ts";
 import postcss from "lume/plugins/postcss.ts";
 import basePath from "lume/plugins/base_path.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
+import gpm from "https://deno.land/x/gpm@v0.1.0/mod.ts";
 
 const site = lume({
   location: new URL("https://lumeland.github.io"),
@@ -32,6 +33,16 @@ site.use(basePath());
 
 site.preprocess([".html"], (page) => {
   page.data.sourceFile = page.src.path + page.src.ext;
+});
+
+site.addEventListener("beforeBuild", () => {
+  return gpm([
+    {
+      name: "oom-components/page-loader",
+      files: ["src"]
+    },
+    "oom-components/searcher"
+  ], "js/vendor");
 });
 
 export default site;

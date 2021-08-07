@@ -1,5 +1,5 @@
-import Searcher from "./searcher.js";
-import Navigator from "./page-loader/navigator.js";
+import Searcher from "./vendor/searcher/searcher.js";
+import Navigator from "./vendor/page-loader/navigator.js";
 
 customElements.define("lume-search", Searcher);
 
