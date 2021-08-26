@@ -1,7 +1,7 @@
 ---
 title: Helpers
 description: Adding filters in the config file
-order: 4
+order: 6
 ---
 
 Helpers are functions accessible from pages and layouts that help to render the

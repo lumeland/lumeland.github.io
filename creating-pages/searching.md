@@ -1,7 +1,7 @@
 ---
 title: Search and collecting
 description: Using the search helper
-order: 8
+order: 9
 ---
 
 In the layouts, you have the `search` helper that allows to search other pages.

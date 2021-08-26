@@ -1,7 +1,7 @@
 ---
 title: Shared data
 description: Creating shared data that can be used between different pages
-order: 3
+order: 5
 ---
 
 In addition to the variables defined in the front matter of the pages and
