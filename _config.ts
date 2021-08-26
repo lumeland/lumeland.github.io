@@ -40,9 +40,9 @@ site.addEventListener("beforeBuild", () => {
   return gpm([
     {
       name: "oom-components/page-loader",
-      files: ["src"]
+      files: ["src"],
     },
-    "oom-components/searcher"
+    "oom-components/searcher",
   ], "js/vendor");
 });
 

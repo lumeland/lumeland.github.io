@@ -40,13 +40,5 @@ document.body.addEventListener("click", () => {
 document.querySelectorAll("lume-search").forEach((search) => {
   search.addEventListener("selected", (ev) => {
     nav.go(ev.detail.value);
-
-    const target = menu.querySelectorAll(
-      `a[href="${ev.detail.value}"]`,
-    );
-
-    if (target) {
-      target.scrollIntoView();
-    }
   });
 });

@@ -4,11 +4,18 @@ description: Other available formats to create pages
 order: 4
 ---
 
-So far, we have seen how to create pages with markdown files, using the front matter to include arbitrary data and configuring the layout used to render it. This way is great if your pages contain large articles, such documentation or posts. But it's not so practical for other use cases. Luckily, Lume supports many other formats to generate pages:
+We have seen how to create pages from markdown files with a front matter to
+include arbitrary data and a layout file to render the content to output HTML
+code. This is great if your pages contain large articles, such documentation or
+posts. But it's not so practical for other use cases. Luckily, Lume supports
+many other formats to generate pages:
 
 ## Pages in YAML
 
-If your page has a more complicated data structure than a post, you can use the yaml format to store this data. The YAML format is the same as the front matter format, but you don't need to delimit by two triple-dashed. Example:
+If your page has a more complicated data structure than a post, you can use the
+YAML format to store this data. The YAML format is exactly the same as the front
+matter in the markdown, but without the markdown content and triple-dashed
+delimiters. Example:
 
 ```yml
 title: Contact with us
@@ -25,13 +32,19 @@ form:
 footer: Thanks for contact us!
 ```
 
-This page doesn't contain a large article, but many microcopies. So YAML format is better in this case because allows to better structure the data that will be used in the layout (configured as `layouts/contact-form.njk`).
+This page doesn't contain a large article, but many microcopies. So YAML format
+is great because allows to better structure the data that will be used in the
+layout (configured as `layouts/contact-form.njk`).
 
-The support for YAML depends on the [YAML plugin](/plugins/yaml/) that is **enabled by default**, so you don't need to configure anything. Just create pages with `.yml` extension and that's all.
+The support for YAML depends on the [YAML plugin](/plugins/yaml/) that is
+**enabled by default**, so you don't need to configure anything. Just create
+pages with `.yml` extension and that's all.
 
 ## Pages in JSON
 
-JSON format has the same benefits as YAML but it's easy to generate and consume by computers, so it's great if the data of your page is fetched by an API or something like that. The previous example in JSON:
+JSON format has the same benefits as YAML but it's easy to generate and consume
+by computers, so it's great if the data of your page is fetched by an API or
+something like that. The previous example in JSON:
 
 ```json
 {
@@ -51,11 +64,18 @@ JSON format has the same benefits as YAML but it's easy to generate and consume 
 }
 ```
 
-The support for JSON depends on the [JSON plugin](/plugins/json/) that is **enabled by default**, so you don't need to configure anything. Just create pages with `.tmpl.json` extension and that's all (note that `.tmpl` subextension is important to indicate that the file must generate a page).
+The support for JSON depends on the [JSON plugin](/plugins/json/) that is
+**enabled by default**, so you don't need to configure anything. Just create
+pages with `.tmpl.json` extension and that's all (note that `.tmpl` subextension
+is important to indicate that the file must generate a page).
 
 ## Pages in Nunjucks
 
-To create a page using HTML code instead markdown, you can write the code using the syntax of any template engine, like Nunjucks. This gives more flexibility and is convenient for unique pages, specially if you don't want to create a layout that won't be reused by other pages. As with markdown, you can create a front matter to place the variables and page configuration:
+To create a page using HTML code instead markdown, you can write the code using
+the syntax of any template engine, like Nunjucks. This gives more flexibility
+and is convenient for unique pages, specially if you don't want to create layout
+files that won't be reused by other pages except this one. Like with markdown,
+you can create a front matter to store the variables:
 
 ```html
 ---
@@ -99,20 +119,30 @@ footer: Thanks for contact us!
   {{ footer }}
 </footer>
 ```
-Note that the layout used is `layouts/base.njk` that would provide the minimal html wrapper for this page (like adding the `<html>` and `<body>` elements). Other option is don't use any layout and include all html code in this page file.
 
-The support for Nunjucks depends on the [Nunjucks plugin](/plugins/nunjucks/) that is **enabled by default**, so you don't need to configure anything. Just create pages with `.njk` extension and that's all.
+Note that the layout used is `layouts/base.njk` that would provide the minimal
+html wrapper for this page (like adding the `<html>` and `<body>` elements).
+Other option is don't use any layout and include all html code here.
 
-You can use other template engines like [Pug](/plugins/pug/) or [Eta](/plugins/eta/) to generate pages but they are disabled by default, so first you need to enable them in the `_config.js` file.
+The support for Nunjucks depends on the [Nunjucks plugin](/plugins/nunjucks/)
+that is **enabled by default**, so you don't need to configure anything. Just
+create pages with `.njk` extension and that's all.
+
+You can use other template engines like [Pug](/plugins/pug/) or
+[Eta](/plugins/eta/) to generate pages using their syntax but they are disabled
+by default, so first you need to enable them in the `_config.js` file.
 
 ## Pages in Javascript or Typescript
 
-For more advanced use cases, with dynamic data, you can use directly javascript or typescript modules. The way it works is the same as in other formats: you have to export the variables needed to generate this page. For example, this is an example to generate the same page as in the YAML example:
+For more advanced use cases, with dynamic data, you can use javascript or
+typescript modules. The way it works is the same as in other formats: you have
+to export the variables needed to generate this page. For example, this is an
+example to generate the same page as in the YAML example:
 
 ```js
 export const title = "Contact with us";
 export const subtitle = "Please, fill the following form";
-export const url =  "/contact-with-us/";
+export const url = "/contact-with-us/";
 export const layout = "layouts/contact-form.njk";
 
 export const form = {
@@ -120,17 +150,21 @@ export const form = {
   email: "Your email",
   comment: "Leave a comment here",
   submit: "Send data",
-}
+};
 
-export const footer = "Thanks for contact us!"
+export const footer = "Thanks for contact us!";
 ```
 
-As you can see, the named exports are equivalent to the values of YAML, JSON, etc. And these values will be used by the layout (`layouts/contact-form.njk`) to generate the final html code.
+As you can see, the named exports are equivalent to the values of YAML, JSON,
+etc. And these values will be used by the layout (`layouts/contact-form.njk`) to
+generate the final html code.
 
-But this is a very basic example, javascript and typescript are much more powerful than that! For example, the default export can be used to generate the html code:
+But this is a very basic example that doesn't provide much advantage over using
+YAML or JSON. Javascript and Typescript are much more powerful than that! For
+example, the default export can be used to generate the html code:
 
 ```js
-export const url =  "/contact-with-us/";
+export const url = "/contact-with-us/";
 export const layout = "layouts/base.njk";
 
 const title = "Contact with us";
@@ -141,9 +175,9 @@ const form = {
   email: "Your email",
   comment: "Leave a comment here",
   submit: "Send data",
-}
+};
 
-const footer = "Thanks for contact us!"
+const footer = "Thanks for contact us!";
 
 export default `
   <header>
@@ -171,15 +205,18 @@ export default `
   <footer>
     ${footer}
   </footer>
-`
+`;
 ```
 
-In this example, we are replicating the same as we did in Nunjucks: export the HTML code and use the layout `layouts/base.njk` to wrap this code with the minimum HTML needed. Because only the `url` and `layout` are needed by Lume (the other variables are used directly in the page), only these two variables are exported.
+In the above example, we are generating the HTML code and use the layout
+`layouts/base.njk` to wrap this code with the minimum HTML needed.
 
-The `default` export is what provide the power of javascript/typescript pages. In the previous example it contain a string with the rendered html. But we can export a function, so it will be executed to generate the final code:
+The `default` export is what provide the power of javascript/typescript pages.
+In the previous example it contain a string with the rendered html. But we can
+export a function, so it will be executed to generate the final code:
 
 ```js
-export const url =  "/contact-with-us/";
+export const url = "/contact-with-us/";
 export const layout = "layouts/base.njk";
 
 export default function () {
@@ -191,9 +228,9 @@ export default function () {
     email: "Your email",
     comment: "Leave a comment here",
     submit: "Send data",
-  }
+  };
 
-  const footer = "Thanks for contact us!"
+  const footer = "Thanks for contact us!";
 
   return `
     <header>
@@ -225,4 +262,15 @@ export default function () {
 }
 ```
 
-You can use generators to generate several pages using the same javascript/typescript file. See [Pagination](/creating-pages/pagination/) for examples.
+You can use generators to generate several pages using the same
+javascript/typescript file. See [Pagination](/creating-pages/pagination/) for
+examples.
+
+The support for Javascript and Typescript modules depends on the
+[Modules plugin](/plugins/modules/) that is **enabled by default**, so you don't
+need to configure anything. Just create pages with `.tmpl.js` or `.tmpl.ts`
+extension and that's all (the `.tmpl` subextension is important to indicate that
+the file must generate a page).
+
+You can use `JSX` and `TSX` syntax, but **is disabled by default**, so you need
+to enable the [JSX plugin](/plugins/jsx/) in the `_config.js` file.
