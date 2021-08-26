@@ -10,6 +10,7 @@ const site = lume({
 }, {
   markdown: {
     plugins: [
+      // @ts-ignore: no anchor typings
       [anchor, { permalink: anchor.permalink.headerLink() }],
     ],
   },

@@ -22,7 +22,7 @@ const nav = new Navigator(async (load, event) => {
     link.removeAttribute("aria-current")
   );
 
-  const target = menu.querySelectorAll(
+  const target = menu.querySelector(
     `a[href="${event.target.getAttribute("href")}"]`,
   );
 
