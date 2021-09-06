@@ -19,8 +19,8 @@ visible:
   Example of a React app with bundled and minified `tsx` code -
   [Source code](https://github.com/lumeland/react-todo)
 
-- **[Documentation](https://lumeland.github.io/)**\
-  This documentation web site is built with Lume -
+- **[Lume documentation](https://lumeland.github.io/)**\
+  This web site -
   [Source code](https://github.com/lumeland/lumeland.github.io)
 
 - **[Tarugo 21](https://tarugo21.netlify.app/)**\
