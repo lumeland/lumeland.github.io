@@ -41,4 +41,4 @@ visible:
 
 - **[Ensino](https://laurarubio.net/)**\
   A collection of resources for Galego teachers by Laura Rubio -
-  [Source code](https://laurarubio.net/)
+  [Source code](https://github.com/laura-rubio/ensino)
