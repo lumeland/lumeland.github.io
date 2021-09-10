@@ -21,7 +21,8 @@ This is a high level description of how Lume build your site. When you run
 5. Group all pages by [`renderOrder` value](/advanced/render-order/) and sort
    them.
 6. For each group of pages with the same `renderOrder`:
-   - If the page content is a generator, generate all the sub-pages.
+   - If the [page content is a generator](/creating-pages/pagination/), generate
+     all the sub-pages.
    - Calculate the [final url](/creating-pages/urls/).
    - Run the [preprocessors](/advanced/processors/#preprocess) registered.
    - Render the page using the assigned
@@ -39,8 +40,8 @@ In watch mode (with `lume --serve` or `lume --watch`), the first build is
 exactly the same, but the succesive changes have some differences:
 
 - The `dest` folder is not emptied.
-- Only the files with changes are loaded.
+- Only the files with changes are reloaded.
 - The steps 5 to 9 are exactly the same. All pages (not only the modified) are
-  rendered. This is because a change in one file can affect to many pages, so we
-  have to render all pages again.
-- Only the pages with changes in the final content are saved in `dest`.
+  re-rendered. This is because a change in one file can affect to many pages, so
+  we have to render all pages again.
+- Only the pages that have changed its content are saved in `dest`.

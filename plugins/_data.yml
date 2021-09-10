@@ -1,5 +1,4 @@
 section: Plugins
 layout: layout.njk
 tags: plugins
-section_order: 3
 order: 1

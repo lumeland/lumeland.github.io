@@ -20,8 +20,7 @@ visible:
   [Source code](https://github.com/lumeland/react-todo)
 
 - **[Lume documentation](https://lumeland.github.io/)**\
-  This web site -
-  [Source code](https://github.com/lumeland/lumeland.github.io)
+  This web site - [Source code](https://github.com/lumeland/lumeland.github.io)
 
 - **[Tarugo 21](https://tarugo21.netlify.app/)**\
   An event about technology and business in Madrid, Spain -
