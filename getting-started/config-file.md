@@ -43,9 +43,11 @@ import lume from "lume/mod.ts";
 
 const site = lume({
   // The "src" and "dest" directories are relative to this path.
+  // You shouldn't modify this value!
   cwd: Deno.cwd(),
 
   // The source directory of your site.
+  // All files needed to build your site must be here.
   // You can override the value from the CLI with `--src=new-value`.
   src: ".",
 
@@ -127,9 +129,9 @@ site.copy("img");
 site.copy("favicon.ico");
 ```
 
-The path is relative to the root of the source directory and the files and
-directories are copied as is, maintaining the same directory structure. If you
-want to change the output directory, use the second parameter:
+The path is relative to the source directory of your site (configured in `src`)
+and the files and directories are copied as is, maintaining the same directory
+structure. If you want to change the output directory, use the second parameter:
 
 ```js
 // Copy the "img" directory to _site/images
@@ -137,12 +139,20 @@ site.copy("img", "images");
 
 // Copy the "static-files/favicons/favicon.ico" to _site/favicon.ico
 site.copy("static-files/favicons/favicon.ico", "favicon.ico");
+
+// Copy the content of "assets" directory to the root of your site
+site.copy("assets", ".");
 ```
+
+The method `site.copy()` only accepts files and folders. Patterns like
+`img/*.png` are not supported. The files and folders copied are not processed,
+even if they have known extensions like `.md`, `.njk`, etc.
 
 ## Ignore files and directories
 
-By default, all files and directories starting with `.` or `_` are ignored. You
-can add more by using the `ignore()` method:
+By default, all files and directories starting with `.` or `_` are ignored, in
+addition to files and folders copied with `site.copy()`. You can add more by
+using the `ignore()` method:
 
 ```js
 site.ignore("README.md", "CHANGELOG.md", "node_modules");

@@ -4,9 +4,8 @@ description: To manage attributes and class names of HTML elements
 docs: plugins/attributes.ts
 ---
 
-The `attributes` plugin register two template filters to normalize the
-attributes of your HTML. This plugin **is disabled by default** so to enable it,
-you have to edit your `_config.js` file:
+This plugin **is disabled by default** so to enable it, you have to edit your
+`_config.js` file:
 
 ```js
 import lume from "lume/mod.ts";
@@ -17,7 +16,8 @@ const site = lume();
 site.use(attributes());
 ```
 
-The filters included in this plugin are the following:
+The `attributes` plugin register two template filters to normalize the
+attributes of your HTML. The included filters are:
 
 ## attr
 

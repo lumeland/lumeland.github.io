@@ -5,6 +5,8 @@ docs: plugins/json.ts
 ---
 
 JSON files are useful to store data not written by humans (for example APIs).
+This plugin enables the support for `.json` files to save data or create pages.
+It's **enabled by default** so you don't need to do anything.
 
 ## Creating _data files
 

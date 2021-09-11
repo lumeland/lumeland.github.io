@@ -5,7 +5,7 @@ docs: plugins/modules.ts
 ---
 
 Because Lume is built for Deno, it has native support for JavaScript and
-TypeScript.
+TypeScript. This plugin is **enabled** by default.
 
 ## Creating _data files
 

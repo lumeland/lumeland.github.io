@@ -28,9 +28,8 @@ You can configure the bundler plugin with the following options:
 - `options`: The options available in
   [`Deno.EmitOptions`](https://doc.deno.land/builtin/unstable#Deno.EmitOptions)
 - `entries`: Use this option to bundle your scripts and all dependencies to a
-  single file. All files, except the ones in this array won't be included in the
-  output. To use this option, you must set `options.bundle` to "module" or
-  "classic".
+  single file. This array contains the entry files that you want to bundle. To
+  use this option, you must set `options.bundle` to "module" or "classic".
 
 ## Typescript for the browser
 
