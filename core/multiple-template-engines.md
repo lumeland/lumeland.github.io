@@ -15,7 +15,7 @@ the extension.
 The following example is a `.md` file but is configured to use Nunjucks to
 render (instead of Markdown).
 
-```md
+```yml
 ---
 title: My post
 templateEngine: njk
@@ -27,7 +27,7 @@ templateEngine: njk
 A typical example is a file using Markdown to render HTML but Nunjucks to insert
 variables or includes. To do that, you can use commas to add several engines:
 
-```md
+```yml
 ---
 title: My post
 templateEngine: njk,md
