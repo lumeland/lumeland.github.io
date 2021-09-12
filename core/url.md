@@ -2,10 +2,10 @@
 title: URL
 description: For URL normalization
 docs: plugins/url.ts
+order: 7
 ---
 
-The URL plugin is enabled by default and register two filters to normalize the
-URLs in your pages:
+Lume provide two filters to normalize the URLs in your pages:
 
 ## url
 
@@ -31,6 +31,9 @@ this page changes. For example:
 <!-- Will be converted to -->
 <a href="/about-us/">
 ```
+
+**Note:** If you don't want to use this filter everywhere there is a url, you
+may be interested in the [Base path plugin](/plugins/base_path/)
 
 ## htmlUrl
 

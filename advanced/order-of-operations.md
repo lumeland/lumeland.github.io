@@ -13,8 +13,8 @@ This is a high level description of how Lume build your site. When you run
    `dest` folder.
 4. Walk the `src` folder recursively and load all files matching with a valid
    file extension, like `.md`, `.njk`, etc.
-   - Skip files and folders starting with `_`, `.` or ignored with
-     `site.ignore()`.
+   - Skip files and folders starting with `_`, `.`, ignored with `site.ignore()`
+     or previously copies with `site.copy()`.
    - If the name of the file is `_data` or is inside a `_data` folder, is shared
      data.
    - Otherwise, it's a page.

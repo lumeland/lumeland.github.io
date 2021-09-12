@@ -2,6 +2,7 @@
 title: Markdown
 description: Using the Markdown plugin
 docs: plugins/markdown.ts
+order: 2
 ---
 
 [Markdown](https://en.wikipedia.org/wiki/Markdown) is a popular markup language
@@ -41,38 +42,43 @@ The Markdown code is stored in the `content` variable:
 
 ## md filter
 
-The Markdown plugin also register the `md` filter, to render any string value as
-Markdown and output a HTML. The filter also accepts an argument to render the
+The Markdown plugin also register the `md` filter that renders any string value
+as Markdown and output a HTML. The filter also accepts an argument to render the
 Markdown in _inline_ mode.
 
 ```html
 <!-- Render to HTML code -->
 <div>{{ text | md }}<div>
 
-<!-- Single line rendering, without paragraph wrap: -->
+<!-- Single line rendering, without the paragraph wrap: -->
 <p>{{ text | md(true) }}<p>
 ```
 
-## Apply markdown-it plugins
+## Configure the Markdown plugin
 
-In `_config.ts`, the second parameter of `lume()` is used to configure the
-plugins that are loaded by default (markdown, url, nunjucks, etc). So it's
-possible to configure
-[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples).
+In `_config.ts`, the second argument of `lume()` is used to configure the
+plugins that are enabled by default (like this!). Use it to configure the
+markdown plugin.
 
-For example, to use
-[markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin:
+For example, let's use the
+[markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin
+and change some
+[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
 
-const site = lume({
-  location: new URL("https://lumeland.github.io"),
-}, {
-  markdown: {
-    plugins: [
-      [anchor, { permalink: anchor.permalink.headerLink() }],
-    ],
+// Markdown plugin configuration
+const markdown = {
+  plugins: [
+    [anchor, { permalink: anchor.permalink.headerLink() }],
+  ],
+  options: {
+    breaks: false,
+    xhtmlOut: true,
   },
-});
+};
+
+// Apply the plugin config
+const site = lume({}, { markdown });
 ```

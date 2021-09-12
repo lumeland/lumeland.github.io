@@ -1,6 +1,7 @@
 ---
 title: Scripts
 description: A guide on using Lume as a script runner
+order: 11
 ---
 
 Lume includes a simple script runner that you can use to execute commands or

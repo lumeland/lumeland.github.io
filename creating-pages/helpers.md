@@ -52,11 +52,11 @@ Output:
 Lume includes the following convenient preinstalled filters:
 
 - **md**: It's installed by the `markdown` plugin and allows to render Markdown
-  content to HTML. [More info](plugins/markdown)
+  content to HTML. [More info](core/markdown)
 - **njk**: It's installed by the `nunjucks` plugin and allows to render Nunjucks
-  content to HTML. [More info](plugins/nunjucks)
+  content to HTML. [More info](core/nunjucks)
 - **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
-  URLs. [More info](plugins/url)
+  URLs. [More info](core/url)
 
 ### Using the filters in JavaScript modules
 

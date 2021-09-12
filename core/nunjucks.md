@@ -2,12 +2,12 @@
 title: Nunjucks
 description: Using the template engine Nunjucks for pages and layouts
 docs: plugins/nunjucks.ts
+order: 5
 ---
 
 [Nunjucks](https://mozilla.github.io/nunjucks/) is powerful template language
 created by Mozilla and inspired by **ninja2**. This format is **enabled by
-default** and you can use it not only for page layouts, but also to create
-pages.
+default** and you can use it to create layouts and pages.
 
 ## Creating layouts
 
@@ -51,4 +51,27 @@ text: "Hello {{ username }}"
 
 <!-- Render a string -->
 <div>{{ text | njk(data) | safe }}<div>
+```
+
+## Configure the Nunjucks plugin
+
+In `_config.ts`, the second argument of `lume()` is used to configure the
+plugins that are enabled by default (like this!). Use it to configure the
+nunjucks plugin.
+
+For example, let's
+[configure nunjucks](https://mozilla.github.io/nunjucks/api.html#configure) and
+change the default folder of the `_includes`:
+
+```ts
+// Nunjucks plugin configuration
+const nunjucks = {
+  includes: "_layouts",
+  options: {
+    throwOnUndefined: true,
+  },
+};
+
+// Apply the plugin config
+const site = lume({}, { nunjucks });
 ```

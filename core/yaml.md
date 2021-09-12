@@ -2,6 +2,7 @@
 title: YAML
 description: Using YAML for data and pages
 docs: plugins/yaml.ts
+order: 6
 ---
 
 [YAML](https://en.wikipedia.org/wiki/YAML) is format to save serialized data.
@@ -57,4 +58,23 @@ You will need a layout to render this page and generate the HTML:
     {% endfor %}
   </body>
 </html>
+```
+
+## Configure the Nunjucks plugin
+
+In `_config.ts`, the second argument of `lume()` is used to configure the
+plugins that are enabled by default (like this!). Use it to configure the YAML
+plugin.
+
+For example, by default, the extensions `.yaml` and `.yml` are loaded. But if we
+want to load only `.yaml` files:
+
+```ts
+// YAML plugin configuration
+const yaml = {
+  extensions: [".yaml"],
+};
+
+// Apply the plugin config
+const site = lume({}, { yaml });
 ```

@@ -36,9 +36,9 @@ This page doesn't contain a large article, but many microcopies. So YAML format
 is great because allows to better structure the data that will be used in the
 layout (configured as `layouts/contact-form.njk`).
 
-The support for YAML depends on the [YAML plugin](/plugins/yaml/) that is
-**enabled by default**, so you don't need to configure anything. Just create
-pages with `.yml` extension and that's all.
+The support for YAML depends on the [YAML plugin](/core/yaml/) that is **enabled
+by default**, so you don't need to configure anything. Just create pages with
+`.yml` extension and that's all.
 
 ## Pages in JSON
 
@@ -64,10 +64,10 @@ something like that. The previous example in JSON:
 }
 ```
 
-The support for JSON depends on the [JSON plugin](/plugins/json/) that is
-**enabled by default**, so you don't need to configure anything. Just create
-pages with `.tmpl.json` extension and that's all (note that `.tmpl` subextension
-is important to indicate that the file must generate a page).
+The support for JSON depends on the [JSON plugin](/core/json/) that is **enabled
+by default**, so you don't need to configure anything. Just create pages with
+`.tmpl.json` extension and that's all (note that `.tmpl` subextension is
+important to indicate that the file must generate a page).
 
 ## Pages in Nunjucks
 
@@ -267,7 +267,7 @@ javascript/typescript file. See [Pagination](/creating-pages/pagination/) for
 examples.
 
 The support for Javascript and Typescript modules depends on the
-[Modules plugin](/plugins/modules/) that is **enabled by default**, so you don't
+[Modules plugin](/core/modules/) that is **enabled by default**, so you don't
 need to configure anything. Just create pages with `.tmpl.js` or `.tmpl.ts`
 extension and that's all (the `.tmpl` subextension is important to indicate that
 the file must generate a page).

@@ -1,6 +1,7 @@
 ---
 title: Render order
 description: Configure the rendering order of the pages
+order: 12
 ---
 
 In lume all pages are rendered at the same time. This works well in most cases,

@@ -101,7 +101,7 @@ import svgo from "lume/plugins/svgo.ts";
 
 const site = lume();
 
-// Add svg plugin
+// Add svgo plugin
 site.use(svgo());
 
 export default site;

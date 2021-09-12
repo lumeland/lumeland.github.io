@@ -4,16 +4,15 @@ description: Creating plugins to extend Lume
 ---
 
 Lume is an static site generator that can be extended easily adding more
-[loaders](/advanced/loaders/), [processors](/advanced/processors/),
-[engines](advanced/engines/) etc. Plugins provide an easy interface to extend
-Lume without write too much code in the `_config.js` file.
+[loaders, engines](/core/loaders/), [processors](/core/processors/) etc. Plugins
+provide an easy interface to extend Lume without write too much code in the
+`_config.js` file.
 
 A plugin is just a function that receives a lume instance in the first argument,
 in order to configure and register new elements to it.
 
 For example, to register a new template engine, you have to create an instance
-and decide the extensions to apply,
-[as you can see in the docs](advanced/loaders/):
+and decide the extensions to apply, [as you can see in the docs](core/loaders/):
 
 ```ts
 import textLoader from "lume/loaders/text.ts";

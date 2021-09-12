@@ -1,6 +1,7 @@
 ---
 title: Multiple template engines
 description: Overriding the behavior of a template engine
+order: 13
 ---
 
 By default, the template engine used to render a file is decided according to

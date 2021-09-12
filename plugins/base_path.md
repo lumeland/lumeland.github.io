@@ -6,7 +6,7 @@ docs: plugins/base_path.ts
 
 The `base_path` plugin fixes all URLs in your HTML documents by prepending the
 path of the location settings. It's useful if your site can be hosted in a
-subdirectory and you don't want to use the [`url` filter](/plugins/url/)
+subdirectory and you don't want to use the [`url` filter](/core/url/)
 everywhere.
 
 This plugin **is disabled by default** so to enable it you have to import and

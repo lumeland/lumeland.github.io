@@ -1,6 +1,7 @@
 ---
 title: Loaders and engines
 description: Small guide on adding custom loaders to Lume
+order: 14
 ---
 
 Loaders are functions that read and return the content of files. There are

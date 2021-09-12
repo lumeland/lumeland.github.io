@@ -22,11 +22,3 @@ site.use(jsx());
 
 export default site;
 ```
-
-**Lume** includes some plugins enabled by default:
-
-- [Markdown](/plugins/markdown)
-- [JSON](/plugins/json)
-- [Modules](/plugins/modules)
-- [Nunjucks](/plugins/nunjucks)
-- [YAML](/plugins/yaml)

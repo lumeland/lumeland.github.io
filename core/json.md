@@ -2,11 +2,12 @@
 title: JSON
 description: Using the JSON plugin to allow using JSON for data
 docs: plugins/json.ts
+order: 3
 ---
 
 JSON files are useful to store data not written by humans (for example APIs).
-This plugin enables the support for `.json` files to save data or create pages.
-It's **enabled by default** so you don't need to do anything.
+This format is enabled as default so you can create `.json` files to store data
+or create pages.
 
 ## Creating _data files
 
@@ -26,3 +27,7 @@ site).
   "content": "This is my first post using lume,\nI hope you like it!"
 }
 ```
+
+## Configure the JSON plugin
+
+This plugin doesn't have any configuration option.

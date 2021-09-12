@@ -1,6 +1,7 @@
 ---
 title: Events
 description: A list of all the events which Lume will dispatch in the lifecycle
+order: 10
 ---
 
 Lume has events that you can use to run some code at certain times during the
