@@ -15,6 +15,7 @@ const nav = new Navigator(async (load, event) => {
   const page = await load();
 
   await page.replaceContent("main");
+  await page.replaceContent("footer");
   await page.updateState();
   await page.resetScroll();
 

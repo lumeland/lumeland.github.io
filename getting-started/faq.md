@@ -48,12 +48,12 @@ More info
 
 Markdown is a format that simply parse and output html, but it doesn't have any
 way to insert dynamic variables. To do that, you must combine markdown with any
-other template engine that suppport variables, for example Nunjucks.
+other template engine that support variables, for example Nunjucks.
 
 This is an example of a markdown file that use Nunjucks to insert variables and
 markdown to parse and output the final html code:
 
-```
+```yml
 ---
 title: My post
 templateEngine: njk,md

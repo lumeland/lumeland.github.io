@@ -87,14 +87,14 @@ menu:
 
 <footer class="footer ly-footer">
   <ul class="footer-pagination">
-    {%- set previousPost = search.previousPage(url, "url!=/", "order title") %}
+    {%- set previousPost = search.previousPage(url, "url!=/", "section_order order title") %}
     {%- if previousPost %}
     <li>
       ← Previous <a href="{{ previousPost.data.url }}" rel="prev">{{ previousPost.data.title }}</a>
     </li>
     {% endif %}
 
-    {%- set nextPost = search.nextPage(url, "url!=/", "order title") %}
+    {%- set nextPost = search.nextPage(url, "url!=/", "section_order order title") %}
     {%- if nextPost %}
     <li>
       Next → <a href="{{ nextPost.data.url }}" rel="next">{{ nextPost.data.title }}</a>
