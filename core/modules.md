@@ -55,7 +55,7 @@ export default (data, filters) =>
 ```
 
 JavaScript/TypeScript allows to generate multiple pages from the same file, see
-[Pagination](/creating-pages/pagination/) for more info.
+[Pagination](pagination.md) for more info.
 
 ## Creating layouts
 

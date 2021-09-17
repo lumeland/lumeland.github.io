@@ -78,7 +78,7 @@ site.addEventListener("beforeSave", (event) => {
 
 ## Execute scripts with events
 
-In addition to functions, you can also execute [scripts](/advanced/scripts) in
+In addition to functions, you can also execute [scripts](scripts.md) in
 events by passing a string with the script name.
 
 ```js

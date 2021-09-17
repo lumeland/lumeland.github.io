@@ -26,9 +26,9 @@ do that, there are different choices:
 
 - If you only want to **copy files or folders as they are** without any change,
   the best way is using `site.copy()`.
-  [More info about copy static files](/getting-started/config-file/#copy-static-files).
+  [More info about copy static files](../getting-started/config-file.md#copy-static-files).
 - If you want to process the content, **they must loaded**
-  ([more info about loaders](/core/loaders/)). There are three types of loaders,
+  ([more info about loaders](../core/loaders.md)). There are three types of loaders,
   depending on the purpose of the format:
   - To load files that **generate HTML pages**, use `site.loadPages()`.
   - To load **assets files** (like `.css` or `.js`), use `site.loadAssets()`.
@@ -42,17 +42,17 @@ Everything in Lume is a plugin. Even the support of core formats like `.md`,
 `.yaml`, `.json` etc is provided by the following plugins that are enabled by
 default:
 
-- [Markdown](/core/markdown)
-- [JSON](/core/json)
-- [Modules](/core/modules)
-- [Nunjucks](/core/nunjucks)
-- [YAML](/core/yaml)
+- [Markdown](markdown.md)
+- [JSON](json.md)
+- [Modules](modules.md)
+- [Nunjucks](nunjucks.md)
+- [YAML](yaml.md)
 
 There are a couple of additional plugins to provide common features:
 
-- [Url](/core/url)
-- [Search](/core/searching)
-- [Pagination](/core/pagination)
+- [Url](url.md)
+- [Search](searching.md)
+- [Pagination](pagination.md)
 
 Because these plugins are enabled by default, you don't need to import them to
 your `_config.js` file. So, if you need to change the configuration of any of

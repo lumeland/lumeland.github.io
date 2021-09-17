@@ -34,12 +34,12 @@ There are some special variables that **lume** can understand:
   variable (or prepending it to the filename). This value is used to sort the
   pages in a list.
 - `layout`: To define the layout that is used to render the page. See
-  [Layouts](/creating-pages/layouts/)
+  [Layouts](layouts.md)
 - `draft`: To ignore pages in production environment, but the page is visible
   during development (execute `lume --dev` to run in development environment).
-- `tags`: Tags are used to group pages. See [Tags](/creating-pages/tags/)
+- `tags`: Tags are used to group pages. See [Tags](tags.md)
 - `templateEngine`: To override the template engine used to render the page. See
-  [Template engines](advanced/template-engines/)
+  [Template engines](../core/loaders.md#template-engines)
 
 ```yaml
 ---

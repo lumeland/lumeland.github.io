@@ -9,27 +9,27 @@ Solutions to some common Lume problems.
 ## How to export `.css` files?
 
 - If you want to process the CSS files with postcss, use the
-  [postcss plugin](/plugins/postcss).
+  [postcss plugin](../plugins/postcss.md).
 - To load `.css` files without using postcss, add `site.loadAssets([".css])` to
   your `_config.js` file.
 
 ## How to export `.js/.ts` files?
 
-- Use the [bundler plugin](/plugins/bundler) if you want to:
+- Use the [bundler plugin](../plugins/bundler.md) if you want to:
   - Transpile Typescript files to Javascript.
   - Bundle the Javascript to a single file.
-- Use the [terser plugin](/plugins/terser) if you want to minify the js code.
+- Use the [terser plugin](../plugins/terser.md) if you want to minify the js code.
 - To load `.js` files without using the bundler or terser plugins, add
   `site.loadAssets([".js])` to your `_config.js` file.
 
 ## How to export `.svg` files?
 
-- If you want to optimize the svg files, use the [svgo plugin](/plugins/svgo).
+- If you want to optimize the svg files, use the [svgo plugin](../plugins/svgo.md).
 - To load `.svg` files without using postcss, add `site.loadAssets([".svg])` to
   your `_config.js` file.
 
 Remember that you can copy files without load them (which is faster) with
-[`site.copy()`](/getting-started/config-file/#copy-static-files).
+[`site.copy()`](../getting-started/config-file.md#copy-static-files).
 
 ## How to generate non-HTML files?
 
@@ -63,4 +63,4 @@ templateEngine: njk,md
 ```
 
 More info
-[about configure multiple template engines](/core/multiple-template-engines/).
+[about configure multiple template engines](../core/multiple-template-engines.md).

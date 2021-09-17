@@ -70,7 +70,7 @@ engine).
 
 Note that processors only can transform pages or assets that are previously
 loaded. So if you want to process some assets (like CSS or JavaScript files),
-make sure that they are loaded before. See [Loaders](/core/loaders/) for more
+make sure that they are loaded before. See [Loaders](loaders.md) for more
 information about how to register a new loader. Let's see an example of how to
 load and transform JavaScript files:
 

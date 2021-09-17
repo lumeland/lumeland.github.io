@@ -22,9 +22,10 @@ const nav = new Navigator(async (load, event) => {
   menu.querySelectorAll('a[aria-current="page"]').forEach((link) =>
     link.removeAttribute("aria-current")
   );
+  const href = document.location.pathname;
 
   const target = menu.querySelector(
-    `a[href="${event.target.getAttribute("href")}"]`,
+    `a[href="${href}"]`,
   );
 
   if (target) {

@@ -19,7 +19,7 @@ site.use(jsx());
 
 To create a page with this format, just add a file with `.jsx` or `.tsx`
 extension to your site. This format works exactly the same as
-[JavaScript/TypeScript files](/core/modules), but with the addition of you can
+[JavaScript/TypeScript files](../core/modules.md), but with the addition of you can
 export JSX code in the default export:
 
 ```jsx

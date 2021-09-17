@@ -33,7 +33,7 @@ this page changes. For example:
 ```
 
 **Note:** If you don't want to use this filter everywhere there is a url, you
-may be interested in the [Base path plugin](/plugins/base_path/)
+may be interested in the [Base path plugin](../plugins/base_path.md)
 
 ## htmlUrl
 

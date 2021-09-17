@@ -36,7 +36,7 @@ This page doesn't contain a large article, but many microcopies. So YAML format
 is great because allows to better structure the data that will be used in the
 layout (configured as `layouts/contact-form.njk`).
 
-The support for YAML depends on the [YAML plugin](/core/yaml/) that is **enabled
+The support for YAML depends on the [YAML plugin](../core/yaml.md) that is **enabled
 by default**, so you don't need to configure anything. Just create pages with
 `.yml` extension and that's all.
 
@@ -64,7 +64,7 @@ something like that. The previous example in JSON:
 }
 ```
 
-The support for JSON depends on the [JSON plugin](/core/json/) that is **enabled
+The support for JSON depends on the [JSON plugin](../core/json.md) that is **enabled
 by default**, so you don't need to configure anything. Just create pages with
 `.tmpl.json` extension and that's all (note that `.tmpl` subextension is
 important to indicate that the file must generate a page).
@@ -124,12 +124,12 @@ Note that the layout used is `layouts/base.njk` that would provide the minimal
 html wrapper for this page (like adding the `<html>` and `<body>` elements).
 Other option is don't use any layout and include all html code here.
 
-The support for Nunjucks depends on the [Nunjucks plugin](/plugins/nunjucks/)
+The support for Nunjucks depends on the [Nunjucks plugin](../core/nunjucks.md)
 that is **enabled by default**, so you don't need to configure anything. Just
 create pages with `.njk` extension and that's all.
 
-You can use other template engines like [Pug](/plugins/pug/) or
-[Eta](/plugins/eta/) to generate pages using their syntax but they are disabled
+You can use other template engines like [Pug](../plugins/pug.md) or
+[Eta](../plugins/eta.md) to generate pages using their syntax but they are disabled
 by default, so first you need to enable them in the `_config.js` file.
 
 ## Pages in Javascript or Typescript
@@ -263,14 +263,14 @@ export default function () {
 ```
 
 You can use generators to generate several pages using the same
-javascript/typescript file. See [Pagination](/creating-pages/pagination/) for
+javascript/typescript file. See [Pagination](../core/pagination.md) for
 examples.
 
 The support for Javascript and Typescript modules depends on the
-[Modules plugin](/core/modules/) that is **enabled by default**, so you don't
+[Modules plugin](../core/modules.md) that is **enabled by default**, so you don't
 need to configure anything. Just create pages with `.tmpl.js` or `.tmpl.ts`
 extension and that's all (the `.tmpl` subextension is important to indicate that
 the file must generate a page).
 
 You can use `JSX` and `TSX` syntax, but **is disabled by default**, so you need
-to enable the [JSX plugin](/plugins/jsx/) in the `_config.js` file.
+to enable the [JSX plugin](../plugins/jsx.md) in the `_config.js` file.

@@ -36,7 +36,7 @@ extension). This means that, instead of `/about-us.html`, the URL is
 directories as needed.
 
 If you want to disable it, set `prettyUrls` to `false` in
-[config file](/getting-started/config-file/), so you will have something like
+[config file](../getting-started/config-file.md), so you will have something like
 this:
 
 ```txt
@@ -90,4 +90,4 @@ Dot files and directories (such as `.git`, `.gitignore`, etc) are also ignored.
 
 You might want to have a particular directory structure for your source files
 that is different for the built site. With the `url` variable you change the
-output filename of any page (see [Page data](/creating-pages/page-data))
+output filename of any page (see [Page data](../creating-pages/page-data.md))

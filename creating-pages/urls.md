@@ -4,7 +4,7 @@ description: How define the output filename
 order: 8
 ---
 
-As said in [Page files](/creating-pages/page-files), the output filename is
+As said in [Page files](../creating-pages/page-files.md), the output filename is
 generated using the original source file path:
 
 ```txt
@@ -14,7 +14,7 @@ posts/my-first-post.md  =>  /posts/my-first-post/index.html
 By default, the pages are saved as "pretty URLs", using directories for the path
 and a `index.html` file. So the final URL is `/posts/my-fist-post/`. To disable
 this behaviour, set the option `prettyUrls` to `false` in your `_config.js` file
-(see [Configuration](/getting-started/config-file/)).
+(see [Configuration](../getting-started/config-file.md)).
 
 ```js
 const site = lume({
@@ -101,11 +101,11 @@ export function url(page) {
 
 Now, all pages in the post directory share the same `url` function, that returns
 the title of the page as a relative URL, for example `./My first post/` (See
-[Shared data](/creating-pages/shared-data/)).
+[Shared data](../creating-pages/shared-data.md)).
 
 Due the URL is relative, the current directory is appended automatically (it
 will be resolved to `/post/My first post/`). And if you are using the
-[`slugify_urls`](/plugins/slugify_urls/) plugin all output paths are slugified
+[`slugify_urls`](../plugins/slugify_urls.md) plugin all output paths are slugified
 automatically, so the final url will be `/post/my-fist-post/`.
 
 Using functions as URLs gives a lot of flexibility to generate the URLs as you

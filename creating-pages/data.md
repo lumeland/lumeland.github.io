@@ -9,8 +9,8 @@ functions that you can execute everywhere, for example for searching or
 pagination results.
 
 In fact, there are two helpers available by default:
-[`search`](/creating-pages/searching) and
-[`paginate`](/creating-pages/pagination) precisely for that purpose.
+[`search`](../core/searching.md) and
+[`paginate`](../core/pagination.md) precisely for that purpose.
 
 If you need to add more extra data, use the `_config.js` file:
 
