@@ -15,7 +15,7 @@ const markdown = {
 
 const site = lume(
   { location: new URL("https://lumeland.github.io") },
-  { markdown }
+  { markdown },
 );
 
 // Fetch the last lume version

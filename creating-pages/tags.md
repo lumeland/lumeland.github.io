@@ -18,7 +18,7 @@ tags:
 ---
 ```
 
-This post have two tags, one to identify the type of page (post) and other with
+This post has two tags, one to identify the type of page (post) and other with
 the topic (ssg). To collect all pages tagged as `post` in the layouts, use the
 `search` object:
 

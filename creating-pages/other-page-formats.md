@@ -36,9 +36,9 @@ This page doesn't contain a large article, but many microcopies. So YAML format
 is great because allows to better structure the data that will be used in the
 layout (configured as `layouts/contact-form.njk`).
 
-The support for YAML depends on the [YAML plugin](../core/yaml.md) that is **enabled
-by default**, so you don't need to configure anything. Just create pages with
-`.yml` extension and that's all.
+The support for YAML depends on the [YAML plugin](../core/yaml.md) that is
+**enabled by default**, so you don't need to configure anything. Just create
+pages with `.yml` extension and that's all.
 
 ## Pages in JSON
 
@@ -64,18 +64,18 @@ something like that. The previous example in JSON:
 }
 ```
 
-The support for JSON depends on the [JSON plugin](../core/json.md) that is **enabled
-by default**, so you don't need to configure anything. Just create pages with
-`.tmpl.json` extension and that's all (note that `.tmpl` subextension is
-important to indicate that the file must generate a page).
+The support for JSON depends on the [JSON plugin](../core/json.md) that is
+**enabled by default**, so you don't need to configure anything. Just create
+pages with `.tmpl.json` extension and that's all (note that `.tmpl` subextension
+is important to indicate that the file must generate a page).
 
 ## Pages in Nunjucks
 
-To create a page using HTML code instead markdown, you can write the code using
-the syntax of any template engine, like Nunjucks. This gives more flexibility
-and is convenient for unique pages, specially if you don't want to create layout
-files that won't be reused by other pages except this one. Like with markdown,
-you can create a front matter to store the variables:
+To create a page using HTML code instead of markdown, you can write the code
+using the syntax of any template engine, like Nunjucks. This gives more
+flexibility and is convenient for unique pages, specially if you don't want to
+create layout files that won't be reused by other pages except this one. Like
+with markdown, you can create a front matter to store the variables:
 
 ```html
 ---
@@ -120,17 +120,13 @@ footer: Thanks for contact us!
 </footer>
 ```
 
-Note that the layout used is `layouts/base.njk` that would provide the minimal
-html wrapper for this page (like adding the `<html>` and `<body>` elements).
-Other option is don't use any layout and include all html code here.
-
 The support for Nunjucks depends on the [Nunjucks plugin](../core/nunjucks.md)
 that is **enabled by default**, so you don't need to configure anything. Just
 create pages with `.njk` extension and that's all.
 
 You can use other template engines like [Pug](../plugins/pug.md) or
-[Eta](../plugins/eta.md) to generate pages using their syntax but they are disabled
-by default, so first you need to enable them in the `_config.js` file.
+[Eta](../plugins/eta.md) to generate pages using their syntax but they are
+disabled by default, so first you need to enable them in the `_config.js` file.
 
 ## Pages in Javascript or Typescript
 
@@ -170,46 +166,17 @@ export const layout = "layouts/base.njk";
 const title = "Contact with us";
 const subtitle = "Please, fill the following form";
 
-const form = {
-  name: "What's your name?",
-  email: "Your email",
-  comment: "Leave a comment here",
-  submit: "Send data",
-};
-
-const footer = "Thanks for contact us!";
-
 export default `
   <header>
     <h1>${title}</h1>
     <p>${subtitle}</p>
   </header>
-
-  <form>
-    <p>
-      <label for="name">${form.name}</label>
-      <input type="text" id="name">
-    </p>
-    <p>
-      <label for="email">${form.email}</label>
-      <input type="email" id="email">
-    </p>
-    <p>
-      <label for="comment">${form.comment}</label>
-      <textarea id="email"></textarea>
-    </p>
-
-    <button>${form.submit}</button>
-  </form>
-
-  <footer>
-    ${footer}
-  </footer>
 `;
 ```
 
-In the above example, we are generating the HTML code and use the layout
-`layouts/base.njk` to wrap this code with the minimum HTML needed.
+In the above example (more simple for clarity), we are generating the HTML code
+and use the layout `layouts/base.njk` to wrap this code with the minimum HTML
+needed.
 
 The `default` export is what provide the power of javascript/typescript pages.
 In the previous example it contain a string with the rendered html. But we can
@@ -223,41 +190,11 @@ export default function () {
   const title = "Contact with us";
   const subtitle = "Please, fill the following form";
 
-  const form = {
-    name: "What's your name?",
-    email: "Your email",
-    comment: "Leave a comment here",
-    submit: "Send data",
-  };
-
-  const footer = "Thanks for contact us!";
-
   return `
     <header>
       <h1>${title}</h1>
       <p>${subtitle}</p>
     </header>
-
-    <form>
-      <p>
-        <label for="name">${form.name}</label>
-        <input type="text" id="name">
-      </p>
-      <p>
-        <label for="email">${form.email}</label>
-        <input type="email" id="email">
-      </p>
-      <p>
-        <label for="comment">${form.comment}</label>
-        <textarea id="email"></textarea>
-      </p>
-
-      <button>${form.submit}</button>
-    </form>
-
-    <footer>
-      ${footer}
-    </footer>
   `;
 }
 ```
@@ -267,10 +204,10 @@ javascript/typescript file. See [Pagination](../core/pagination.md) for
 examples.
 
 The support for Javascript and Typescript modules depends on the
-[Modules plugin](../core/modules.md) that is **enabled by default**, so you don't
-need to configure anything. Just create pages with `.tmpl.js` or `.tmpl.ts`
-extension and that's all (the `.tmpl` subextension is important to indicate that
-the file must generate a page).
+[Modules plugin](../core/modules.md) that is **enabled by default**, so you
+don't need to configure anything. Just create pages with `.tmpl.js` or
+`.tmpl.ts` extension and that's all (the `.tmpl` subextension is important to
+indicate that the file must generate a page).
 
-You can use `JSX` and `TSX` syntax, but **is disabled by default**, so you need
-to enable the [JSX plugin](../plugins/jsx.md) in the `_config.js` file.
+You also can use `JSX` and `TSX` syntax, but **is disabled by default**, so you
+need to enable the [JSX plugin](../plugins/jsx.md) in the `_config.js` file.

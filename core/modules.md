@@ -76,4 +76,21 @@ export default ({ title, content }, filters) =>
 
 ## Configure the Modules plugin
 
-This plugin doesn't have any configuration option.
+In `_config.ts`, the second argument of `lume()` is used to configure the
+plugins that are enabled by default (like this!). Use it to configure the
+Modules plugin.
+
+For example, to use a different extension than `.tmpl.js` and `.tmpl.ts` to
+generate pages, edit the `pageExtensions` property:
+
+```ts
+import lume from "lume/mod.ts";
+
+// Modules plugin configuration
+const modules = {
+  pagesExtensions: [".page.js", ".page.ts"],
+};
+
+// Apply the plugin config
+const site = lume({}, { modules });
+```

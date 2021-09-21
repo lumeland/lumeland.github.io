@@ -60,25 +60,59 @@ In `_config.ts`, the second argument of `lume()` is used to configure the
 plugins that are enabled by default (like this!). Use it to configure the
 markdown plugin.
 
-For example, let's use the
-[markdown-it-anchor](https://www.npmjs.com/package/markdown-it-anchor) plugin
-and change some
-[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+```ts
+import lume from "lume/mod.ts";
+
+// Markdown plugin configuration
+const markdown = {};
+
+// Apply the plugin config
+const site = lume({}, { markdown });
+```
+
+### Plugins
+
+Lume uses [markdown-it](https://github.com/markdown-it/markdown-it) as the
+markdown parser, with the following plugins enabled:
+
+- [markdown-it-deflist](https://github.com/markdown-it/markdown-it-deflist) to
+  add support for definition lists (`<dl>` tag).
+- [markdown-it-attrs](https://github.com/arve0/markdown-it-attrs) to add support
+  for CSS classes and other attributes using `{}`.
+
+Use the property `plugins` to replace them. For example, to add the
+[markdown-it-anchor](https://github.com/valeriangalliat/markdown-it-anchor)
+plugin:
 
 ```ts
 import anchor from "https://jspm.dev/markdown-it-anchor";
 
-// Markdown plugin configuration
+// Set the markdown plugins
 const markdown = {
-  plugins: [
-    [anchor, { permalink: anchor.permalink.headerLink() }],
-  ],
+  plugins: [anchor],
+};
+```
+
+This will override the default plugins with yours. If you only want to add more
+plugins without remove the defaults, use the `keepDefaultPlugins` option:
+
+```ts
+// Add more markdown plugins without override the defaults
+const markdown = {
+  plugins: [anchor],
+  keepDefaultPlugins: true,
+};
+```
+
+Use the `options` property to change the
+[markdown-it settings](https://github.com/markdown-it/markdown-it#usage-examples):
+
+```ts
+// Change markdown-it configuration
+const markdown = {
   options: {
     breaks: false,
     xhtmlOut: true,
   },
 };
-
-// Apply the plugin config
-const site = lume({}, { markdown });
 ```

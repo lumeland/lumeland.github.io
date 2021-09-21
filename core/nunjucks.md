@@ -75,3 +75,6 @@ const nunjucks = {
 // Apply the plugin config
 const site = lume({}, { nunjucks });
 ```
+
+Now, Lume will search the `.njk` templates in the directory `_layouts` instead
+of `_includes`.

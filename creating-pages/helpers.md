@@ -51,12 +51,11 @@ Output:
 
 Lume includes the following convenient preinstalled filters:
 
-- **md**: It's installed by the `markdown` plugin and allows to render Markdown
-  content to HTML. [More info](../core/markdown.md)
-- **njk**: It's installed by the `nunjucks` plugin and allows to render Nunjucks
-  content to HTML. [More info](../core/nunjucks.md)
-- **url / htmlUrl**: It's installed by the `url` plugin and allows to normalize
-  URLs. [More info](../core/url.md)
+- **md**: Allows to render Markdown content to HTML.
+  [More info](../core/markdown.md)
+- **njk**: Allows to render Nunjucks content to HTML.
+  [More info](../core/nunjucks.md)
+- **url / htmlUrl**: Allows to normalize URLs. [More info](../core/url.md)
 
 ### Using the filters in JavaScript modules
 
@@ -81,3 +80,6 @@ is an example with a tag with a body:
 Hello, {{ user.name }}
 {% enduppercase %}
 ```
+
+See [Helpers configuration](/getting-started/config-file.md#helpers) for more
+information about how to create your own tags.

@@ -4,12 +4,11 @@ description: Configuring Lume
 order: 3
 ---
 
-**Lume** processes files based on the file extension. Which file extensions are
-processed how is determined by tying the extensions to **template engines** or
-**processors**. Some extensions are enabled by default, for example **Markdown**
-(`*.md`) or **Nunjucks** (`*.njk` or `*.html`). This means that all `*.md`,
-`*.njk` and `*.html` files will be loaded, processed and saved as `*.html`
-files.
+**Lume** processes your files based on the file extension. Which file extensions
+are processed how is determined by tying the extensions to **template engines**
+or **processors**. Some extensions are enabled by default, for example
+**Markdown** (`*.md`) or **Nunjucks** (`*.njk`). This means that all `*.md`, and
+`*.njk` files will be loaded, processed and saved as `*.html` files.
 
 You can customize this by adding a `_config.ts` or `_config.js` file, which adds
 to or overrides the default options; for example, to use a different template
@@ -35,51 +34,123 @@ const site = lume();
 export default site;
 ```
 
-You can pass an object with configuration data to your site. This is an example
-with the default values:
+You can pass an object with configuration data to your site. The available
+options are:
+
+### cwd
+
+The `cwd` option defines the root of your project. The `src` and `dest`
+directory are relative to this path. By default is the value of `Deno.cwd()` and
+you may not modify it (unless you have a good reason).
+
+You can override it in the CLI, with the option `--root`. This is useful to
+execute Lume in a project in a different folder:
+
+```sh
+# Run lume in the projects/my-blog subdirectory
+lume --root ./projects/my-blog
+```
+
+### src
+
+This is the directory of the sources of your site. All files needed to build
+your site must be here. Files and folders outside this directory won't be
+included in your site. It's relative to `cwd` and by default it's `.` (the same
+directory), but some people prefer to store the source files in a subfolder like
+`src`.
+
+You can override the value from the CLI with `--src`, useful if you have
+different sites in the same directory:
+
+```sh
+lume --src ./src
+```
+
+### dest
+
+This is the destination of your site, the output files will be saved here. It's
+relative to `cwd` and by default is `_site`. The `dest` directory can be inside
+the `src` directory (in fact, it is by default).
+
+You can override the value from the CLI with `--dest`, useful if you want to
+generate the site without override the previous one:
+
+```sh
+lume --dest ./output
+```
+
+### location
+
+This is the URL where the site will be published. Useful to generate absolute
+URLs or if your site is published in a subdirectory, for example:
+`https://username.github.io/project-name/`. The value must be an
+[URL object](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), for
+example:
+
+```ts
+const site = lume({
+  location: new URL("https://example.com"),
+});
+```
+
+If you start a local server (with `lume --serve`), **this value is always
+`http://localhost:3000`** (or the defined port if you change it).
+
+You can override the value from the CLI with `--location`, very useful if you
+want to build and deploy the site to different locations:
+
+```sh
+lume --location https://my-site.com/blog/
+```
+
+### dev
+
+Set `true` to build the site in development mode. The only difference is that
+pages with the value `draft: true` will be included in the build (in production
+mode they are ignored). This value can be used also to load or configure plugins
+differently according to the environment. For example: minify the Javascript
+code only in production mode.
+
+By default is `false`, and you can override the value from the CLI with `--dev`.
+
+```sh
+lume --dev
+```
+
+### prettyUrls
+
+To generate pretty URLs, for example `/about-us/` instead of `/about-us.html`.
+It only has effect on pages without `url` variable
+([see URLs documentation](../creating-pages/urls.md)). It's enabled by default,
+set `false` to disable it.
+
+### server
+
+This is an object to configure the local server. It has the following options:
+
+- **port:** to configure the port of the server. By default is `3000`. It can be
+  override also from CLI with `--port`.
+- **page404:** to configure the HTML page to display for 404 errors. By default
+  is `/404.html`. If you are building a SPA with dynamic urls, you may want to
+  change it to `/index.html`.
+- **open:** set `true` to automatically open the site in the browser after
+  starting the local web server.
+
+This is an example with all options with the default values:
 
 ```js
 import lume from "lume/mod.ts";
 
 const site = lume({
-  // The "src" and "dest" directories are relative to this path.
-  // You shouldn't modify this value!
   cwd: Deno.cwd(),
-
-  // The source directory of your site.
-  // All files needed to build your site must be here.
-  // You can override the value from the CLI with `--src=new-value`.
   src: ".",
-
-  // The output destination of the site.
-  // You can override the value from the CLI with `--dest=new-value`.
-  // This directory will be cleared before building.
   dest: "_site",
-
-  // The base location where the site will be published.
-  // Useful to generate absolute URLs or if your site is published in a subdirectory.
-  // For example: https://username.github.io/project-name/
-  // You can override the value from the CLI with `--location=new-value`.
-  location: new URL("http://localhost"),
-
-  // Set `true` to build the site in development mode.
-  // You can override the value from the CLI with `--dev`.
+  location: new URL("http://localhost:3000"),
   dev: false
-
-  // To generate pretty URLs, for example `/about-us/` instead of `/about-us.html`.
-  // Set `false` to disable it.
   prettyUrls: true,
-
-  // Local server configuration
   server: {
-    // You can override the value from the CLI with `--port`.
     port: 3000,
-
-    // The HTML page to display for 404 errors.
-    // You can use, for example, "/index.html" if you are building a web app with dynamic URLs.
     page404: "/404.html",
-
-    // To automatically open the site in the browser.
     open: false,
   }
 });
@@ -188,7 +259,7 @@ Note that not all template engines support async filters.
 
 ## Helpers
 
-Some templates filter allows to add other helpers different to filters, like
+Some templates engines allows to add other helpers different to filters, like
 custom tags. To configure that, there's the `helper()` method that allows to add
 any generical helper. Example:
 

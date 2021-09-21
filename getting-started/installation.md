@@ -26,6 +26,10 @@ lume upgrade
 Note: If you get an error upgrading from an old versions of Lume, just install
 it again.
 
+Use the command `lume upgrade --dev` to install the latest development version
+(the last commit in the [Github repository](https://github.com/lumeland/lume)).
+It's useful to test new features of Lume before released.
+
 ## Execute it without install
 
 The `ci.ts` file works exactly like the `lume` command but without installation.

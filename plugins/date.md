@@ -25,7 +25,7 @@ library under the hood.
 
 By default, the value is formatted to `yyyy-MM-dd` but you can use the first
 argument to set a different format. See the
-[`date-fms` documentation](https://date-fns.org/v2.15.0/docs/format) for more
+[`date-fms` documentation](https://date-fns.org/v2.22.0/docs/format) for more
 info.
 
 ```html
@@ -70,20 +70,21 @@ Now you can use this format by its name:
 
 ## Locales
 
-`date-fns` has support for [multiple locales](date_fns@v2.15.0/locale). If you
-want to use them, just import and register them in `_config.js`:
+`date-fns` has support for
+[multiple locales](https://deno.land/x/date_fns@v2.22.1/locale). If you want to
+use them, just import and register them in `_config.js`:
 
 ```js
 import date from "lume/plugins/date.ts";
-import gl from "date_fns@v2.15.0/locale/gl/index.js";
-import es from "date_fns@v2.15.0/locale/es/index.js";
+import gl from "https://deno.land/x/date_fns@v2.22.1/locale/gl/index.js";
+import es from "https://deno.land/x/date_fns@v2.22.1/locale/es/index.js";
 
 site.use(date({
   locales: { gl, es },
 }));
 ```
 
-Use the second argument to set the locale used:
+Use the second argument to set the locale:
 
 ```html
 <time datetime="{{ createdAt | date }}">

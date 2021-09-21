@@ -6,41 +6,62 @@ order: 2
 
 These examples assume that you have installed Lume as the `lume` executable:
 
+## Build the site
+
+To build your website, simply run:
+
 ```sh
-# Build the site in the current directory
 lume
-
-# Build the site and boot up a web server
-# that refreshes automatically for every change
-lume --serve # or -s
-
-# Change the web server port to localhost:8000
-lume --serve --port=8000
-
-# Build the site overriding some config values
-lume --src=from --dest=build --location=https://my-site.com/blog/
-
-# Show the version
-lume --version # or -V
-
-# Show help information
-lume --help # or -h
-
-# Create a _config.js file
-lume init
-
-# Build the site located in a different directory
-lume --root ./my-site
-
-# Build in development mode to view draft pages
-lume --dev
-
-# Build and watch changes but without starting a webserver
-lume --watch # or -w
-
-# Pass additional flags to your site code
-lume -- flag1 flag2
-
-# Run a custom script
-lume run gzip
 ```
+
+This command will compile your documents to HTML and save them into the dest
+directory (usually `_site`).
+
+Typically you will want to see the site in your browser so to start a local
+server with your site, add the `--serve` (or `-s`) argument:
+
+```sh
+lume --serve
+```
+
+This command init a **local web server** and starts **watching the changes** of
+your site. So if you edit anything, Lume will rebuild the site and reload
+automatically your browser with the new changes. The local server use the port
+`3000` by default but you can change it with the `--port` argument. For example:
+
+```sh
+lume --serve --port=8000
+```
+
+If you don't want to start a local server but want to watch the changes, use the
+`--watch` (or `-w`) argument:
+
+```sh
+lume --watch
+```
+
+## Create a config file
+
+Lume don't need a config file to work, but is required to change the default
+behavior like adding plugins, ignore files, etc. The
+[config file](config-file.md) is very simple and you can create it by yourself,
+but for convenience you can use the following command.
+
+```sh
+lume init
+```
+
+This will create a config file for you, after some questions. It also can
+configure [VS Code](https://code.visualstudio.com/) if you use this code editor
+with the
+[Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
+
+## Other commands
+
+There are other useful commands like:
+
+- `lume -V`: to show the current version.
+- `lume upgrade`: to upgrade Lume to the latest version.
+- `lume run`: to run a custom script.
+
+To see all available commands and arguments, run `lume --help`.

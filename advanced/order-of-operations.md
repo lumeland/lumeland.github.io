@@ -21,8 +21,8 @@ This is a high level description of how Lume build your site. When you run
 5. Group all pages by [`renderOrder` value](../core/render-order.md) and sort
    them.
 6. For each group of pages with the same `renderOrder`:
-   - If the [page content is a generator](../core/pagination.md), generate
-     all the sub-pages.
+   - If the [page content is a generator](../core/pagination.md), generate all
+     the sub-pages.
    - Calculate the [final url](../core/url.md).
    - Run the [preprocessors](../core/processors.md#preprocess) registered.
    - Render the page using the assigned

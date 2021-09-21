@@ -15,8 +15,8 @@ Create `_data.json` or `_data/*.json` files to save common variables.
 
 ## Creating pages in JSON
 
-It's possible also create pages using JSON format. To do that, create a file
-with the extension `.tmpl.json` (the `.tmpl` subextension is required to
+It's possible to create pages using JSON format. To do that, create a file with
+the extension `.tmpl.json` (the `.tmpl` subextension is required to
 differentiate these pages from other json files that you can include in your
 site).
 
@@ -30,4 +30,21 @@ site).
 
 ## Configure the JSON plugin
 
-This plugin doesn't have any configuration option.
+In `_config.ts`, the second argument of `lume()` is used to configure the
+plugins that are enabled by default (like this!). Use it to configure the JSON
+plugin.
+
+For example, to use a different extension than `.tmpl.json` to generate pages,
+edit the `pageExtensions` property:
+
+```ts
+import lume from "lume/mod.ts";
+
+// JSON plugin configuration
+const json = {
+  pagesExtensions: [".page.json"],
+};
+
+// Apply the plugin config
+const site = lume({}, { json });
+```

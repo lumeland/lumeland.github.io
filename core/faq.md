@@ -1,7 +1,7 @@
 ---
 title: FAQ
 description: Frequently Asked Questions
-order: 6
+order: 16
 ---
 
 Solutions to some common Lume problems.
@@ -18,13 +18,15 @@ Solutions to some common Lume problems.
 - Use the [bundler plugin](../plugins/bundler.md) if you want to:
   - Transpile Typescript files to Javascript.
   - Bundle the Javascript to a single file.
-- Use the [terser plugin](../plugins/terser.md) if you want to minify the js code.
+- Use the [terser plugin](../plugins/terser.md) if you want to minify the js
+  code.
 - To load `.js` files without using the bundler or terser plugins, add
   `site.loadAssets([".js])` to your `_config.js` file.
 
 ## How to export `.svg` files?
 
-- If you want to optimize the svg files, use the [svgo plugin](../plugins/svgo.md).
+- If you want to optimize the svg files, use the
+  [svgo plugin](../plugins/svgo.md).
 - To load `.svg` files without using postcss, add `site.loadAssets([".svg])` to
   your `_config.js` file.
 
