@@ -41,3 +41,7 @@ visible:
 - **[Ensino](https://laurarubio.net/)**\
   A collection of resources for Galego teachers by Laura Rubio -
   [Source code](https://github.com/laura-rubio/ensino)
+
+- **[Tobias Schmidt](https://tobiasschmidt.me/)**\
+  The personal blog of Tobias Schmidt - 
+  [Source code](https://github.com/tobiasschmidt89/tobiasschmidt.me)
