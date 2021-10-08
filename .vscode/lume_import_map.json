@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "lume": "file:/Users/oscarotero/www/lumeland/lume/mod.ts",
+    "lume/": "file:/Users/oscarotero/www/lumeland/lume/",
+    "https://deno.land/x/lume/": "file:/Users/oscarotero/www/lumeland/lume/"
+  }
+}
