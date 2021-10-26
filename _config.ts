@@ -11,6 +11,7 @@ const markdown = {
     // @ts-ignore: no anchor typings
     [anchor, { permalink: anchor.permalink.headerLink() }],
   ],
+  keepDefaultPlugins: true,
 };
 
 const site = lume(

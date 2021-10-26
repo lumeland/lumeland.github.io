@@ -43,5 +43,5 @@ visible:
   [Source code](https://github.com/laura-rubio/ensino)
 
 - **[Tobias Schmidt](https://tobiasschmidt.me/)**\
-  The personal blog of Tobias Schmidt - 
+  The personal blog of Tobias Schmidt -
   [Source code](https://github.com/tobiasschmidt89/tobiasschmidt.me)
