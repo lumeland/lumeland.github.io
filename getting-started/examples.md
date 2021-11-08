@@ -45,3 +45,11 @@ visible:
 - **[Tobias Schmidt](https://tobiasschmidt.me/)**\
   The personal blog of Tobias Schmidt -
   [Source code](https://github.com/tobiasschmidt89/tobiasschmidt.me)
+
+- **[Kusaeni](https://kusaeni.com/)**\
+  The personal blog of Kusaeni -
+  [Source code](https://notabug.org/kuspoes/kusaicom)
+
+---
+
+If you want to include your project in this list, please [edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md) and send me a pull request.

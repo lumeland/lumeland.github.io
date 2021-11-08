@@ -32,3 +32,10 @@ dt {
   font-weight: bold;
   margin-top: .5em;
 }
+hr {
+  border: none;
+  border-top: solid 1px var(--color-shadow);
+  background: none;
+  margin: 2em 0;
+  width: 5em;
+}
