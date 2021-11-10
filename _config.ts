@@ -4,7 +4,7 @@ import postcss from "lume/plugins/postcss.ts";
 import basePath from "lume/plugins/base_path.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
-import gpm from "https://deno.land/x/gpm@v0.1.0/mod.ts";
+import gpm from "https://deno.land/x/gpm@v0.4.0/mod.ts";
 
 const markdown = {
   plugins: [
