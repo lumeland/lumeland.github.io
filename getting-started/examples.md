@@ -50,6 +50,10 @@ visible:
   The personal blog of Kusaeni -
   [Source code](https://notabug.org/kuspoes/kusaicom)
 
+- **[Fabon](https://www.fabon.info/)**\
+  The personal website of Fabon -
+  [Source code](https://github.com/fabon-f/website)
+
 ---
 
 If you want to include your project in this list, please [edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md) and send me a pull request.
