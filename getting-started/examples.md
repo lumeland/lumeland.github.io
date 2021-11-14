@@ -54,6 +54,12 @@ visible:
   The personal website of Fabon -
   [Source code](https://github.com/fabon-f/website)
 
+- **[Better Know Canvas](https://canvas.rocks/)**\
+  A collection of advanced web graphics tutorials by Fernando Serboncini -
+  [Source code](https://github.com/fserb/bkc)
+
 ---
 
-If you want to include your project in this list, please [edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md) and send me a pull request.
+If you want to include your project in this list, please
+[edit this page](https://github.com/lumeland/lumeland.github.io/edit/master/getting-started/examples.md)
+and send me a pull request.
