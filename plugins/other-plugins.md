@@ -27,4 +27,5 @@ export default site;
 
 ## Have you created a plugin for Lume?
 
-Please let me know and I'll include here.
+Please let me know and I'll include here. See the documentation
+[to create your own plugins](../advanced/plugins.md).
