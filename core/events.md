@@ -20,6 +20,14 @@ site.addEventListener("beforeBuild", () => {
 });
 ```
 
+Note: if the event listener returns `false`, the build process is stopped:
+
+```js
+site.addEventListener("beforeBuild", () => {
+  return false; // Stop the build
+});
+```
+
 ## afterBuild
 
 This event is triggered after build the site. Note that if you are watching the
@@ -41,6 +49,14 @@ This event is triggered every time a change is detected on build the site with
 site.addEventListener("beforeUpdate", (event) => {
   console.log("New changes detected");
   console.log(event.files); // The files that have changed
+});
+```
+
+Note: if the event listener returns `false`, the update process is stopped:
+
+```js
+site.addEventListener("beforeUpdate", () => {
+  return false; // Stop the update
 });
 ```
 
@@ -76,6 +92,14 @@ site.addEventListener("beforeSave", (event) => {
 });
 ```
 
+Note: if the event listener returns `false`, the save process is stopped:
+
+```js
+site.addEventListener("beforeSave", () => {
+  return false; // Don't save the files
+});
+```
+
 ## Execute scripts with events
 
 In addition to functions, you can also execute [scripts](scripts.md) in events
@@ -87,4 +111,47 @@ site.script("compress", "gzip -r _site site.gz");
 
 // Execute it after build the site
 site.addEventListener("afterBuild", "compress").
+
+// Or you can run any script directly
+site.addEventListener("afterBuild", "gzip -r _site site.gz").
+```
+
+## Events options
+
+Similar to
+[web APIs](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+the third argument of `addEventListener` allows to customize the event listener.
+The available options are:
+
+- **once:** To run the listener only once and then remove it.
+- **signal:** To provide an `AbortSignal` to remove the listener at any time.
+
+Example of a listener executed only once:
+
+```js
+site.addEventListener("afterUpdate", () => {
+  console.log("This is the first update");
+}, {
+  once: true,
+});
+```
+
+Example of signal usage:
+
+```js
+const controller = new AbortController();
+let times = 0;
+
+site.addEventListener("afterUpdate", () => {
+  times++;
+
+  // Remove the listener after 5 times
+  if (times === 5) {
+    controller.abort();
+  }
+
+  console.log(`This is the update ${times}`);
+}, {
+  signal: controller.signal,
+});
 ```

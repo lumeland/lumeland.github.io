@@ -55,6 +55,7 @@ This will create a config file for you, after some questions. It also can
 configure [VS Code](https://code.visualstudio.com/) if you use this code editor
 with the
 [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
+If you only need to configure VSCode, just run `lume init --only=vscode`.
 
 ## Other commands
 
@@ -65,3 +66,22 @@ There are other useful commands like:
 - `lume run`: to run a custom script.
 
 To see all available commands and arguments, run `lume --help`.
+
+## Passing arguments to Deno
+
+Deno CLI has some options that can be interesting for your site build. For
+example,
+[Node.js compatiblity mode](https://deno.land/manual/npm_nodejs/compatibility_mode)
+with `--compat` flag,
+[a configuration file](https://deno.land/manual/getting_started/configuration_file)
+with `--config=<FILE>` or a
+[import map file](https://deno.land/manual@v1.16.1/linking_to_external_code/import_maps)
+with `--import-map=<FILE>`.
+
+Lume CLI runs Deno CLI with some arguments predefined, but you can customize
+them including the Deno arguments after `--`. For example, if you want to run
+Lume with a custom import map and Node compatibility:
+
+```
+lume -- --import-map=import_map.json --compat
+```

@@ -136,6 +136,13 @@ This is an object to configure the local server. It has the following options:
 - **open:** set `true` to automatically open the site in the browser after
   starting the local web server.
 
+### watch
+
+An object to configure the file watcher:
+
+- **debounce:** The debounce interval (in milliseconds). By default is `100`.
+- **ignore:** An array of paths that the watcher will ignore.
+
 This is an example with all options with the default values:
 
 ```js
@@ -152,6 +159,10 @@ const site = lume({
     port: 3000,
     page404: "/404.html",
     open: false,
+  },
+  watch: {
+    debounce: 100,
+    ignore: []
   }
 });
 
