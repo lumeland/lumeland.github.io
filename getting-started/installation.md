@@ -4,7 +4,7 @@ description: Installing Lume
 order: 1
 ---
 
-**Lume** requires Deno (v1.13.1 or newer) being installed on your computer. Read
+**Lume** requires Deno (v1.16.1 or newer) being installed on your computer. Read
 the [Deno installation](https://deno.land/#installation) instructions if you
 don't have it yet.
 
