@@ -7,7 +7,7 @@ order: 6
 This is a list of sites built with Lume that have the source code publicly
 visible:
 
-- **[Base Blog](https://lumeland.github.io/base-blog/)**\
+- **[Base Blog](https://lumeland.github.io/base-blog/){data-loader=off}**\
   The official starter to build a blog -
   [Source code](https://github.com/lumeland/base-blog)
 
