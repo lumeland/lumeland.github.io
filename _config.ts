@@ -32,6 +32,7 @@ site.copy("deno.svg");
 site.copy("lume.png");
 site.copy("favicon.ico");
 site.copy("favicon-32x32.png");
+site.copy("img");
 site.use(postcss());
 site.use(codeHighlight());
 site.use(resolveUrls());

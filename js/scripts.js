@@ -36,7 +36,7 @@ const nav = new Navigator(async (load, event) => {
 nav.init();
 
 document.body.addEventListener("click", () => {
-  menu.classList.remove("is-open");
+  menu?.classList.remove("is-open");
 });
 
 document.querySelectorAll("lume-search").forEach((search) => {

@@ -4,15 +4,28 @@ description: Lume is the Galician word for fire but also a fast and flexible sta
 body_class: landing
 
 buttons:
-  - text: Read the Docs
-    url: /getting-started/overview/
-    class: button
-  - text: See examples
-    url: /getting-started/examples/
-    class: button is-secondary
-  - text: Code in GitHub
-    url: https://github.com/lumeland/lume
-    class: button is-secondary
+- text: Read the Docs
+  url: /getting-started/overview/
+  class: button
+- text: See examples
+  url: /getting-started/examples/
+  class: button is-secondary
+- text: Code in GitHub
+  url: https://github.com/lumeland/lume
+  class: button is-secondary
+
+footer: |
+  Created by [Oscar Otero](https://oscarotero.com).
+
+  Propose new ideas and get help at [**Discord**](https://discord.gg/YbTmpACHWB).  
+  Support the project on [**Open Collective**](https://opencollective.com/lume).
+
+support:
+  title: Lume is [supported](https://opencollective.com/lume) by
+  sponsors:
+    - name: Androw Nash
+      url: https://audrow.github.io/
+      image: /img/avatars/audrow.jpg
 ---
 
 <header class="landing-header logo">
@@ -36,9 +49,20 @@ deno run -A https://deno.land/x/lume/install.ts</code></pre>
   </ul>
 </nav>
 
+<section class="landing-support">
+  <h2>{{ support.title | md(true) | safe }}</h2>
+
+  <ul class="landing-sponsors">
+    {% for sponsor in support.sponsors %}
+    <li>
+      <a href="{{ sponsor.url }}">
+        <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
+      </a>
+    </li>
+    {% endfor %}
+    </ul>
+</section>
+
 <footer class="landing-footer">
-  <p>
-    Propose new ideas and get help at <a href="https://discord.gg/YbTmpACHWB"><strong>Discord</strong></a>.<br>
-    Support the project on <a href="https://opencollective.com/lume"><strong>Open Collective</strong></a>.
-  </p>
+  {{ footer | md | safe }}
 </footer>
