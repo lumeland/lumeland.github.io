@@ -1,7 +1,7 @@
 ---
 title: Pug
 description: Using the template engine Pug to create pages and layouts
-docs: plugins/pug.ts
+docs: plugins/pug.ts/~/Options
 ---
 
 [Pug](https://pugjs.org/) is a template engine heavily influenced by Haml. This

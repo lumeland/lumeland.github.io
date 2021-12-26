@@ -1,7 +1,6 @@
 ---
 title: Relative URLs
 description: Convert all URLs to relative
-docs: plugins/relative_urls.ts
 ---
 
 The `relative_urls` plugin converts all URLs in your HTML documents to relative,

@@ -114,3 +114,12 @@ etc). To decide if a page must use a registered processor or preprocessor, Lume
 search this extension in the input file (like `.md` or `.njk`) or the output
 file (like `.html` or `.css`). This means that you can create processors to
 modify a page based in the extension of the input file, not only the output.
+
+## Global (pre)processors
+
+If you want to run a processor or preprocessor with all pages, use `*` in the
+first argument:
+
+```js
+site.process("*", processAllPages);
+```

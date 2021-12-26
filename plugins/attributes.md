@@ -1,7 +1,6 @@
 ---
 title: Attributes
 description: To manage attributes and class names of HTML elements
-docs: plugins/attributes.ts
 ---
 
 This plugin **is disabled by default** so to enable it, you have to edit your

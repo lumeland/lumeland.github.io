@@ -6,7 +6,7 @@ customElements.define("lume-search", Searcher);
 const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
 
-btn.addEventListener("click", (ev) => {
+btn?.addEventListener("click", (ev) => {
   menu.classList.toggle("is-open");
   ev.stopPropagation();
 });

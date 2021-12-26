@@ -12,7 +12,7 @@
   --font-size-big: clamp(1.5rem, 4vw, 2rem);
   --font-size-xbig: clamp(2.5rem, 5vw, 4rem);
 
-  --font-xsmall: var(--font-size-xsmall) / 1.1 var(--font-family-sans);
+  --font-xsmall: var(--font-size-xsmall) / 1.2 var(--font-family-sans);
   --font-xsmall-bold: bold var(--font-xsmall);
   --font-small: var(--font-size-small) / 1.5 var(--font-family-sans);
   --font-small-bold: bold var(--font-small);

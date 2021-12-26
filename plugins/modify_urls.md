@@ -1,7 +1,7 @@
 ---
 title: Modify URLs
 description: Modify all URLs of HTML files
-docs: plugins/modify_urls.ts
+docs: plugins/modify_urls.ts/~/Options
 ---
 
 The `modify_urls` plugin modifies all URLs in your HTML documents using a

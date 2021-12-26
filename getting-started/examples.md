@@ -57,7 +57,7 @@ visible:
 - **[Better Know Canvas](https://canvas.rocks/)**\
   A collection of advanced web graphics tutorials by Fernando Serboncini -
   [Source code](https://github.com/fserb/bkc)
-  
+
 - **[DenissB](https://denissb.github.io/)**\
   A personal website of a web developer
   [Source code](https://github.com/denissb/denissb.github.io)

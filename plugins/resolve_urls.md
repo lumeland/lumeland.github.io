@@ -1,7 +1,6 @@
 ---
 title: Resolve URLs
 description: Resolve all URLs pointing to source files
-docs: plugins/resolve_urls.ts
 ---
 
 The `resolve_urls` plugin converts all URLs in your HTML documents matching with

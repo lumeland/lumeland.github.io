@@ -1,7 +1,7 @@
 ---
 title: Terser
 description: Using the Terser plugin to minify javascript files
-docs: plugins/terser.ts
+docs: plugins/terser.ts/~/Options
 ---
 
 The Terser plugin minifies `.js` files using the

@@ -1,7 +1,7 @@
 ---
 title: Slugify URLs
 description: Slugify all page urls to remove conflict characters
-docs: plugins/slugify_urls.ts
+docs: plugins/slugify_urls.ts/~/Options
 ---
 
 The `slugify_urls` plugin converts all URLs in your HTML documents removing or

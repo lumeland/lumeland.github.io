@@ -1,7 +1,6 @@
 ---
 title: Base path
 description: Add automatically a base path to all urls
-docs: plugins/base_path.ts
 ---
 
 The `base_path` plugin fixes all URLs in your HTML documents by prepending the

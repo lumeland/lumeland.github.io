@@ -1,7 +1,7 @@
 ---
 title: Date
 description: To manipulate date & time values in different locales
-docs: plugins/date.ts
+docs: plugins/date.ts/~/Options
 ---
 
 The Date plugin **is disabled by default** so you need to enable it in

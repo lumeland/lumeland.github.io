@@ -1,7 +1,7 @@
 ---
 title: Liquid
 description: Using the template engine Liquid to create pages and layouts
-docs: plugins/liquid.ts
+docs: plugins/liquid.ts/~/Options
 ---
 
 [Liquid](https://liquidjs.com/) is a simple, expressive and safe template

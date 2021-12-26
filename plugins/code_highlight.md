@@ -1,7 +1,7 @@
 ---
 title: Code Highlight
 description: Syntax highlighting
-docs: plugins/code_highlight.ts
+docs: plugins/code_highlight.ts/~/Options
 ---
 
 This plugin uses the [highlight.js](https://highlightjs.org/) library to search
