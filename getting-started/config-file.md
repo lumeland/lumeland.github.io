@@ -317,3 +317,4 @@ site.filter("uppercase", (text) => text.toUpperCase());
 // is equivalent to:
 site.helper("uppercase", (text) => text.toUpperCase(), { type: "filter" });
 ```
+

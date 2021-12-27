@@ -151,6 +151,10 @@ sometimes is more practical.
 {% endfor %}
 ```
 
+## Search one page
+
+The function `search.page()` is very similar to `search.pages()` but only returns the first page found. Note the `limit` argument is not available.
+
 ## Searching next and previous page
 
 If the current page belongs to a list of pages (for example, a list of pages
