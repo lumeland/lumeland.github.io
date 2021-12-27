@@ -136,7 +136,7 @@ This is an object to configure the local server. It has the following options:
 - **open:** set `true` to automatically open the site in the browser after
   starting the local web server.
 
-### watch
+### watcher
 
 An object to configure the file watcher:
 
@@ -160,7 +160,7 @@ const site = lume({
     page404: "/404.html",
     open: false,
   },
-  watch: {
+  watcher: {
     debounce: 100,
     ignore: []
   }
