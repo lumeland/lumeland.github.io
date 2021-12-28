@@ -143,6 +143,15 @@ An object to configure the file watcher:
 - **debounce:** The debounce interval (in milliseconds). By default is `100`.
 - **ignore:** An array of paths that the watcher will ignore.
 
+### Components
+
+An object to configure the components load and output files.
+
+- **directory:** The directory where the components files are stored.
+- **variable:** The variable name used to access to the loaded components.
+- **cssFile:** The file name to export the CSS code of the components.
+- **jsFile:** The file name to export the JS code of the components.
+
 This is an example with all options with the default values:
 
 ```js
@@ -163,7 +172,13 @@ const site = lume({
   watcher: {
     debounce: 100,
     ignore: []
-  }
+  },
+  components: {
+    directory: "/_components",
+    variable: "comp",
+    cssFile: "/components.css",
+    jsFile: "/components.js",
+  },
 });
 
 export default site;
