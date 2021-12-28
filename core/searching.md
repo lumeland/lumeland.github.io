@@ -153,7 +153,8 @@ sometimes is more practical.
 
 ## Search one page
 
-The function `search.page()` is very similar to `search.pages()` but only returns the first page found. Note the `limit` argument is not available.
+The function `search.page()` is very similar to `search.pages()` but only
+returns the first page found. Note the `limit` argument is not available.
 
 ## Searching next and previous page
 
