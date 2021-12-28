@@ -27,10 +27,16 @@ support:
       url: https://audrow.github.io/
       image: /img/avatars/audrow.jpg
       amount: 5
+      recurrent: true
     - name: Yuto Oguchi
       url: https://aiotter.com/
       image: /img/avatars/aiotter.jpg
-      amount: 5
+      amount: 1
+      recurrent: true
+    - name: Tobias Schmidt
+      url: https://tobiasschmidt.me/
+      image: /img/avatars/tobias.png
+      amount: 20
 ---
 
 <header class="landing-header logo">
@@ -60,7 +66,7 @@ deno run -A https://deno.land/x/lume/install.ts</code></pre>
   <ul class="landing-sponsors">
     {% for sponsor in support.sponsors %}
     <li>
-      <a href="{{ sponsor.url }}">
+      <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
         <img src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
       </a>
     </li>
