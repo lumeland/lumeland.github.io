@@ -24,10 +24,13 @@
     grid-area: 1 / 1 / span 2;
   }
   & .logo-name {
+    margin: 0;
+    font-family: var(--font-family-brand);
+    letter-spacing: -0.02em;
     grid-area: 1 / 2;
     text-transform: lowercase;
     align-self: end;
-    line-height: 1;
+    line-height: 0.85;
   }
   & .logo-description {
     grid-area: 2 / 2;

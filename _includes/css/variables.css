@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&display=swap');
 @import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/github-dark.min.css";
 
 :root {
   --font-family-serif: Charter, Palatino, 'Palatino Linotype', "Droid Serif", serif;
   --font-family-sans: -apple-system, system-ui, sans-serif;
   --font-family-mono: 'PT Mono', monospace;
+  --font-family-brand: 'Sorts Mill Goudy', var(--font-family-serif);
 
   --font-size-xsmall: 0.85rem;
   --font-size-small: 0.9rem;
