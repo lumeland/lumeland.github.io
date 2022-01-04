@@ -59,8 +59,15 @@ visible:
   [Source code](https://github.com/fserb/bkc)
 
 - **[DenissB](https://denissb.github.io/)**\
-  A personal website of a web developer
+  A personal website of a web developer -
   [Source code](https://github.com/denissb/denissb.github.io)
+  
+- **[notion-enhancer documentation](https://notion-enhancer.github.io/)**\
+  an enhancer/customiser for the all-in-one productivity workspace notion.so -
+  [Source code](https://github.com/notion-enhancer/notion-enhancer.github.io)
+  
+- **[Johan Brook](https://johanbrook.com)**\
+  The personal website and blog of Johan - [Source code](https://github.com/johanbrook/johanbrook.com)
 
 ---
 
