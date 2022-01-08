@@ -69,6 +69,9 @@ visible:
 - **[Johan Brook](https://johanbrook.com)**\
   The personal website and blog of Johan - [Source code](https://github.com/johanbrook/johanbrook.com)
 
+- **[scarf@127.0.0.1](https://www.maribel.dev/)**\
+  The personal blog of scarf - [Source code](https://github.com/scarf005/scarf005.github.com)
+
 ---
 
 If you want to include your project in this list, please
