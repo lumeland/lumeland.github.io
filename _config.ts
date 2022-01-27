@@ -5,6 +5,7 @@ import basePath from "lume/plugins/base_path.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
 import gpm from "https://deno.land/x/gpm@v0.4.1/mod.ts";
+import psyche from "https://deno.land/x/psyche@v0.3.1/indexers/lume.ts";
 
 const markdown = {
   plugins: [
@@ -37,6 +38,7 @@ site.use(postcss());
 site.use(codeHighlight());
 site.use(resolveUrls());
 site.use(basePath());
+site.use(psyche({ selector: ".article-content" }));
 
 // Insert the link to edit the original .md page
 site.preprocess([".html"], (page) => {
@@ -50,7 +52,6 @@ site.addEventListener("beforeBuild", () => {
       name: "oom-components/page-loader",
       files: ["src"],
     },
-    "oom-components/searcher",
   ], "js/vendor");
 });
 

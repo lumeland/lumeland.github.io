@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 
   & > li {
     display: flex;
@@ -18,7 +18,7 @@
     &.has-separator {
       border-right: solid 1px var(--color-background-20);
       padding-right: 1rem;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
 
     @media (max-width: 1000px) {
@@ -76,9 +76,51 @@
   flex: 1 1 auto;
   margin: 0 1rem;
   align-self: center;
-  max-width: 400px;
+  width: 100%;
+  max-width: 240px;
+
+  font: var(--font-small);
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0.25em;
+
+  border-radius: 1.5rem;
+  border: solid 2px var(--color-shadow);
+  background: var(--color-white);
+  color: var(--color-black);
+  font-weight: 500;
+
+  & svg {
+    height: 1em;
+    width: 1em;
+    margin: 0 0.5em;
+  }
+
+  & kbd {
+    margin-right: 0.5em;
+    margin-left: auto;
+    font: var(--font-xsmall-bold);
+    font-size: 0.8em;
+    background: var(--color-black);
+    color: var(--color-white);
+    padding: 0.25em 0.6em 0.25em 0.5em;
+    border-radius: 0.375rem;
+    border: solid 2px var(--color-shadow);
+  }
+
+  &:hover {
+    border-color: var(--color-brand);
+    box-shadow: 0 0 0 1px var(--color-brand);
+    cursor: pointer;
+  }
 
   @media (max-width: 500px) {
-    display: none;
+    width: auto;
+    flex-grow: 0;
+
+    & span,
+    & kbd {
+      display: none;
+    }
   }
 }
