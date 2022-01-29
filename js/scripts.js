@@ -1,7 +1,7 @@
 import Navigator from "./vendor/page-loader/navigator.js";
 import psyche, {
   platformModifier,
-} from "https://deno.land/x/psyche@v0.3.1/client/psyche.min.mjs";
+} from "https://deno.land/x/psyche@v0.3.2/client/psyche.min.mjs";
 
 const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
@@ -59,7 +59,7 @@ const searchTheme = {
   searchTrigger = document.querySelector(".navbar-search");
 searchInstance.$component.addEventListener("click", (e) => {
   // route search results
-  const $a = e.composedPath().find(($) => $.matches("a"));
+  const $a = e.composedPath().find(($) => $ instanceof Element && $.matches("a"));
   if ($a) {
     e.preventDefault();
     nav.go($a.href);
