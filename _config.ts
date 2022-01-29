@@ -5,7 +5,7 @@ import basePath from "lume/plugins/base_path.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import anchor from "https://jspm.dev/markdown-it-anchor@8.0.0";
 import gpm from "https://deno.land/x/gpm@v0.4.1/mod.ts";
-import psyche from "https://deno.land/x/psyche@v0.3.1/indexers/lume.ts";
+import psyche from "https://deno.land/x/psyche@v0.3.2/indexers/lume.ts";
 
 const markdown = {
   plugins: [
