@@ -55,7 +55,6 @@ This will create a config file for you, after some questions. It also can
 configure [VS Code](https://code.visualstudio.com/) if you use this code editor
 with the
 [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
-If you only need to configure VSCode, just run `lume init --only=vscode`.
 
 ## Other commands
 

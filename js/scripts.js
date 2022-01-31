@@ -59,7 +59,9 @@ const searchTheme = {
   searchTrigger = document.querySelector(".navbar-search");
 searchInstance.$component.addEventListener("click", (e) => {
   // route search results
-  const $a = e.composedPath().find(($) => $ instanceof Element && $.matches("a"));
+  const $a = e.composedPath().find(($) =>
+    $ instanceof Element && $.matches("a")
+  );
   if ($a) {
     e.preventDefault();
     nav.go($a.href);

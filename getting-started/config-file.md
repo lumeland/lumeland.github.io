@@ -255,7 +255,11 @@ using the `ignore()` method:
 site.ignore("README.md", "CHANGELOG.md", "node_modules");
 ```
 
-Note: the `node_modules` directory is ignored by default too.
+The following paths are ignored by default:
+
+- `node_modules`
+- `import_map.json`
+- `deno.json`
 
 ## Template filters
 

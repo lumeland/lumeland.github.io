@@ -24,9 +24,9 @@ This plugin accepts a configuration object. The available options are:
 - `plugins`: Array with the PostCSS plugins that you want to use.
 - `keepDefaultPlugins`: Set `true` to append your plugins to the defaults,
   instead of replacing them.
-- `sourceMap`: Set `true` to generate a source map file that will be saved in
-  the same place but with the `.map` extension appended. For example, the file
-  `my/styles.css` will generate the sourcemap file `my/styles.css.map`.
+- `sourceMap`: Set `true` to generate the source map that will be inlined in the
+  css file. To generate the source map in a different file, set
+  `sourceMap: { inline: false }`.
 - `includes`: An array of directories to search for the `@import`ed files. By
   default is `_includes`. Set `false` to disable it.
 
