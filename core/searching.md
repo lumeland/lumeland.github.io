@@ -104,9 +104,9 @@ the query `menu=true`:
 The available operators for the conditions are:
 
 - `=` to search coincidences, for example `menu=true`. The strings `true` and
-  `false` are converted to booleans automatically.
+  `false` are converted to booleans automatically. `undefined` and `null` are also converted so you can filter pages without a value with `keyname=undefined`.
 - `!=` to search non-coincidences, for example `menu!=true`. The strings `true`
-  and `false` are converted to booleans automatically.
+  and `false` are converted to booleans automatically. `undefined` and `null` are also converted so you can filter pages containing a value with `keyname!=undefined`.
 - `^=` to search values starting with another value. For example all categories
   starting with the letter `A`: `category^=A`.
 - `$=` to search values ending with another value. For example all categories
