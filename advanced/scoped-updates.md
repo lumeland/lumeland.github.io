@@ -38,7 +38,7 @@ To do that, just add this code to your `_config.js` file:
 ```js
 site.scopedUpdates(
   (path) => path.endsWith(".css"), //Select all *.css files
-  (path) => path.test(/\.(js|ts)$/), //Select all *.js and *.ts files
+  (path) => /\.(js|ts)$/.test(path), //Select all *.js and *.ts files
 );
 ```
 
