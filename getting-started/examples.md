@@ -74,6 +74,10 @@ visible:
   The personal blog of scarf -
   [Source code](https://github.com/scarf005/scarf005.github.com)
 
+- **[aiotter](https://aiotter.com/)**\
+  The technical blog of Yuto Oguchi -
+  [Source code](https://github.com/aiotter/blog)
+
 ---
 
 If you want to include your project in this list, please
