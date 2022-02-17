@@ -53,7 +53,7 @@ menu:
   <ul class="menu-links">
     {% for section in menu %}
     <li>
-      <strong>{{ search.data("/docs/" + section).section }}</strong>
+      <strong>{{ search.data(section).section }}</strong>
       <ul>
       {% for page in search.pages(section, "order title") %}
         <li>
