@@ -38,6 +38,16 @@ site.use(parcelCSS({
       nesting: true,
       customMedia: true,
     },
+    targets: {
+      android: 98,
+      chrome: 98,
+      edge: 98,
+      firefox: 97,
+      ios_saf: 15,
+      safari: 15,
+      opera: 83,
+      samsung: 16,
+    }
   },
 }));
 ```
