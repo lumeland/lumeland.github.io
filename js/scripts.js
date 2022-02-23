@@ -1,7 +1,7 @@
 import Navigator from "./vendor/page-loader/navigator.js";
 import psyche, {
   platformModifier,
-} from "https://deno.land/x/psyche@v0.3.2/client/psyche.min.mjs";
+} from "https://deno.land/x/psyche@v0.3.4/client/psyche.min.mjs";
 
 const menu = document.querySelector(".menu");
 const btn = document.querySelector(".menu-button");
