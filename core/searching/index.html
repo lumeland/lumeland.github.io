@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search and collecting - Lume – A static site generator for Deno 🔥</title>
+    <meta http-equiv="REFRESH" content="0;url=https://lume.land">
+    <link rel="preload" as="style" href="https://dev.jspm.io/npm:highlight.js@10.1.2/styles/monokai-sublime.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <meta name="description" content="Using the search helper">
+    <meta property="og:image" content="https://lumeland.github.io/lume.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://lumeland.github.io/">
+    <meta name="twitter:title" content="Search and collecting">
+    <meta name="twitter:description" content="Using the search helper">
+    <meta name="twitter:image" content="https://lumeland.github.io/lume.png">
+    <meta name="twitter:creator" content="@misteroom">
+    <script src="/js/scripts.js" type="module"></script>
+  </head>
+
+  <body class="ly-main">
+    
+<nav class="navbar ly-navbar">
+  <button class="menu-button" type="button" id="menu-button">Menu</button>
+
+  <a href="/" class="logo navbar-logo">
+    <img src="/logo.svg" width="64" height="64" alt="Lume logotype">
+    <strong class="logo-name">Lume</strong>
+    <em class="logo-description">SSG for Deno</em>
+  </a>
+
+  <button class="navbar-search">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <span>Search</span>
+    <kbd>CTRL + K</kbd>
+  </button>
+
+  <ul class="navbar-links">
+    <li class="has-separator not-mobile">
+      <a href="">
+        </a><a href="https://deno.land/x/lume@v1.6.3/" class="navbar-version">Last version <strong>v1.6.3</strong></a>
+      
+    </li>
+
+    <li>
+      <a href="https://github.com/lumeland/lume">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://discord.gg/YbTmpACHWB">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://opencollective.com/lume">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Open Collective</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.943 11.943 0 0 0 12 0zm9.865 5.166l-3.109 3.107A7.67 7.67 0 0 1 19.715 12a7.682 7.682 0 0 1-.959 3.727l3.109 3.107A11.943 11.943 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834z"></path></svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="menu ly-menu scrollbar">
+  <ul class="menu-links">
+    
+    <li>
+      <strong>Getting started</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/getting-started/overview/" title="About Lume">Overview</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/installation/" title="Installing Lume">Installation</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/command-line/" title="Using Lume on the command line">Command line usage</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/config-file/" title="Configuring Lume">Configuration</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/examples/" title="Sites built with Lume">Examples</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Creating pages</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/creating-pages/page-files/" title="How Lume will output files based on the sites file structure">Page files</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/page-data/" title="Page data with Lume">Page data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/layouts/" title="Using layouts in Lume">Layouts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/other-page-formats/" title="Other available formats to create pages">Other page formats</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/shared-data/" title="Creating shared data that can be used between different pages">Shared data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/helpers/" title="Adding filters in the config file">Helpers</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/data/" title="Adding special data in the config">Extra data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/tags/" title="Grouping pages with tags">Tags</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/urls/" title="How define the output filename">URLs</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Core</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/core/concepts/" title="How Lume works?">General concepts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/markdown/" title="Using the Markdown plugin">Markdown</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/json/" title="Using the JSON plugin to allow using JSON for data">JSON</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/modules/" title="Using javascript and typescript modules for data, pages, and layouts">Modules</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/nunjucks/" title="Using the template engine Nunjucks for pages and layouts">Nunjucks</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/yaml/" title="Using YAML for data and pages">YAML</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/url/" title="For URL normalization">URL</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/components/" title="Generic Lume components">Components</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/searching/" aria-current="page" title="Using the search helper">Search and collecting</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/pagination/" title="Pagination in Lume">Pagination</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/events/" title="A list of all the events which Lume will dispatch in the lifecycle">Events</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/scripts/" title="A guide on using Lume as a script runner">Scripts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/render-order/" title="Configure the rendering order of the pages">Render order</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/multiple-template-engines/" title="Overriding the behavior of a template engine">Multiple template engines</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/loaders/" title="Small guide on adding custom loaders to Lume">Loaders and engines</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/processors/" title="A guide on extending Lume with custom processors">Processors</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/faq/" title="Frequently Asked Questions">FAQ</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Plugins</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/plugins/about-plugins/" title="How to enable plugin in Lume">About plugins</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/attributes/" title="To manage attributes and class names of HTML elements">Attributes</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/base_path/" title="Add automatically a base path to all urls">Base path</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/bundler/" title="Enabling the bundler plugin">Bundler</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/code_highlight/" title="Syntax highlighting">Code Highlight</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/date/" title="To manipulate date &amp; time values in different locales">Date</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/esbuild/" title="Enabling the esbuild plugin">ESbuild</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/eta/" title="Enabling the Eta template engine">Eta</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/inline/" title="Using the inline plugin to inline sources">Inline</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/jsx/" title="Using JSX for templates">JSX</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/liquid/" title="Using the template engine Liquid to create pages and layouts">Liquid</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/modify_urls/" title="Modify all URLs of HTML files">Modify URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/parcel_css/" title="Using the ParcelCSS plugin to transform and minify CSS">ParcelCSS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/postcss/" title="Using the PostCSS plugin to transform CSS">PostCSS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/pug/" title="Using the template engine Pug to create pages and layouts">Pug</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/relative_urls/" title="Convert all URLs to relative">Relative URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/resolve_urls/" title="Resolve all URLs pointing to source files">Resolve URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/sass/" title="Using the SASS plugin to transform scss files">SASS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/svgo/" title="Using the SVGO plugin to optimize SVG files">SVGO</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/slugify_urls/" title="Slugify all page urls to remove conflict characters">Slugify URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/terser/" title="Using the Terser plugin to minify javascript files">Terser</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/other-plugins/" title="Experimental plugins for Lume">Other plugins</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Advanced</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/advanced/plugins/" title="Creating plugins to extend Lume">Creating plugins</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/migrate-from-11ty/" title="How to migrate from Eleventy project to Lume">Migrate from Eleventy</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/order-of-operations/" title="How Lume works internally">Order of operations</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/scoped-updates/" title="Techniques to optimize the update">Update optimization</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+  </ul>
+</nav>
+
+<main class="article ly-content">
+  
+  <header class="article-header">
+    <p>Core</p>
+    <h1>Search and collecting</h1>
+
+    
+  </header>
+  
+
+
+  <div class="article-content">
+    <p id="in-the-layouts-you-have-the">In the layouts, you have the <code>search</code> helper that allows to search other pages.
+It's useful to build menus or other navigation stuff.</p>
+<h2 id="searching-pages" tabindex="-1"><a class="header-anchor" href="#searching-pages">Searching pages</a></h2>
+<p id="the-function-search.pages()">The function <code>search.pages()</code> returns an array of pages that you can filter and
+sort.</p>
+<p id="to-search-by-tags-just-include">To search by tags, just include the tag names as first argument, separated by
+space. For example, to search all pages containing the tags <code>post</code> and <code>html</code>,
+you have to execute <code>search.pages("post html")</code>:</p>
+<pre id="lessulgreater-percent-for-post-in"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  {% for post in search.pages("post html") %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{{ post.data.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  {% endfor %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p id="you-can-use-quotes-to-search">You can use quotes to search tags containing spaces. For example to search by
+the tags <code>post</code> and <code>static site generator</code>:</p>
+<pre id="lessulgreater-percent-for-post-in-1"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  {% for post in search.pages("post 'static site generator'") %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{{ post.data.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  {% endfor %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<h2 id="sort-pages" tabindex="-1"><a class="header-anchor" href="#sort-pages">Sort pages</a></h2>
+<p id="the-second-argument-is-the">The second argument is the value used to sort. By default the pages are sorted
+by <code>date</code>, but you can use any field. For example, if you want sort by title:</p>
+<pre id="lessulgreater-percent-for-post-in-2"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  {% for post in search.pages("post html", "title") %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>{{ post.data.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  {% endfor %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p id="note:-you-can-use-dot-notation">Note: You can use dot notation to sort by any subfield. For example:
+<code>header.title</code>.</p>
+<p id="sorting-allows-to-specify">Sorting allows to specify multiple fields. For example let's sort by "order" and
+"title" fields:</p>
+<pre id="percent-for-post-in"><code class="language-html hljs language-xml">{% for post in search.pages("post html", "order title") %}
+  ...
+{% endfor %}
+</code></pre>
+<p id="by-default-sort-is-ascendent">By default, sort is ascendent, but this can be changed appending <code>=desc</code> to the
+field name:</p>
+<pre id="percent-for-post-in-1"><code class="language-html hljs language-xml">{% for post in search.pages("post html", "order=asc title=desc") %}
+  ...
+{% endfor %}
+</code></pre>
+<h3 id="limit-the-results" tabindex="-1"><a class="header-anchor" href="#limit-the-results">Limit the results</a></h3>
+<p id="the-third-argument-of">The third argument of <code>search.pages()</code> allow to limit the number of results. You
+can use a positive number to return the first <code>n</code> results or a negative number
+to return the latests <code>n</code> results:</p>
+<pre id="less!-get-the-3-first-values"><code class="language-html hljs language-xml"><span class="hljs-comment">&lt;!-- Get the 3 first values --&gt;</span>
+{% for post in search.pages("post html", "order title", 3) %}
+  ...
+{% endfor %}
+
+<span class="hljs-comment">&lt;!-- Get the 3 latest values --&gt;</span>
+{% for post in search.pages("post html", "order title", -3) %}
+  ...
+{% endfor %}
+</code></pre>
+<h3 id="filtering-by-a-field" tabindex="-1"><a class="header-anchor" href="#filtering-by-a-field">Filtering by a field</a></h3>
+<p id="you-can-filter-pages-not-only">You can filter pages not only by tags but also any other field that you want.
+For example, to search all pages with the value <code>menu</code> as <code>true</code>, simply include
+the query <code>menu=true</code>:</p>
+<pre id="percent-for-option-in"><code class="language-html hljs language-xml">{% for option in search.pages("menu=true") %}
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ option.data.url }}"</span>&gt;</span>
+  {{ option.data.title }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endfor %}
+</code></pre>
+<p id="the-available-operators-for-the">The available operators for the conditions are:</p>
+<ul>
+<li id="to-search-coincidences-for"><code>=</code> to search coincidences, for example <code>menu=true</code>. The strings <code>true</code> and
+<code>false</code> are converted to booleans automatically. <code>undefined</code> and <code>null</code> are also converted so you can filter pages without a value with <code>keyname=undefined</code>.</li>
+<li id="!-to-search-non-coincidences"><code>!=</code> to search non-coincidences, for example <code>menu!=true</code>. The strings <code>true</code>
+and <code>false</code> are converted to booleans automatically. <code>undefined</code> and <code>null</code> are also converted so you can filter pages containing a value with <code>keyname!=undefined</code>.</li>
+<li id="to-search-values-starting"><code>^=</code> to search values starting with another value. For example all categories
+starting with the letter <code>A</code>: <code>category^=A</code>.</li>
+<li id="dollar-to-search-values-ending-with"><code>$=</code> to search values ending with another value. For example all categories
+ending with the letter <code>b</code>: <code>category$=b</code>.</li>
+<li id="*-to-search-values-containing"><code>*=</code> to search values containing another value. For example all titles
+containing the string <code>security</code>: <code>title*=security</code>.</li>
+<li id="less-greater-less-greater-to-search-values"><code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code> to search values lower or greater than other value. For
+example, all pages with level greater than 2: <code>level&gt;2</code>.</li>
+</ul>
+<p id="you-can-use-the-dot-notation">You can use the dot notation and even combine queries with tags. For example,
+let's say you want to select all pages with the value <code>taxonomy.category=sport</code>
+and with the tag <code>football</code>:</p>
+<pre id="percent-for-post-in-2"><code class="language-html hljs language-xml">{% for post in search.pages("taxonomy.category=sport football") %}
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ post.data.url }}"</span>&gt;</span>
+  {{ post.data.title }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endfor %}
+</code></pre>
+<h3 id="using-%7C-for-or-conditions" tabindex="-1"><a class="header-anchor" href="#using-%7C-for-or-conditions">Using <code>|</code> for OR conditions</a></h3>
+<p id="you-can-assign-several-values">You can assign several values for any condition using the pipe character <code>|</code>.
+For example, if you want to search pages having the tag <code>html</code> OR <code>css</code>, you can
+do it with <code>search.pages("html|css")</code>. You can combine AND and OR using spaces
+and pipes. For example, to search all pages with the tag <code>post</code> and also one of
+the tags <code>html</code> or <code>css</code>: <code>search.pages("post html|css")</code>.</p>
+<p id="or-conditions-can-be-used-with">OR conditions can be used with other fields. Example, to search pages with
+titles containing the words "html", "css" or "javascript":
+<code>search.pages("title*=html|css|javascript")</code>.</p>
+<p id="in-addition-to-space-separated">In addition to space separated values, you can use an array of values, that
+sometimes is more practical.</p>
+<pre id="percent-for-post-in-3"><code class="language-html hljs language-xml">{% for post in search.pages(["taxonomy.category=sport", "football"]) %}
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ post.data.url }}"</span>&gt;</span>
+  {{ post.data.title }}
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endfor %}
+</code></pre>
+<h2 id="search-one-page" tabindex="-1"><a class="header-anchor" href="#search-one-page">Search one page</a></h2>
+<p id="the-function-search.page()-is">The function <code>search.page()</code> is very similar to <code>search.pages()</code> but only
+returns the first page found. Note the <code>limit</code> argument is not available.</p>
+<h2 id="searching-next-and-previous-page" tabindex="-1"><a class="header-anchor" href="#searching-next-and-previous-page">Searching next and previous page</a></h2>
+<p id="if-the-current-page-belongs-to">If the current page belongs to a list of pages (for example, a list of pages
+under the same tag), you can get the previous and next page in this list. To do
+that we have the functions <code>search.previousPage()</code> and <code>search.nextPage()</code>. The
+syntax is the same as <code>search.pages()</code> but the first argument is the url of the
+current page. Let's see an example:</p>
+<pre id="lessh2greatermore-articles-tagged-as"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>More articles tagged as "html"<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+
+{% set post = search.previousPage(url, "html") %}
+
+{% if post %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ post.data.url }}"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"prev"</span>&gt;</span>← {{ post.data.title }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% else %}
+
+{% set post = search.nextPage(url, "html") %}
+
+{% if post %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ post.data.url }}"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"next"</span>&gt;</span>{{ post.data.title }} →<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+{% endif %}
+</code></pre>
+<h2 id="searching-tags" tabindex="-1"><a class="header-anchor" href="#searching-tags">Searching tags</a></h2>
+<p id="the-function-tags-returns-the">The function <code>tags</code> returns the list of all available tags. You can use the
+first argument to filter the pages of which you want to get the tags. For
+example, to list all tags used by pages with the category <code>sport</code>:</p>
+<pre id="lessstronggreaterlist-of-tags-in"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>List of tags in sport:<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+  {% for tag in search.tags("category=sport") %}
+  <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/tags/{{ tag }}"</span>&gt;</span>
+      {{ tag }}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  {% endfor %}
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<h2 id="searching-data" tabindex="-1"><a class="header-anchor" href="#searching-data">Searching data</a></h2>
+<p id="the-function-data-returns-the">The function <code>data</code> returns the data associated to any file or directory in the
+source directory. This is useful to get the data stored in any <code>_data</code> of any
+directory. For example:</p>
+<pre id="set-companydata"><code class="language-html hljs language-xml">{{ set companyData = search.data("about/the-company") }}
+</code></pre>
+
+  </div>
+
+</main>
+
+<footer class="footer ly-footer">
+  <ul class="footer-pagination">
+    <li>
+      ← Previous <a href="/core/components/" rel="prev">Components</a>
+    </li>
+    
+    <li>
+      Next → <a href="/core/pagination/" rel="next">Pagination</a>
+    </li>
+    
+  </ul>
+
+  <p class="footer-credits">
+    Created by <a href="https://twitter.com/misteroom">Oscar Otero</a> - 
+    <a href="https://github.com/lumeland/lumeland.github.io/edit/master/core/searching.md">Edit this page</a>
+  </p>
+</footer>
+
+  
+
+</body></html>

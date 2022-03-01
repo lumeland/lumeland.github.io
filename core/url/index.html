@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL - Lume – A static site generator for Deno 🔥</title>
+    <meta http-equiv="REFRESH" content="0;url=https://lume.land">
+    <link rel="preload" as="style" href="https://dev.jspm.io/npm:highlight.js@10.1.2/styles/monokai-sublime.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    <link href="/favicon-32x32.png" rel="icon" type="image/png" sizes="32x32">
+    <meta name="description" content="For URL normalization">
+    <meta property="og:image" content="https://lumeland.github.io/lume.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://lumeland.github.io/">
+    <meta name="twitter:title" content="URL">
+    <meta name="twitter:description" content="For URL normalization">
+    <meta name="twitter:image" content="https://lumeland.github.io/lume.png">
+    <meta name="twitter:creator" content="@misteroom">
+    <script src="/js/scripts.js" type="module"></script>
+  </head>
+
+  <body class="ly-main">
+    
+<nav class="navbar ly-navbar">
+  <button class="menu-button" type="button" id="menu-button">Menu</button>
+
+  <a href="/" class="logo navbar-logo">
+    <img src="/logo.svg" width="64" height="64" alt="Lume logotype">
+    <strong class="logo-name">Lume</strong>
+    <em class="logo-description">SSG for Deno</em>
+  </a>
+
+  <button class="navbar-search">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <span>Search</span>
+    <kbd>CTRL + K</kbd>
+  </button>
+
+  <ul class="navbar-links">
+    <li class="has-separator not-mobile">
+      <a href="">
+        </a><a href="https://deno.land/x/lume@v1.6.3/" class="navbar-version">Last version <strong>v1.6.3</strong></a>
+      
+    </li>
+
+    <li>
+      <a href="https://github.com/lumeland/lume">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://discord.gg/YbTmpACHWB">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="https://opencollective.com/lume">
+        <svg role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Open Collective</title><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12c2.54 0 4.894-.79 6.834-2.135l-3.107-3.109a7.715 7.715 0 1 1 0-13.512l3.107-3.109A11.943 11.943 0 0 0 12 0zm9.865 5.166l-3.109 3.107A7.67 7.67 0 0 1 19.715 12a7.682 7.682 0 0 1-.959 3.727l3.109 3.107A11.943 11.943 0 0 0 24 12c0-2.54-.79-4.894-2.135-6.834z"></path></svg>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="menu ly-menu scrollbar">
+  <ul class="menu-links">
+    
+    <li>
+      <strong>Getting started</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/getting-started/overview/" title="About Lume">Overview</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/installation/" title="Installing Lume">Installation</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/command-line/" title="Using Lume on the command line">Command line usage</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/config-file/" title="Configuring Lume">Configuration</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/getting-started/examples/" title="Sites built with Lume">Examples</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Creating pages</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/creating-pages/page-files/" title="How Lume will output files based on the sites file structure">Page files</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/page-data/" title="Page data with Lume">Page data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/layouts/" title="Using layouts in Lume">Layouts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/other-page-formats/" title="Other available formats to create pages">Other page formats</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/shared-data/" title="Creating shared data that can be used between different pages">Shared data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/helpers/" title="Adding filters in the config file">Helpers</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/data/" title="Adding special data in the config">Extra data</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/tags/" title="Grouping pages with tags">Tags</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/creating-pages/urls/" title="How define the output filename">URLs</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Core</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/core/concepts/" title="How Lume works?">General concepts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/markdown/" title="Using the Markdown plugin">Markdown</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/json/" title="Using the JSON plugin to allow using JSON for data">JSON</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/modules/" title="Using javascript and typescript modules for data, pages, and layouts">Modules</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/nunjucks/" title="Using the template engine Nunjucks for pages and layouts">Nunjucks</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/yaml/" title="Using YAML for data and pages">YAML</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/url/" aria-current="page" title="For URL normalization">URL</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/components/" title="Generic Lume components">Components</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/searching/" title="Using the search helper">Search and collecting</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/pagination/" title="Pagination in Lume">Pagination</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/events/" title="A list of all the events which Lume will dispatch in the lifecycle">Events</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/scripts/" title="A guide on using Lume as a script runner">Scripts</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/render-order/" title="Configure the rendering order of the pages">Render order</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/multiple-template-engines/" title="Overriding the behavior of a template engine">Multiple template engines</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/loaders/" title="Small guide on adding custom loaders to Lume">Loaders and engines</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/processors/" title="A guide on extending Lume with custom processors">Processors</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/core/faq/" title="Frequently Asked Questions">FAQ</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Plugins</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/plugins/about-plugins/" title="How to enable plugin in Lume">About plugins</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/attributes/" title="To manage attributes and class names of HTML elements">Attributes</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/base_path/" title="Add automatically a base path to all urls">Base path</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/bundler/" title="Enabling the bundler plugin">Bundler</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/code_highlight/" title="Syntax highlighting">Code Highlight</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/date/" title="To manipulate date &amp; time values in different locales">Date</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/esbuild/" title="Enabling the esbuild plugin">ESbuild</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/eta/" title="Enabling the Eta template engine">Eta</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/inline/" title="Using the inline plugin to inline sources">Inline</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/jsx/" title="Using JSX for templates">JSX</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/liquid/" title="Using the template engine Liquid to create pages and layouts">Liquid</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/modify_urls/" title="Modify all URLs of HTML files">Modify URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/parcel_css/" title="Using the ParcelCSS plugin to transform and minify CSS">ParcelCSS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/postcss/" title="Using the PostCSS plugin to transform CSS">PostCSS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/pug/" title="Using the template engine Pug to create pages and layouts">Pug</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/relative_urls/" title="Convert all URLs to relative">Relative URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/resolve_urls/" title="Resolve all URLs pointing to source files">Resolve URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/sass/" title="Using the SASS plugin to transform scss files">SASS</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/svgo/" title="Using the SVGO plugin to optimize SVG files">SVGO</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/slugify_urls/" title="Slugify all page urls to remove conflict characters">Slugify URLs</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/terser/" title="Using the Terser plugin to minify javascript files">Terser</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/plugins/other-plugins/" title="Experimental plugins for Lume">Other plugins</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Advanced</strong>
+      <ul>
+      
+        <li>
+          
+          <a href="/advanced/plugins/" title="Creating plugins to extend Lume">Creating plugins</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/migrate-from-11ty/" title="How to migrate from Eleventy project to Lume">Migrate from Eleventy</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/order-of-operations/" title="How Lume works internally">Order of operations</a>
+          
+        </li>
+      
+        <li>
+          
+          <a href="/advanced/scoped-updates/" title="Techniques to optimize the update">Update optimization</a>
+          
+        </li>
+      
+      </ul>
+    </li>
+    
+  </ul>
+</nav>
+
+<main class="article ly-content">
+  
+  <header class="article-header">
+    <p>Core</p>
+    <h1>URL</h1>
+
+    
+    <nav class="article-nav">
+      <a href="https://doc.deno.land/https/deno.land/x/lume@v1.6.3/plugins/url.ts">
+        <img src="/deno.svg" alt="Deno logo" width="20" height="20">
+        See Options documentation
+      </a>
+    </nav>
+    
+  </header>
+  
+
+
+  <div class="article-content">
+    <p id="lume-provide-two-filters-to">Lume provide two filters to normalize the URLs in your pages:</p>
+<h2 id="url" tabindex="-1"><a class="header-anchor" href="#url">url</a></h2>
+<p id="the-filter-url-normalize-a">The filter <code>url</code> normalize a single path with the location value that you have
+configured in <code>_config.js</code>. It's useful if your site is in a subdirectory or you
+want to generate absolute URLs.</p>
+<pre id="lessa-href&quot;-'about-us'-or-url"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/about-us' | url }}"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Full URL --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '/about-us' | url(true) }}"</span>&gt;</span>
+</code></pre>
+<p id="use-the-character-~-to-use-the">Use the character <code>~</code> to use the source file name instead of the final URL. The
+plugin automatically will detect the final URL for you. This is useful for
+dynamic URLs and updating automatically all links to one page when the URL of
+this page changes. For example:</p>
+<pre id="lessa-href&quot;-'~about-us.md'-or"><code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ '~/about-us.md' | url }}"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Will be converted to --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/about-us/"</span>&gt;</span>
+</code></pre>
+<p id="note:-if-you-don't-want-to-use"><strong>Note:</strong> If you don't want to use this filter everywhere there is a url, you
+may be interested in the <a href="/plugins/base_path/">Base path plugin</a></p>
+<h2 id="htmlurl" tabindex="-1"><a class="header-anchor" href="#htmlurl">htmlUrl</a></h2>
+<p id="this-filter-is-similar-to-url">This filter is similar to <code>url</code> but it works with HTML code: it search and
+normalize all URLs found in <code>href</code> and <code>src</code> attributes:</p>
+<pre id="-text:-'go-to-lessa"><code class="language-yml hljs language-yaml"><span class="hljs-meta">---</span>
+<span class="hljs-attr">text:</span> <span class="hljs-string">'Go to &lt;a href="/"&gt;Homepage&lt;/a&gt;'</span>
+<span class="hljs-meta">---</span>
+<span class="hljs-string">&lt;div&gt;{{</span> <span class="hljs-string">text</span> <span class="hljs-string">|</span> <span class="hljs-string">htmlUrl</span> <span class="hljs-string">|</span> <span class="hljs-string">safe</span> <span class="hljs-string">}}&lt;/div&gt;</span>
+</code></pre>
+
+  </div>
+
+</main>
+
+<footer class="footer ly-footer">
+  <ul class="footer-pagination">
+    <li>
+      ← Previous <a href="/core/yaml/" rel="prev">YAML</a>
+    </li>
+    
+    <li>
+      Next → <a href="/core/components/" rel="next">Components</a>
+    </li>
+    
+  </ul>
+
+  <p class="footer-credits">
+    Created by <a href="https://twitter.com/misteroom">Oscar Otero</a> - 
+    <a href="https://github.com/lumeland/lumeland.github.io/edit/master/core/url.md">Edit this page</a>
+  </p>
+</footer>
+
+  
+
+</body></html>
